@@ -49,7 +49,7 @@
 ---
 
 ## EN
-### Snow Graphics System (hereinafter SGS) - a free open-source graphics engine written in `Rust` using `Vulkan`. ***COMMERCIAL USE IS PROHIBITED***
+### Snow Graphics System (hereinafter SGS) - a free open-source graphics engine written in `Rust` using `Vulkan`. ***COPYLEFT LICENSE***
 ---
 ### Versions are designated by elements of the periodic table. You can view all releases [here](https://github.com/halva89/Snow-Graphics-System/releases)
 
