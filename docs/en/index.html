@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - Home</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>Snow Graphics System</h1>
+
+    <p>
+        Snow Graphics System is a graphics engine written in Rust with Vulkan.
+        Created for learning graphics, experimenting, and developing small 3D projects.
+    </p>
+
+    <hr>
+
+    <h2 id="latest">Latest version</h2>
+    <p>
+        <strong>Lithium V2 (Red Wolf)</strong> — Alpha 3.1.<br>
+        Supports animation, camera, .sgss parser, and dynamic viewport.
+    </p>
+
+    <hr>
+
+    <h2>Quick start</h2>
+    <ol>
+        <li>Download the latest release <a href="https://github.com/halva89/Snow-Graphics-System/releases">here</a>.</li>
+        <li>Extract the archive.</li>
+        <li>Run <code>snow_graphics.exe</code>.</li>
+    </ol>
+
+    <p>
+        Or build from source:
+    </p>
+    <pre><code>git clone https://github.com/halva89/Snow-Graphics-System.git
+cd Snow-Graphics-System
+cargo run --release</code></pre>
+
+    <hr>
+
+    <div class="footer">
+        SGS Wiki — Snow Graphics System<br>
+        <a href="../ru/">Russian version</a>
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>
