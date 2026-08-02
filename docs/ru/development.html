@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - Разработка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>Разработка</h1>
+    
+    <h2 id="syntax">Синтаксис SGSS</h2>
+    <pre><code>window 1280 720
+title "Сцена"
+
+square
+x y size
+r g b</code></pre>
+    
+    <h2 id="triangle">Треугольники</h2>
+    <pre><code>triangle
+x1 y1
+x2 y2
+x3 y3
+r g b</code></pre>
+    
+    <h2 id="square">Квадраты</h2>
+    <pre><code>square
+x y size
+r g b</code></pre>
+    
+    <h2 id="circle">Круги</h2>
+    <pre><code>circle
+cx cy radius segments
+r g b</code></pre>
+    
+    <h2 id="animation">Анимация</h2>
+    <pre><code>animate triangle
+    keyframe 0.0
+        position 0.0 0.0
+        color 1.0 0.0 0.0
+    keyframe 2.0
+        position 0.8 0.8
+        color 0.0 1.0 0.0</code></pre>
+    
+    <hr>
+    
+    <div class="footer">
+        SGS Wiki — Snow Graphics System
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>

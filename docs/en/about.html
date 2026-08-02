@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - About</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>About</h1>
+
+    <p>
+        Snow Graphics System (SGS) is a free open-source graphics engine.
+        The project was created for learning low-level graphics and developing interactive scenes.
+    </p>
+
+    <h2 id="developer">Developer</h2>
+    <p>
+        Author: Halva (Maks Babiychuk).<br>
+        The project has been running since 2026.
+    </p>
+
+    <h2 id="fact">Fact of the day</h2>
+    <p>
+        The engine name comes from the first letters of Snow Graphics System.
+        Versions are named after elements of the periodic table.
+    </p>
+
+    <hr>
+
+    <div class="footer">
+        SGS Wiki — Snow Graphics System<br>
+        <a href="../ru/">Russian version</a>
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>

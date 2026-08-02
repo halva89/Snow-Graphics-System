@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - Getting Started</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>Getting Started</h1>
+
+    <h2 id="install">Installation</h2>
+    <ol>
+        <li>Download the latest release from <a href="https://github.com/halva89/Snow-Graphics-System/releases">GitHub</a>.</li>
+        <li>Extract the archive.</li>
+        <li>Run <code>snow_graphics.exe</code>.</li>
+    </ol>
+
+    <h2 id="open">Opening</h2>
+    <p>
+        By default, the engine loads <code>assets/level1.sgss</code>.
+    </p>
+    <pre><code>cargo run -- assets/level1.sgss</code></pre>
+
+    <h2 id="edit">Editing</h2>
+    <p>
+        .sgss files are text files. Open any in a text editor and change the coordinates.
+    </p>
+
+    <hr>
+
+    <div class="footer">
+        SGS Wiki — Snow Graphics System<br>
+        <a href="../ru/">Russian version</a>
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>
