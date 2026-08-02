@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - Ecosystem</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>Ecosystem</h1>
+
+    <h2 id="sgs">SGS</h2>
+    <p>
+        Snow Graphics System — the core engine. Handles rendering and logic.
+    </p>
+
+    <h2 id="sgss">SGSS</h2>
+    <p>
+        <code>.sgss</code> — scene format. A text file describing objects and animations.
+    </p>
+
+    <h2 id="editor">SGSS Editor</h2>
+    <p>
+        A visual editor for creating .sgss files. Allows drawing and saving scenes.
+    </p>
+
+    <hr>
+
+    <div class="footer">
+        SGS Wiki — Snow Graphics System<br>
+        <a href="../ru/">Russian version</a>
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>

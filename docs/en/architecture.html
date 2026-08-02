@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS Wiki - Architecture</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="sidebar-container"></div>
+
+<div class="content">
+    <h1>Architecture</h1>
+
+    <p>
+        SGS is built on a modular architecture. Each component handles its own task.
+    </p>
+
+    <h2 id="languages">Languages</h2>
+    <ul>
+        <li><strong>Rust</strong> — main language.</li>
+        <li><strong>GLSL</strong> — shaders.</li>
+    </ul>
+
+    <h2 id="libraries">Libraries</h2>
+    <ul>
+        <li><strong>winit</strong> — window creation.</li>
+        <li><strong>ash</strong> — Vulkan wrapper.</li>
+        <li><strong>raw-window-handle</strong> — window management.</li>
+    </ul>
+
+    <h2 id="devices">Supported devices</h2>
+    <ul>
+        <li>Windows 10/11 (64-bit).</li>
+        <li>GPUs with Vulkan 1.0 support.</li>
+    </ul>
+
+    <hr>
+
+    <div class="footer">
+        SGS Wiki — Snow Graphics System<br>
+        <a href="../ru/">Russian version</a>
+    </div>
+</div>
+
+<script>
+    fetch('sidebar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            const current = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.sidebar-link, .sidebar-link-sub').forEach(link => {
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+</script>
+</body>
+</html>
