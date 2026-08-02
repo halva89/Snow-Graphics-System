@@ -1,0 +1,41 @@
+Business Source License 1.1
+
+Licensor: Halva (Maks Babiychuk)
+Licensed Work: Snow Graphics System (SGS)
+Additional Use Grant: You may use the Licensed Work for personal, educational, and non-commercial purposes. Any commercial use, including but not limited to selling, sublicensing, or using the Licensed Work in a commercial product or service, requires explicit written permission from the Licensor.
+
+Change Date: 2028-01-01
+
+Change License: MIT
+
+---
+
+The Business Source License (this document, or the "License") is not an Open Source license. However, the Licensed Work will eventually be made available under an Open Source License, as stated in this License.
+
+1. License Grant.
+The Licensor hereby grants you the right to copy, modify, create derivative works, redistribute, and make non-commercial use of the Licensed Work, subject to the terms and conditions of this License.
+
+2. Use Grant.
+You may use the Licensed Work for any purpose that is not a prohibited use under Section 3.
+
+3. Prohibited Uses.
+You may not use the Licensed Work for any commercial purpose without the express written permission of the Licensor. For clarity, commercial purposes include, but are not limited to:
+   - Selling or sublicensing the Licensed Work or any derivative thereof.
+   - Using the Licensed Work in a product or service that is sold or licensed for a fee.
+   - Using the Licensed Work in a product or service that is offered as part of a commercial hosting or cloud service.
+
+4. Change Date.
+On the Change Date (2028-01-01), the Licensed Work will become available under the Change License (MIT).
+
+5. Notices.
+You must retain all copyright, patent, trademark, and attribution notices in the Licensed Work.
+
+6. Disclaimer of Warranty.
+THE LICENSED WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
+
+7. Limitation of Liability.
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE LICENSED WORK.
+
+---
+
+For inquiries regarding commercial licensing, please contact: [https://github.com/halva89]
