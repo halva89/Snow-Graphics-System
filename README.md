@@ -10,7 +10,7 @@
 
 ---
 ## RU
-### Snow Graphics System(далее SGS) - бесплатный open-source графический движок написанный на `Rust` с использованием `Vulkan`. ***ЗАПРЕЩЕНО КОММЕРЧЕСКОЕ ИСПОЛЬЗОВАНИЕ***
+### Snow Graphics System(далее SGS) - бесплатный open-source графический движок написанный на `Rust` с использованием `Vulkan`. ***COPYLEFT ЛИЦЕНЗИЯ***
 ---
 ### Версии обозначаются элементами таблицы Менделеева. Просмотреть все релизы можно [здесь](https://github.com/halva89/Snow-Graphics-System/releases)
 
