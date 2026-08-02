@@ -1,7 +1,7 @@
 # Snow Graphics System
 
 <!-- Badges -->
-[![License](https://img.shields.io/badge/License-BSL%201.1-orange)](LICENSE)
+[![License](https://img.shields.io/badge/License-GPT%20v3-orange)](LICENSE)
 [![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange)](https://www.rust-lang.org/)
 [![Vulkan](https://img.shields.io/badge/Vulkan-1.0%2B-red)](https://www.vulkan.org/)
 [![Windows](https://img.shields.io/badge/Windows-10%2B-blue)]([![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.microsoft.com/windows))
