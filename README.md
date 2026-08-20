@@ -12,14 +12,14 @@
 ## RU
 ### Snow Graphics System(далее SGS) - бесплатный open-source графический движок написанный на `Rust` с использованием `Vulkan`. ***COPYLEFT ЛИЦЕНЗИЯ***
 ---
-### Версии обозначаются элементами таблицы Менделеева. Просмотреть все релизы можно [здесь](https://github.com/halva89/Snow-Graphics-System/releases)
+### Версии обозначаются элементами таблицы Менделеева до выхода версий Beta. После выхода Beta называются в честь гор. Просмотреть все релизы можно [здесь](https://github.com/halva89/Snow-Graphics-System/releases)
 
 1. Alpha 1: Uranium. Создан первый треугольник и шейдеры. Архитектура не обозначена. [X] ВЫПОЛНЕНО
 2. Alpha 2: Gold. Создан базовый парсер файлов `.sgss` формата. Архитектура Rusty Wolf [X] ВЫПОЛНЕНО
 3. Alpha 3.0: Lithium. Готов полноценный парсер 2D фигур(треугольник, круг, квадрат). В комплект релиза входит демо-сцена. Архитектура Red Wolf [X] ВЫПОЛНЕНО
 4. Alpha 3.1: Lithium V2. Готовы анимации(alpha, bugs included). Полноценный парсер `.sgss`, включая `animation` и остальные фигуры, а также настройки окна. Добавлена камера с калибровкой по вьюпорту. Выход с уничтожением ресурсов [X] ВЫПОЛНЕНО
 5. Pre-beta: Beryllium. Устранение багов, базовые наброски 3D-фигур. Многопоточный рендеринг и рефакторинг. [/] В РАЗРАБОТКЕ
-6. Beta 1: Radium. Создание теней, полноценная камера. [|] В ПОДГОТОВКЕ
+6. Beta 1: McKinley. Создание теней, полноценная камера. [|] В ПОДГОТОВКЕ
 7. Версии будут пополнятся
 ---
 ### Системные требования(последняя версия)
@@ -51,7 +51,7 @@
 ## EN
 ### Snow Graphics System (hereinafter SGS) - a free open-source graphics engine written in `Rust` using `Vulkan`. ***COPYLEFT LICENSE***
 ---
-### Versions are designated by elements of the periodic table. You can view all releases [here](https://github.com/halva89/Snow-Graphics-System/releases)
+### Versions are designated by elements of the periodic table before release Beta. Beta versions are named after mountains. You can view all releases [here](https://github.com/halva89/Snow-Graphics-System/releases)
 
 1. **Alpha 1: Uranium**. The first triangle and shaders were created. Architecture not defined. [X] COMPLETED
 2. **Alpha 2: Gold**. A basic parser for the `.sgss` file format was created. Architecture: Rusty Wolf [X] COMPLETED
