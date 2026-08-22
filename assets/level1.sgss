@@ -1,0 +1,24 @@
+window 1280 720
+title "Lithium v2.1 - Animation Test"
+
+animate triangle
+    keyframe 0.0
+        position 0.0 0.0
+        color 1.0 0.0 0.0
+    keyframe 2.0
+        position 0.8 0.8
+        color 0.0 1.0 0.0
+    keyframe 4.0
+        position -0.8 -0.8
+        color 0.0 0.0 1.0
+    keyframe 6.0
+        position 0.0 0.0
+        color 1.0 0.0 0.0
+
+square
+0.0 -0.6 0.4
+1.0 1.0 0.0
+
+circle
+-0.6 0.6 0.3 16
+0.0 1.0 1.0
