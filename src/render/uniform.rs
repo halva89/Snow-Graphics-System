@@ -16,8 +16,4 @@ impl Uniforms {
             projection: Mat4::identity(),
         }
     }
-
-    pub fn as_slice(&self) -> &[f32; 48] {
-        unsafe { &*(self as *const _ as *const [f32; 48]) }
-    }
 }

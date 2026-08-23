@@ -16,8 +16,9 @@ impl Object {
         match scene_obj {
             SceneObject::Static(mesh) => {
                 let color = mesh.color;
+                println!("[Object] Creating static with color: {:?}, vertices: {:?}", color, mesh.vertices);
                 Self {
-                    mesh: Mesh::from_2d(mesh),
+                    mesh,
                     transform: Transform::default(),
                     is_animated: false,
                     color,
@@ -40,7 +41,6 @@ impl Object {
             }
         }
     }
-
     pub fn new(mesh: Mesh, transform: Transform) -> Self {
         Self {
             mesh,

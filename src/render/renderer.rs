@@ -1,30 +1,25 @@
 use crate::render::vulkan::VulkanContext;
 use crate::core::scene::Scene;
-use crate::platform::window::Window;
+use crate::platform::Window;
 
 pub struct Renderer {
     vulkan: VulkanContext,
     pub width: u32,
     pub height: u32,
-    pub fps: u32,
 }
 
 impl Renderer {
     pub fn new(window: &Window) -> Self {
         let vulkan = VulkanContext::new(window);
-
         Self {
             vulkan,
-            width: 800,
-            height: 600,
-            fps: 0,
+            width: window.width,
+            height: window.height,
         }
     }
 
     pub fn render(&mut self, scene: &Scene) {
-        self.vulkan.begin_frame();
-        self.vulkan.draw_scene(scene);
-        self.vulkan.end_frame();
+        self.vulkan.render_scene(scene);
     }
 
     pub fn resize(&mut self, width: u32, height: u32) {

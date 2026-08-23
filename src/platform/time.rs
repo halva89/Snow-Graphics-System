@@ -1,4 +1,4 @@
-use std::time::{Instant, Duration};
+use std::time::Instant;
 
 pub struct Time {
     pub start_time: Instant,
@@ -34,7 +34,6 @@ impl Time {
         self.last_frame_time = now;
         self.frame_count += 1;
 
-        // FPS счётчик
         self.fps_counter += 1;
         self.fps_timer += self.delta_time;
         if self.fps_timer >= 1.0 {
@@ -54,10 +53,6 @@ impl Time {
 
     pub fn fps(&self) -> f32 {
         self.fps
-    }
-
-    pub fn now(&self) -> Instant {
-        Instant::now()
     }
 }
 

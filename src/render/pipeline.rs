@@ -1,75 +1,36 @@
 use ash::vk;
-use crate::render::shader::ShaderManager;
+use std::ffi::CString;
+use std::fs;
 
 pub struct Pipeline {
     pub layout: vk::PipelineLayout,
     pub handle: vk::Pipeline,
-    pub render_pass: vk::RenderPass,
 }
 
 impl Pipeline {
-    pub fn new(device: &ash::Device, swapchain_format: vk::Format) -> Self {
-        let render_pass = Self::create_render_pass(device, swapchain_format);
-        let (layout, handle) = Self::create_graphics_pipeline(device, render_pass);
+    pub fn new(device: &ash::Device, render_pass: vk::RenderPass, swapchain_extent: vk::Extent2D) -> Self {
+        println!("[Pipeline] Creating pipeline...");
+        
+        let vert_path = "shaders/vert.spv";
+        let frag_path = "shaders/frag.spv";
+        
+        let vert_code = Self::load_shader(vert_path);
+        let frag_code = Self::load_shader(frag_path);
 
-        Self {
-            layout,
-            handle,
-            render_pass,
-        }
-    }
+        let vert_module = Self::create_shader_module(device, &vert_code);
+        let frag_module = Self::create_shader_module(device, &frag_code);
 
-    fn create_render_pass(device: &ash::Device, format: vk::Format) -> vk::RenderPass {
-        let attachment = vk::AttachmentDescription::default()
-            .format(format)
-            .samples(vk::SampleCountFlags::TYPE_1)
-            .load_op(vk::AttachmentLoadOp::CLEAR)
-            .store_op(vk::AttachmentStoreOp::STORE)
-            .stencil_load_op(vk::AttachmentLoadOp::DONT_CARE)
-            .stencil_store_op(vk::AttachmentStoreOp::DONT_CARE)
-            .initial_layout(vk::ImageLayout::UNDEFINED)
-            .final_layout(vk::ImageLayout::PRESENT_SRC_KHR);
-
-        let color_ref = vk::AttachmentReference::default()
-            .attachment(0)
-            .layout(vk::ImageLayout::COLOR_ATTACHMENT_OPTIMAL);
-
-        let subpass = vk::SubpassDescription::default()
-            .pipeline_bind_point(vk::PipelineBindPoint::GRAPHICS)
-            .color_attachments(std::slice::from_ref(&color_ref));
-
-        let dependency = vk::SubpassDependency::default()
-            .src_subpass(vk::SUBPASS_EXTERNAL)
-            .dst_subpass(0)
-            .src_stage_mask(vk::PipelineStageFlags::COLOR_ATTACHMENT_OUTPUT)
-            .dst_stage_mask(vk::PipelineStageFlags::COLOR_ATTACHMENT_OUTPUT)
-            .src_access_mask(vk::AccessFlags::empty())
-            .dst_access_mask(vk::AccessFlags::COLOR_ATTACHMENT_WRITE);
-
-        let info = vk::RenderPassCreateInfo::default()
-            .attachments(std::slice::from_ref(&attachment))
-            .subpasses(std::slice::from_ref(&subpass))
-            .dependencies(std::slice::from_ref(&dependency));
-
-        unsafe { device.create_render_pass(&info, None) }.unwrap()
-    }
-
-    fn create_graphics_pipeline(device: &ash::Device, render_pass: vk::RenderPass) -> (vk::PipelineLayout, vk::Pipeline) {
-        let vert_code = ShaderManager::load_shader("shaders/vertex.spv");
-        let frag_code = ShaderManager::load_shader("shaders/fragment.spv");
-
-        let vert_module = ShaderManager::create_shader_module(device, &vert_code);
-        let frag_module = ShaderManager::create_shader_module(device, &frag_code);
+        let name = CString::new("main").unwrap();
 
         let vert_stage = vk::PipelineShaderStageCreateInfo::default()
             .stage(vk::ShaderStageFlags::VERTEX)
             .module(vert_module)
-            .name(std::ffi::CString::new("main").unwrap().as_c_str());
+            .name(&name);
 
         let frag_stage = vk::PipelineShaderStageCreateInfo::default()
             .stage(vk::ShaderStageFlags::FRAGMENT)
             .module(frag_module)
-            .name(std::ffi::CString::new("main").unwrap().as_c_str());
+            .name(&name);
 
         let stages = [vert_stage, frag_stage];
 
@@ -78,20 +39,20 @@ impl Pipeline {
 
         let binding_desc = vk::VertexInputBindingDescription::default()
             .binding(0)
-            .stride(5 * std::mem::size_of::<f32>() as u32)
+            .stride(6 * std::mem::size_of::<f32>() as u32)
             .input_rate(vk::VertexInputRate::VERTEX);
 
         let attr_descs = [
             vk::VertexInputAttributeDescription::default()
                 .location(0)
                 .binding(0)
-                .format(vk::Format::R32G32_SFLOAT)
+                .format(vk::Format::R32G32B32_SFLOAT)
                 .offset(0),
             vk::VertexInputAttributeDescription::default()
                 .location(1)
                 .binding(0)
                 .format(vk::Format::R32G32B32_SFLOAT)
-                .offset(2 * std::mem::size_of::<f32>() as u32),
+                .offset(3 * std::mem::size_of::<f32>() as u32),
         ];
 
         let vertex_input = vk::PipelineVertexInputStateCreateInfo::default()
@@ -101,13 +62,20 @@ impl Pipeline {
         let input_assembly = vk::PipelineInputAssemblyStateCreateInfo::default()
             .topology(vk::PrimitiveTopology::TRIANGLE_LIST);
 
+        // Вьюпорт с правильным соотношением сторон
+        let aspect = swapchain_extent.width as f32 / swapchain_extent.height as f32;
         let viewport = vk::Viewport::default()
-            .width(800.0)
-            .height(600.0)
+            .x(0.0)
+            .y(0.0)
+            .width(swapchain_extent.width as f32)
+            .height(swapchain_extent.height as f32)
             .min_depth(0.0)
             .max_depth(1.0);
+
         let scissor = vk::Rect2D::default()
-            .extent(vk::Extent2D { width: 800, height: 600 });
+            .offset(vk::Offset2D { x: 0, y: 0 })
+            .extent(swapchain_extent);
+
         let viewport_state = vk::PipelineViewportStateCreateInfo::default()
             .viewports(std::slice::from_ref(&viewport))
             .scissors(std::slice::from_ref(&scissor));
@@ -124,6 +92,7 @@ impl Pipeline {
         let color_blend_attachment = vk::PipelineColorBlendAttachmentState::default()
             .color_write_mask(vk::ColorComponentFlags::RGBA)
             .blend_enable(false);
+
         let color_blend = vk::PipelineColorBlendStateCreateInfo::default()
             .attachments(std::slice::from_ref(&color_blend_attachment));
 
@@ -141,21 +110,48 @@ impl Pipeline {
 
         let pipeline = unsafe {
             device.create_graphics_pipelines(vk::PipelineCache::null(), std::slice::from_ref(&pipeline_info), None)
-        }.expect("Failed to create pipeline")[0];
+        };
 
         unsafe {
             device.destroy_shader_module(vert_module, None);
             device.destroy_shader_module(frag_module, None);
         }
 
-        (layout, pipeline)
+        match pipeline {
+            Ok(pipelines) => {
+                println!("[Pipeline] Pipeline created successfully!");
+                Self { layout, handle: pipelines[0] }
+            }
+            Err(e) => {
+                panic!("Failed to create pipeline: {:?}", e);
+            }
+        }
+    }
+
+    fn load_shader(path: &str) -> Vec<u32> {
+        let bytes = fs::read(path).expect(&format!("Failed to read shader file: {}", path));
+        
+        let code = bytes.chunks_exact(4)
+            .map(|c| u32::from_le_bytes(c.try_into().unwrap()))
+            .collect::<Vec<_>>();
+        
+        code
+    }
+
+    fn create_shader_module(device: &ash::Device, code: &[u32]) -> vk::ShaderModule {
+        unsafe {
+            device.create_shader_module(
+                &vk::ShaderModuleCreateInfo::default().code(code),
+                None,
+            )
+            .expect("Failed to create shader module")
+        }
     }
 
     pub fn cleanup(&self, device: &ash::Device) {
         unsafe {
             device.destroy_pipeline(self.handle, None);
             device.destroy_pipeline_layout(self.layout, None);
-            device.destroy_render_pass(self.render_pass, None);
         }
     }
 }

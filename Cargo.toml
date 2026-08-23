@@ -10,3 +10,7 @@ ash-window = "0.13"
 raw-window-handle = "0.6"
 log = "0.4"
 env_logger = "0.10"
+
+[[bin]]
+name = "snow_graphics"
+path = "src/main.rs"

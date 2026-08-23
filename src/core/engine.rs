@@ -1,6 +1,6 @@
 use crate::core::scene::Scene;
 use crate::render::Renderer;
-use crate::platform::window::Window;
+use crate::platform::Window;
 use crate::scene_parser::{SceneSettings, SceneObject};
 use crate::animation::Animator;
 
@@ -10,7 +10,6 @@ pub struct Engine {
     window: Window,
     animator: Animator,
     is_running: bool,
-    pub fps: u32,
 }
 
 impl Engine {
@@ -26,7 +25,6 @@ impl Engine {
             window,
             animator,
             is_running: true,
-            fps: 60,
         }
     }
 
@@ -42,24 +40,25 @@ impl Engine {
 
     pub fn run(&mut self) {
         println!("Engine started");
+        println!("Objects in scene: {}", self.scene.len());
 
-        while self.is_running {
+        // Бесконечный цикл - закрывается только по Ctrl+C
+        loop {
             self.window.poll_events();
-
-            for obj in self.scene.get_objects_mut() {
-                if obj.is_animated {
-                    self.animator.apply(&mut obj.transform, "default");
+            
+            // Обновляем анимации
+            for object in self.scene.get_objects_mut() {
+                if object.is_animated {
+                    self.animator.apply(&mut object.transform, "main");
                 }
             }
-
+            
             self.renderer.render(&self.scene);
-            self.window.swap_buffers();
         }
-
-        println!("Engine stopped");
     }
 
     pub fn shutdown(&mut self) {
         self.is_running = false;
+        self.renderer.cleanup();
     }
 }

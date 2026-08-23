@@ -1,4 +1,4 @@
-use winit::event::{WindowEvent, ElementState, KeyEvent};
+use winit::event::{WindowEvent, ElementState, KeyEvent, MouseButton};
 use winit::keyboard::{KeyCode, PhysicalKey};
 use std::collections::HashSet;
 
@@ -8,7 +8,7 @@ pub struct Input {
     pub mouse_y: f32,
     pub mouse_delta_x: f32,
     pub mouse_delta_y: f32,
-    pub mouse_buttons: HashSet<u32>,
+    pub mouse_buttons: HashSet<MouseButton>,
 }
 
 impl Input {
@@ -34,8 +34,12 @@ impl Input {
                 ..
             } => {
                 match state {
-                    ElementState::Pressed => { self.keys.insert(*keycode); }
-                    ElementState::Released => { self.keys.remove(keycode); }
+                    ElementState::Pressed => {
+                        self.keys.insert(*keycode);
+                    }
+                    ElementState::Released => {
+                        self.keys.remove(keycode);
+                    }
                 }
             }
             WindowEvent::CursorMoved { position, .. } => {
@@ -48,8 +52,12 @@ impl Input {
             }
             WindowEvent::MouseInput { state, button, .. } => {
                 match state {
-                    ElementState::Pressed => { self.mouse_buttons.insert(button.into()); }
-                    ElementState::Released => { self.mouse_buttons.remove(&button.into()); }
+                    ElementState::Pressed => {
+                        self.mouse_buttons.insert(button.clone());
+                    }
+                    ElementState::Released => {
+                        self.mouse_buttons.remove(button);
+                    }
                 }
             }
             _ => {}

@@ -40,6 +40,7 @@ impl Animator {
             return;
         }
 
+        // Используем фиксированный delta time (будет заменен на реальный)
         self.current_time += 0.016 * self.speed;
 
         let duration = frames.last().unwrap().time;

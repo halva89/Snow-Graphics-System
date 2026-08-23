@@ -4,8 +4,6 @@ use crate::types::Color;
 pub struct Mesh {
     pub vertices: Vec<f32>,
     pub indices: Vec<u32>,
-    pub normals: Vec<f32>,
-    pub uvs: Vec<f32>,
     pub color: Color,
     pub vertex_count: u32,
     pub index_count: u32,
@@ -16,37 +14,19 @@ impl Mesh {
         Self {
             vertices: Vec::new(),
             indices: Vec::new(),
-            normals: Vec::new(),
-            uvs: Vec::new(),
             color: Color::white(),
             vertex_count: 0,
             index_count: 0,
         }
     }
 
-    // Для совместимости со старым кодом
-    pub fn from_2d(old: crate::mesh::Mesh) -> Self {
-        let mut mesh = Self::new();
-        mesh.vertices = old.vertices;
-        mesh.indices = old.indices;
-        mesh.color = old.color;
-        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
-        mesh.index_count = mesh.indices.len() as u32;
-        mesh
-    }
-
-    pub fn from_animated(anim: crate::animation::AnimatedMesh) -> Self {
-        let mut mesh = Self::new();
-        mesh.vertices = anim.vertices;
-        mesh.indices = anim.indices;
-        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
-        mesh.index_count = mesh.indices.len() as u32;
-        mesh
-    }
-
     pub fn triangle(v1: (f32, f32), v2: (f32, f32), v3: (f32, f32)) -> Self {
         let mut mesh = Self::new();
-        mesh.vertices.extend(&[v1.0, v1.1, 0.0, v2.0, v2.1, 0.0, v3.0, v3.1, 0.0]);
+        mesh.vertices.extend(&[
+            v1.0, v1.1, 0.0,
+            v2.0, v2.1, 0.0,
+            v3.0, v3.1, 0.0,
+        ]);
         mesh.indices.extend(&[0, 1, 2]);
         mesh.vertex_count = 3;
         mesh.index_count = 3;
@@ -72,28 +52,45 @@ impl Mesh {
         let mut mesh = Self::new();
         let segments = segments.max(3);
 
+        // Центр
         mesh.vertices.extend(&[cx, cy, 0.0]);
 
+        // Вершины по окружности
         for i in 0..=segments {
             let angle = (i as f32 / segments as f32) * std::f32::consts::TAU;
-            mesh.vertices.extend(&[cx + radius * angle.cos(), cy + radius * angle.sin(), 0.0]);
+            mesh.vertices.extend(&[
+                cx + radius * angle.cos(),
+                cy + radius * angle.sin(),
+                0.0,
+            ]);
         }
 
+        // Индексы треугольников (веер)
         for i in 0..segments {
             let current = i + 1;
             let next = if i == segments - 1 { 1 } else { i + 2 };
             mesh.indices.extend(&[0, current, next]);
         }
 
-        mesh.vertex_count = segments + 2;
-        mesh.index_count = segments * 3;
+        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
+        mesh.index_count = mesh.indices.len() as u32;
+        
+        mesh
+    }
+
+    pub fn from_animated(anim: crate::animation::AnimatedMesh) -> Self {
+        let mut mesh = Self::new();
+        mesh.vertices = anim.vertices;
+        mesh.indices = anim.indices;
+        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
+        mesh.index_count = mesh.indices.len() as u32;
         mesh
     }
 
     pub fn cube(size: f32) -> Self {
         let half = size / 2.0;
         let mut mesh = Self::new();
-
+        
         let v = [
             [-half, -half, -half],
             [ half, -half, -half],

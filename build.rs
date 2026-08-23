@@ -1,25 +1,15 @@
-use std::fs;
-use std::path::Path;
+use std::process::Command;
 
 fn main() {
-    println!("cargo:rerun-if-changed=src/shaders");
+    println!("cargo:rerun-if-changed=shaders/vertex.vert");
+    println!("cargo:rerun-if-changed=shaders/fragment.frag");
     
-    let out_dir = std::env::var("OUT_DIR").unwrap();
-    let target_dir = Path::new(&out_dir)
-        .parent().unwrap()
-        .parent().unwrap()
-        .parent().unwrap();
+    // Компилируем шейдеры
+    let _ = Command::new("glslangValidator")
+        .args(&["-V", "shaders/vertex.vert", "-o", "src/shaders/vert.spv"])
+        .status();
     
-    let shaders_src = Path::new("src/shaders");
-    let shaders_dst = target_dir.join("shaders");
-    
-    if shaders_src.exists() {
-        let _ = fs::create_dir_all(&shaders_dst);
-        for entry in fs::read_dir(shaders_src).unwrap() {
-            let entry = entry.unwrap();
-            let src = entry.path();
-            let dst = shaders_dst.join(entry.file_name());
-            let _ = fs::copy(&src, &dst);
-        }
-    }
+    let _ = Command::new("glslangValidator")
+        .args(&["-V", "shaders/fragment.frag", "-o", "src/shaders/frag.spv"])
+        .status();
 }

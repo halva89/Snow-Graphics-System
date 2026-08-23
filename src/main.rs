@@ -1,6 +1,3 @@
-// Copyright (C) 2026 Halva (Maks Babiychuk)
-// SPDX-License-Identifier: GPL-3.0-or-later
-
 use snow_graphics::core::engine::Engine;
 use snow_graphics::scene_parser::load_scene;
 

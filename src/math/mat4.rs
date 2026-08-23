@@ -1,4 +1,4 @@
-use crate::math::vec3::Vec3;
+use crate::math::Vec3;
 
 #[repr(C)]
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -105,11 +105,11 @@ impl Mat4 {
         result
     }
 
-    pub fn transform(&self, v: &crate::math::Vec3) -> crate::math::Vec3 {
+    pub fn transform(&self, v: &Vec3) -> Vec3 {
         let x = self.data[0][0] * v.x + self.data[0][1] * v.y + self.data[0][2] * v.z + self.data[0][3];
         let y = self.data[1][0] * v.x + self.data[1][1] * v.y + self.data[1][2] * v.z + self.data[1][3];
         let z = self.data[2][0] * v.x + self.data[2][1] * v.y + self.data[2][2] * v.z + self.data[2][3];
-        crate::math::Vec3::new(x, y, z)
+        Vec3::new(x, y, z)
     }
 
     pub fn as_slice(&self) -> &[f32; 16] {

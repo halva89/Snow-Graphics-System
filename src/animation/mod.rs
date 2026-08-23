@@ -5,9 +5,6 @@ pub mod animator;
 pub use keyframe::Keyframe;
 pub use animator::Animator;
 
-use crate::types::Color;
-use crate::math::Vec3;
-
 #[derive(Debug, Clone)]
 pub struct AnimatedMesh {
     pub vertices: Vec<f32>,
