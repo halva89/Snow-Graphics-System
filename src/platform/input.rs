@@ -53,7 +53,7 @@ impl Input {
             WindowEvent::MouseInput { state, button, .. } => {
                 match state {
                     ElementState::Pressed => {
-                        self.mouse_buttons.insert(button.clone());
+                        self.mouse_buttons.insert(*button);
                     }
                     ElementState::Released => {
                         self.mouse_buttons.remove(button);

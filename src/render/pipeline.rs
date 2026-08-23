@@ -9,7 +9,6 @@ pub struct Pipeline {
 
 impl Pipeline {
     pub fn new(device: &ash::Device, render_pass: vk::RenderPass, swapchain_extent: vk::Extent2D) -> Self {
-        // Этот метод теперь использует create_with_layout
         let layout = unsafe { device.create_pipeline_layout(&vk::PipelineLayoutCreateInfo::default(), None) }
             .expect("Failed to create pipeline layout");
         Self::new_with_layout(device, render_pass, swapchain_extent, layout)
@@ -158,7 +157,6 @@ impl Pipeline {
     pub fn cleanup(&self, device: &ash::Device) {
         unsafe {
             device.destroy_pipeline(self.handle, None);
-            device.destroy_pipeline_layout(self.layout, None);
         }
     }
 }

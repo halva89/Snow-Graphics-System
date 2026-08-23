@@ -1,20 +1,24 @@
 use crate::core::scene::Scene;
 use crate::render::Renderer;
-use crate::platform::Window;
+use crate::platform::CustomWindow;
 use crate::scene_parser::{SceneSettings, SceneObject};
 use crate::animation::Animator;
+use crate::math::Vec3;
 
 pub struct Engine {
     scene: Scene,
     renderer: Renderer,
-    window: Window,
+    window: CustomWindow,
     animator: Animator,
     is_running: bool,
+    camera_pos: Vec3,
+    camera_target: Vec3,
+    frame_count: u32,
 }
 
 impl Engine {
     pub fn new(settings: SceneSettings) -> Self {
-        let window = Window::new(&settings);
+        let window = CustomWindow::new(&settings);
         let renderer = Renderer::new(&window);
         let scene = Scene::new();
         let animator = Animator::new();
@@ -25,6 +29,9 @@ impl Engine {
             window,
             animator,
             is_running: true,
+            camera_pos: Vec3::new(0.0, 0.0, 5.0),
+            camera_target: Vec3::zero(),
+            frame_count: 0,
         }
     }
 
@@ -42,11 +49,12 @@ impl Engine {
         println!("Engine started");
         println!("Objects in scene: {}", self.scene.len());
 
-        // Бесконечный цикл - закрывается только по Ctrl+C
-        loop {
+        while !self.window.should_close() {
             self.window.poll_events();
             
-            // Обновляем анимации
+            // Камера статична
+            self.renderer.set_camera(self.camera_pos, self.camera_target);
+            
             for object in self.scene.get_objects_mut() {
                 if object.is_animated {
                     self.animator.apply(&mut object.transform, "main");
@@ -54,7 +62,11 @@ impl Engine {
             }
             
             self.renderer.render(&self.scene);
+            self.frame_count += 1;
         }
+
+        self.shutdown();
+        println!("Engine stopped");
     }
 
     pub fn shutdown(&mut self) {
