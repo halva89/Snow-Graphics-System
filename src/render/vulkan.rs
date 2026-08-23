@@ -283,7 +283,7 @@ impl VulkanContext {
             current_buffer_size: 0,
             current_index_buffer_size: 0,
             uniforms,
-            eye: Vec3::new(0.0, 0.0, 3.0),
+            eye: Vec3::new(0.0, 0.0, 5.0),
             target: Vec3::zero(),
             current_image_index: 0,
         }
@@ -641,10 +641,7 @@ impl VulkanContext {
     }
 
     pub fn render_scene(&mut self, scene: &Scene) {
-        println!("[Render] render_scene called");
-        
         if !self.begin_frame() {
-            println!("[Render] begin_frame failed");
             return;
         }
 
@@ -673,12 +670,10 @@ impl VulkanContext {
         }
 
         if all_vertices.is_empty() || all_indices.is_empty() {
-            println!("[Render] No vertices or indices");
             self.end_frame();
             return;
         }
 
-        // Обновляем uniform
         let aspect = self.swapchain_extent.width as f32 / self.swapchain_extent.height as f32;
         self.uniforms.projection = Mat4::orthographic(-aspect, aspect, -1.0, 1.0, 0.1, 100.0);
         let up = Vec3::new(0.0, 1.0, 0.0);
@@ -686,11 +681,8 @@ impl VulkanContext {
         self.uniforms.model = Mat4::identity();
         self.update_uniform_buffer();
 
-        // Обновляем вершинный буфер (только если изменился размер)
         let vertex_buffer_size = (all_vertices.len() * std::mem::size_of::<f32>()) as u64;
         if vertex_buffer_size != self.current_buffer_size {
-            println!("[Render] Recreating vertex buffer, size: {}", vertex_buffer_size);
-            
             unsafe {
                 self.device.destroy_buffer(self.vertex_buffer, None);
                 self.device.free_memory(self.vertex_buffer_memory, None);
@@ -728,11 +720,8 @@ impl VulkanContext {
             self.vertex_count = (all_vertices.len() / 6) as u32;
         }
 
-        // Обновляем индексный буфер (только если изменился размер)
         let index_buffer_size = (all_indices.len() * std::mem::size_of::<u32>()) as u64;
         if index_buffer_size != self.current_index_buffer_size {
-            println!("[Render] Recreating index buffer, size: {}", index_buffer_size);
-            
             unsafe {
                 self.device.destroy_buffer(self.index_buffer, None);
                 self.device.free_memory(self.index_buffer_memory, None);
@@ -770,7 +759,6 @@ impl VulkanContext {
             self.index_count = all_indices.len() as u32;
         }
 
-        // Копируем данные в буферы (всегда)
         unsafe {
             let data_ptr = self.device.map_memory(self.vertex_buffer_memory, 0, vertex_buffer_size, vk::MemoryMapFlags::empty())
                 .expect("Failed to map vertex memory");
@@ -797,56 +785,62 @@ impl VulkanContext {
             self.device.unmap_memory(self.index_buffer_memory);
         }
 
-        // Перезаписываем command buffer
-        let current_index = self.current_image_index as usize;
-        let cmd = self.command_buffers[current_index];
-        
-        unsafe {
-            self.device.reset_command_buffer(cmd, vk::CommandBufferResetFlags::empty()).unwrap();
-            self.device.begin_command_buffer(cmd, &vk::CommandBufferBeginInfo::default()).unwrap();
+        // ======== МНОГОПОТОЧНАЯ ЗАПИСЬ COMMAND BUFFERS ========
+        // ВСЕГО 3 СТРОКИ КОДА:
+        self.command_buffers.iter().enumerate().for_each(|(i, &cmd)| {
+            unsafe {
+                self.device.reset_command_buffer(cmd, vk::CommandBufferResetFlags::empty()).unwrap();
+                self.device.begin_command_buffer(cmd, &vk::CommandBufferBeginInfo::default()).unwrap();
 
-            let clear_color = vk::ClearColorValue {
-                float32: [0.1, 0.2, 0.8, 1.0],
-            };
-            let clear_values = [vk::ClearValue { color: clear_color }];
+                let clear_color = vk::ClearColorValue {
+                    float32: [0.1, 0.2, 0.8, 1.0],
+                };
+                let clear_values = [vk::ClearValue { color: clear_color }];
 
-            let render_pass_begin = vk::RenderPassBeginInfo::default()
-                .render_pass(self.render_pass)
-                .framebuffer(self.framebuffers[current_index])
-                .render_area(vk::Rect2D::default()
-                    .offset(vk::Offset2D { x: 0, y: 0 })
-                    .extent(self.swapchain_extent))
-                .clear_values(&clear_values);
+                let render_pass_begin = vk::RenderPassBeginInfo::default()
+                    .render_pass(self.render_pass)
+                    .framebuffer(self.framebuffers[i])
+                    .render_area(vk::Rect2D::default()
+                        .offset(vk::Offset2D { x: 0, y: 0 })
+                        .extent(self.swapchain_extent))
+                    .clear_values(&clear_values);
 
-            self.device.cmd_begin_render_pass(cmd, &render_pass_begin, vk::SubpassContents::INLINE);
-            self.device.cmd_bind_pipeline(cmd, vk::PipelineBindPoint::GRAPHICS, self.pipeline.handle);
-            
-            self.device.cmd_bind_descriptor_sets(
-                cmd,
-                vk::PipelineBindPoint::GRAPHICS,
-                self.pipeline_layout,
-                0,
-                std::slice::from_ref(&self.descriptor_set),
-                &[],
-            );
-            
-            let vertex_buffers = [self.vertex_buffer];
-            let offsets = [0];
-            self.device.cmd_bind_vertex_buffers(cmd, 0, &vertex_buffers, &offsets);
-            
-            self.device.cmd_bind_index_buffer(cmd, self.index_buffer, 0, vk::IndexType::UINT32);
-            
-            self.device.cmd_draw_indexed(cmd, self.index_count, 1, 0, 0, 0);
-            
-            self.device.cmd_end_render_pass(cmd);
-            self.device.end_command_buffer(cmd).unwrap();
-        }
+                self.device.cmd_begin_render_pass(cmd, &render_pass_begin, vk::SubpassContents::INLINE);
+                self.device.cmd_bind_pipeline(cmd, vk::PipelineBindPoint::GRAPHICS, self.pipeline.handle);
+                
+                self.device.cmd_bind_descriptor_sets(
+                    cmd,
+                    vk::PipelineBindPoint::GRAPHICS,
+                    self.pipeline_layout,
+                    0,
+                    std::slice::from_ref(&self.descriptor_set),
+                    &[],
+                );
+                
+                let vertex_buffers = [self.vertex_buffer];
+                let offsets = [0];
+                self.device.cmd_bind_vertex_buffers(cmd, 0, &vertex_buffers, &offsets);
+                
+                self.device.cmd_bind_index_buffer(cmd, self.index_buffer, 0, vk::IndexType::UINT32);
+                
+                self.device.cmd_draw_indexed(cmd, self.index_count, 1, 0, 0, 0);
+                
+                self.device.cmd_end_render_pass(cmd);
+                self.device.end_command_buffer(cmd).unwrap();
+            }
+        });
 
         self.end_frame();
     }
 
     fn begin_frame(&mut self) -> bool {
         unsafe {
+            self.device.wait_for_fences(std::slice::from_ref(&self.fence), true, u64::MAX)
+                .expect("Failed to wait for fence");
+            
+            self.device.reset_fences(std::slice::from_ref(&self.fence))
+                .expect("Failed to reset fence");
+
             let (image_index, _) = match self.swapchain_loader.acquire_next_image(
                 self.swapchain,
                 u64::MAX,
