@@ -115,6 +115,61 @@ impl Mat4 {
     pub fn as_slice(&self) -> &[f32; 16] {
         unsafe { &*(self.data.as_ptr() as *const [f32; 16]) }
     }
+
+    // Ортографическая проекция для 2D
+    pub fn orthographic(left: f32, right: f32, bottom: f32, top: f32, near: f32, far: f32) -> Self {
+        Self {
+            data: [
+                [2.0 / (right - left), 0.0, 0.0, -(right + left) / (right - left)],
+                [0.0, 2.0 / (top - bottom), 0.0, -(top + bottom) / (top - bottom)],
+                [0.0, 0.0, -2.0 / (far - near), -(far + near) / (far - near)],
+                [0.0, 0.0, 0.0, 1.0],
+            ],
+        }
+    }
+
+    // Перспективная проекция для 3D
+    pub fn perspective(fov: f32, aspect: f32, near: f32, far: f32) -> Self {
+        let tan_half_fov = (fov / 2.0).tan();
+        let mut result = Self::zero();
+        result.data[0][0] = 1.0 / (aspect * tan_half_fov);
+        result.data[1][1] = 1.0 / tan_half_fov;
+        result.data[2][2] = -(far + near) / (far - near);
+        result.data[2][3] = -(2.0 * far * near) / (far - near);
+        result.data[3][2] = -1.0;
+        result
+    }
+
+    // Матрица вида (камера)
+    pub fn look_at(eye: Vec3, target: Vec3, up: Vec3) -> Self {
+        let forward = (target - eye).normalize();
+        let right = forward.cross(&up).normalize();
+        let up = right.cross(&forward);
+
+        let mut result = Self::identity();
+        result.data[0][0] = right.x;
+        result.data[0][1] = right.y;
+        result.data[0][2] = right.z;
+        result.data[1][0] = up.x;
+        result.data[1][1] = up.y;
+        result.data[1][2] = up.z;
+        result.data[2][0] = -forward.x;
+        result.data[2][1] = -forward.y;
+        result.data[2][2] = -forward.z;
+
+        let translation = Mat4::translation(-eye.x, -eye.y, -eye.z);
+        Self::multiply(&result, &translation)
+    }
+
+    pub fn transpose(&self) -> Self {
+        let mut result = Self::zero();
+        for i in 0..4 {
+            for j in 0..4 {
+                result.data[i][j] = self.data[j][i];
+            }
+        }
+        result
+    }
 }
 
 impl Default for Mat4 {

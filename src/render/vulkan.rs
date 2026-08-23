@@ -1,9 +1,10 @@
 use ash::{vk, Entry, Instance, Device};
 use ash::khr::{surface, swapchain};
-use ash::vk::Handle;
 use crate::platform::Window;
 use crate::render::pipeline::Pipeline;
+use crate::render::uniform::{self, Uniforms};
 use crate::core::scene::Scene;
+use crate::math::Mat4;
 use std::ffi::CString;
 
 pub struct VulkanContext {
@@ -23,6 +24,7 @@ pub struct VulkanContext {
     pub swapchain_extent: vk::Extent2D,
     pub render_pass: vk::RenderPass,
     pub pipeline: Pipeline,
+    pub pipeline_layout: vk::PipelineLayout,
     pub framebuffers: Vec<vk::Framebuffer>,
     pub command_pool: vk::CommandPool,
     pub command_buffers: Vec<vk::CommandBuffer>,
@@ -33,10 +35,13 @@ pub struct VulkanContext {
     pub vertex_buffer_memory: vk::DeviceMemory,
     pub index_buffer: vk::Buffer,
     pub index_buffer_memory: vk::DeviceMemory,
+    pub uniform_buffer: vk::Buffer,
+    pub uniform_buffer_memory: vk::DeviceMemory,
     pub vertex_count: u32,
     pub index_count: u32,
     pub current_buffer_size: u64,
     pub current_index_buffer_size: u64,
+    pub uniforms: Uniforms,
     current_image_index: u32,
 }
 
@@ -146,7 +151,9 @@ impl VulkanContext {
         let render_pass = Self::create_render_pass(&device, swapchain_format);
         println!("[Vulkan] Render pass created");
 
-        let pipeline = Pipeline::new(&device, render_pass, swapchain_extent);
+        // Создаем pipeline layout с дескриптором для uniform
+        let pipeline_layout = Self::create_pipeline_layout(&device);
+        let pipeline = Pipeline::new_with_layout(&device, render_pass, swapchain_extent, pipeline_layout);
         println!("[Vulkan] Pipeline created");
 
         let framebuffers: Vec<vk::Framebuffer> = swapchain_image_views.iter().map(|&view| {
@@ -188,6 +195,18 @@ impl VulkanContext {
             &device, &instance, physical_device, &dummy_indices
         );
 
+        // Создаем uniform буфер
+        let mut uniforms = Uniforms::new();
+        let aspect = swapchain_extent.width as f32 / swapchain_extent.height as f32;
+        uniforms.projection = Mat4::orthographic(-aspect, aspect, -1.0, 1.0, 0.1, 100.0);
+        uniforms.view = Mat4::identity();
+        uniforms.model = Mat4::identity();
+
+        let (uniform_buffer, uniform_buffer_memory) = Self::create_uniform_buffer(
+            &device, &instance, physical_device, &uniforms
+        );
+        println!("[Vulkan] Uniform buffer created");
+
         let sem_info = vk::SemaphoreCreateInfo::default();
         let fence_info = vk::FenceCreateInfo::default().flags(vk::FenceCreateFlags::SIGNALED);
 
@@ -215,6 +234,7 @@ impl VulkanContext {
             swapchain_extent,
             render_pass,
             pipeline,
+            pipeline_layout,
             framebuffers,
             command_pool,
             command_buffers,
@@ -225,10 +245,13 @@ impl VulkanContext {
             vertex_buffer_memory,
             index_buffer,
             index_buffer_memory,
+            uniform_buffer,
+            uniform_buffer_memory,
             vertex_count,
             index_count,
             current_buffer_size: 0,
             current_index_buffer_size: 0,
+            uniforms,
             current_image_index: 0,
         }
     }
@@ -348,6 +371,27 @@ impl VulkanContext {
 
         unsafe { device.create_render_pass(&render_pass_info, None) }
             .expect("Failed to create Render Pass")
+    }
+
+    fn create_pipeline_layout(device: &Device) -> vk::PipelineLayout {
+        // Создаем дескриптор сет для uniform
+        let binding = vk::DescriptorSetLayoutBinding::default()
+            .binding(0)
+            .descriptor_type(vk::DescriptorType::UNIFORM_BUFFER)
+            .descriptor_count(1)
+            .stage_flags(vk::ShaderStageFlags::VERTEX);
+
+        let layout_info = vk::DescriptorSetLayoutCreateInfo::default()
+            .bindings(std::slice::from_ref(&binding));
+
+        let descriptor_set_layout = unsafe { device.create_descriptor_set_layout(&layout_info, None) }
+            .expect("Failed to create descriptor set layout");
+
+        let pipeline_layout_info = vk::PipelineLayoutCreateInfo::default()
+            .set_layouts(std::slice::from_ref(&descriptor_set_layout));
+
+        unsafe { device.create_pipeline_layout(&pipeline_layout_info, None) }
+            .expect("Failed to create pipeline layout")
     }
 
     fn find_memory_type(
@@ -477,6 +521,72 @@ impl VulkanContext {
         (index_buffer, index_buffer_memory, index_count)
     }
 
+    fn create_uniform_buffer(
+        device: &Device,
+        instance: &Instance,
+        physical_device: vk::PhysicalDevice,
+        uniforms: &Uniforms,
+    ) -> (vk::Buffer, vk::DeviceMemory) {
+        let buffer_size = std::mem::size_of::<Uniforms>() as u64;
+
+        let buffer_info = vk::BufferCreateInfo::default()
+            .size(buffer_size)
+            .usage(vk::BufferUsageFlags::UNIFORM_BUFFER)
+            .sharing_mode(vk::SharingMode::EXCLUSIVE);
+
+        let buffer = unsafe { device.create_buffer(&buffer_info, None) }
+            .expect("Failed to create uniform buffer");
+
+        let memory_requirements = unsafe { device.get_buffer_memory_requirements(buffer) };
+        let memory_type_index = Self::find_memory_type(
+            instance,
+            physical_device,
+            memory_requirements.memory_type_bits,
+            vk::MemoryPropertyFlags::HOST_VISIBLE | vk::MemoryPropertyFlags::HOST_COHERENT,
+        );
+
+        let memory_info = vk::MemoryAllocateInfo::default()
+            .allocation_size(memory_requirements.size)
+            .memory_type_index(memory_type_index);
+
+        let memory = unsafe { device.allocate_memory(&memory_info, None) }
+            .expect("Failed to allocate uniform buffer memory");
+
+        unsafe {
+            device.bind_buffer_memory(buffer, memory, 0)
+                .expect("Failed to bind uniform buffer memory");
+            
+            let data_ptr = device.map_memory(memory, 0, buffer_size, vk::MemoryMapFlags::empty())
+                .expect("Failed to map uniform memory");
+            
+            let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, buffer_size as usize);
+            let uniform_bytes: &[u8] = std::slice::from_raw_parts(
+                uniforms as *const _ as *const u8,
+                buffer_size as usize
+            );
+            slice.copy_from_slice(uniform_bytes);
+            device.unmap_memory(memory);
+        }
+
+        (buffer, memory)
+    }
+
+    fn update_uniform_buffer(&mut self, uniforms: &Uniforms) {
+        let buffer_size = std::mem::size_of::<Uniforms>() as u64;
+        unsafe {
+            let data_ptr = self.device.map_memory(self.uniform_buffer_memory, 0, buffer_size, vk::MemoryMapFlags::empty())
+                .expect("Failed to map uniform memory");
+            
+            let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, buffer_size as usize);
+            let uniform_bytes: &[u8] = std::slice::from_raw_parts(
+                uniforms as *const _ as *const u8,
+                buffer_size as usize
+            );
+            slice.copy_from_slice(uniform_bytes);
+            self.device.unmap_memory(self.uniform_buffer_memory);
+        }
+    }
+
     pub fn render_scene(&mut self, scene: &Scene) {
         if !self.begin_frame() {
             return;
@@ -485,7 +595,7 @@ impl VulkanContext {
         // Собираем все вершины и индексы из объектов
         let mut all_vertices = Vec::new();
         let mut all_indices = Vec::new();
-        let mut index_offset = 0;
+        let index_offset = 0;
 
         for object in scene.get_objects() {
             let mesh = &object.mesh;
@@ -493,7 +603,6 @@ impl VulkanContext {
             let indices = &mesh.indices;
             let color = object.color.as_array();
             
-            // Добавляем вершины с цветом
             let start_idx = all_vertices.len() / 6;
             for chunk in vertices.chunks(3) {
                 all_vertices.push(chunk[0]);
@@ -504,7 +613,6 @@ impl VulkanContext {
                 all_vertices.push(color[2]);
             }
             
-            // Добавляем индексы со смещением
             for &idx in indices {
                 all_indices.push(idx + start_idx as u32);
             }
@@ -514,6 +622,14 @@ impl VulkanContext {
             self.end_frame();
             return;
         }
+
+        // Обновляем uniform буфер с правильной проекцией
+        let aspect = self.swapchain_extent.width as f32 / self.swapchain_extent.height as f32;
+        self.uniforms.projection = Mat4::orthographic(-aspect, aspect, -1.0, 1.0, 0.1, 100.0);
+        self.uniforms.view = Mat4::identity();
+        self.uniforms.model = Mat4::identity();
+        let uniforms_copy = self.uniforms;
+        self.update_uniform_buffer(&uniforms_copy);
 
         // Обновляем вершинный буфер
         let vertex_buffer_size = (all_vertices.len() * std::mem::size_of::<f32>()) as u64;
@@ -655,6 +771,10 @@ impl VulkanContext {
             // Биндим индексный буфер
             self.device.cmd_bind_index_buffer(cmd, self.index_buffer, 0, vk::IndexType::UINT32);
             
+            // Биндим дескрипторы (uniform)
+            // Для простоты пока пропустим дескрипторы
+            // TODO: Добавить дескриптор сет и bind_descriptor_sets
+            
             // Рисуем с индексами
             self.device.cmd_draw_indexed(cmd, self.index_count, 1, 0, 0, 0);
             
@@ -715,11 +835,14 @@ impl VulkanContext {
     pub fn cleanup(&mut self) {
         unsafe {
             self.pipeline.cleanup(&self.device);
+            self.device.destroy_pipeline_layout(self.pipeline_layout, None);
             
             self.device.destroy_buffer(self.vertex_buffer, None);
             self.device.free_memory(self.vertex_buffer_memory, None);
             self.device.destroy_buffer(self.index_buffer, None);
             self.device.free_memory(self.index_buffer_memory, None);
+            self.device.destroy_buffer(self.uniform_buffer, None);
+            self.device.free_memory(self.uniform_buffer_memory, None);
             
             self.device.destroy_fence(self.fence, None);
             self.device.destroy_semaphore(self.image_available_semaphore, None);
