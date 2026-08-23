@@ -9,6 +9,17 @@ pub struct Pipeline {
 
 impl Pipeline {
     pub fn new(device: &ash::Device, render_pass: vk::RenderPass, swapchain_extent: vk::Extent2D) -> Self {
+        let layout = unsafe { device.create_pipeline_layout(&vk::PipelineLayoutCreateInfo::default(), None) }
+            .expect("Failed to create pipeline layout");
+        Self::new_with_layout(device, render_pass, swapchain_extent, layout)
+    }
+
+    pub fn new_with_layout(
+        device: &ash::Device, 
+        render_pass: vk::RenderPass, 
+        swapchain_extent: vk::Extent2D,
+        layout: vk::PipelineLayout,
+    ) -> Self {
         println!("[Pipeline] Creating pipeline...");
         
         let vert_path = "shaders/vert.spv";
@@ -33,9 +44,6 @@ impl Pipeline {
             .name(&name);
 
         let stages = [vert_stage, frag_stage];
-
-        let layout_info = vk::PipelineLayoutCreateInfo::default();
-        let layout = unsafe { device.create_pipeline_layout(&layout_info, None) }.unwrap();
 
         let binding_desc = vk::VertexInputBindingDescription::default()
             .binding(0)
@@ -62,8 +70,6 @@ impl Pipeline {
         let input_assembly = vk::PipelineInputAssemblyStateCreateInfo::default()
             .topology(vk::PrimitiveTopology::TRIANGLE_LIST);
 
-        // Вьюпорт с правильным соотношением сторон
-        let aspect = swapchain_extent.width as f32 / swapchain_extent.height as f32;
         let viewport = vk::Viewport::default()
             .x(0.0)
             .y(0.0)
@@ -151,7 +157,6 @@ impl Pipeline {
     pub fn cleanup(&self, device: &ash::Device) {
         unsafe {
             device.destroy_pipeline(self.handle, None);
-            device.destroy_pipeline_layout(self.layout, None);
         }
     }
 }

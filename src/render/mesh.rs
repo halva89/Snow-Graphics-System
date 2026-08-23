@@ -27,7 +27,7 @@ impl Mesh {
             v2.0, v2.1, 0.0,
             v3.0, v3.1, 0.0,
         ]);
-        mesh.indices.extend(&[0, 1, 2]);
+        mesh.indices.extend(&[0, 1, 2]); // Только 3 вершины, индексы 0,1,2
         mesh.vertex_count = 3;
         mesh.index_count = 3;
         mesh

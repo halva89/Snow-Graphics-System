@@ -1,6 +1,7 @@
 use crate::render::vulkan::VulkanContext;
 use crate::core::scene::Scene;
-use crate::platform::Window;
+use crate::platform::CustomWindow;
+use crate::math::Vec3;
 
 pub struct Renderer {
     vulkan: VulkanContext,
@@ -9,13 +10,17 @@ pub struct Renderer {
 }
 
 impl Renderer {
-    pub fn new(window: &Window) -> Self {
+    pub fn new(window: &CustomWindow) -> Self {
         let vulkan = VulkanContext::new(window);
         Self {
             vulkan,
             width: window.width,
             height: window.height,
         }
+    }
+
+    pub fn set_camera(&mut self, eye: Vec3, target: Vec3) {
+        self.vulkan.set_camera(eye, target);
     }
 
     pub fn render(&mut self, scene: &Scene) {

@@ -3,7 +3,7 @@ use winit::{
     event_loop::EventLoop,
     dpi::LogicalSize,
 };
-use raw_window_handle::{HasWindowHandle, HasDisplayHandle, WindowHandle, DisplayHandle};
+use raw_window_handle::{HasWindowHandle, HasDisplayHandle, RawWindowHandle, RawDisplayHandle};
 use crate::scene_parser::SceneSettings;
 use crate::platform::input::Input;
 use crate::platform::time::Time;
@@ -42,25 +42,17 @@ impl CustomWindow {
 
     pub fn poll_events(&mut self) {
         self.time.update();
-        // События не обрабатываем - окно закрывается по Ctrl+C
-        // Но оно не будет "Не отвечает", потому что мы рендерим в цикле
     }
-
-    pub fn swap_buffers(&mut self) {}
 
     pub fn should_close(&self) -> bool {
         self.should_close
     }
 
-    pub fn set_should_close(&mut self, value: bool) {
-        self.should_close = value;
+    pub fn get_raw_window_handle(&self) -> RawWindowHandle {
+        self.raw.window_handle().unwrap().as_raw()
     }
 
-    pub fn get_window_handle(&self) -> WindowHandle<'_> {
-        self.raw.window_handle().unwrap()
-    }
-
-    pub fn get_display_handle(&self) -> DisplayHandle<'_> {
-        self.raw.display_handle().unwrap()
+    pub fn get_raw_display_handle(&self) -> RawDisplayHandle {
+        self.raw.display_handle().unwrap().as_raw()
     }
 }
