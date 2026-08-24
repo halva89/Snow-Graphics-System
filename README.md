@@ -5,7 +5,7 @@
 [![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange)](https://www.rust-lang.org/)
 [![Vulkan](https://img.shields.io/badge/Vulkan-1.0%2B-red)](https://www.vulkan.org/)
 [![Windows](https://img.shields.io/badge/Windows-10%2B-blue)]([![Windows](https://img.shields.io/badge/Windows-10%2B-blue)](https://www.microsoft.com/windows))
-[![Version](https://img.shields.io/badge/Version-Lithium%20v2.1-blueviolet)](https://github.com/halva89/Snow-Graphics-System/releases)
+[![Version](https://img.shields.io/badge/Version-Beryllium%20v0.1-blueviolet)](https://github.com/halva89/Snow-Graphics-System/releases)
 [![Author](https://img.shields.io/badge/Author-Halva-blue)](https://github.com/halva89)
 
 ---
