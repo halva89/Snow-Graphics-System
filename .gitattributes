@@ -1,3 +1,8 @@
-*.md linguist-language=Markdown
 *.rs linguist-language=Rust
+*.py linguist-language=Python
+*.sgss linguist-language=SGSS
+*.md linguist-language=Markdown
 *.html linguist-language=HTML
+
+*.sgss linguist-vendored=false
+*.md linguist-documentation=true
