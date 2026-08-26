@@ -9,6 +9,7 @@ pub use animated_objects::parse_animated;
 
 use crate::render::mesh::Mesh;
 use crate::animation::AnimatedMesh;
+use crate::types::Color;
 use std::fs;
 
 pub enum SceneObject {
@@ -53,7 +54,68 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             continue;
         }
 
-        if let Some(obj) = static_objects::parse_static(line, &lines, &mut i) {
+        // ===== ОБРАБОТКА ВСЕХ ОБЪЕКТОВ =====
+        let shape = line;
+        
+        if shape == "cube" {
+            println!("[Parser] Found cube");
+            if i + 2 >= lines.len() {
+                println!("[Parser] Not enough lines for cube");
+                i += 1;
+                continue;
+            }
+            
+            let size = lines[i + 1]
+                .split_whitespace()
+                .next()
+                .unwrap_or("1.0")
+                .parse::<f32>()
+                .unwrap_or(1.0);
+                
+            let color = parse_color(lines[i + 2]);
+            
+            let mut mesh = Mesh::cube(size);
+            mesh.color = color;
+            i += 3;
+            objects.push(SceneObject::Static(mesh));
+            println!("[Parser] Cube added, size={}", size);
+            continue;
+        }
+
+        if shape == "sphere" {
+            println!("[Parser] Found sphere");
+            if i + 3 >= lines.len() {
+                println!("[Parser] Not enough lines for sphere");
+                i += 1;
+                continue;
+            }
+            
+            let radius = lines[i + 1]
+                .split_whitespace()
+                .next()
+                .unwrap_or("0.5")
+                .parse::<f32>()
+                .unwrap_or(0.5);
+                
+            let segments = lines[i + 2]
+                .split_whitespace()
+                .next()
+                .unwrap_or("16")
+                .parse::<u32>()
+                .unwrap_or(16);
+                
+            let color = parse_color(lines[i + 3]);
+            
+            let mut mesh = Mesh::sphere(radius, segments);
+            mesh.color = color;
+            i += 4;
+            objects.push(SceneObject::Static(mesh));
+            println!("[Parser] Sphere added, radius={}, segments={}", radius, segments);
+            continue;
+        }
+
+        // Остальные объекты через parse_static
+        if let Some(obj) = parse_static(line, &lines, &mut i) {
             objects.push(obj);
             println!("[Parser] Static object added");
             continue;
@@ -65,4 +127,17 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
 
     println!("[Parser] Loaded {} objects", objects.len());
     (settings, objects)
+}
+
+fn parse_color(line: &str) -> Color {
+    let parts: Vec<&str> = line.split_whitespace().collect();
+    if parts.len() >= 3 {
+        Color::new(
+            parts[0].parse().unwrap_or(1.0),
+            parts[1].parse().unwrap_or(1.0),
+            parts[2].parse().unwrap_or(1.0),
+        )
+    } else {
+        Color::white()
+    }
 }

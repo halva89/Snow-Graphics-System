@@ -4,13 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-winit = "0.30.0"
+winit = "0.30.0" # он мне руинит ввод
 ash = "0.38.0"
 ash-window = "0.13.0"
 raw-window-handle = "0.6.0"
 log = "0.4"
 env_logger = "0.10"
-# rayon = "1.7.0"
+rayon = "1.7.0" # эта собака руинит мне многопоточку
+
+rapier3d = "0.18.0"
+nalgebra = "0.32"  # эта собака руинит мне физику
 
 [[bin]]
 name = "snow_graphics"

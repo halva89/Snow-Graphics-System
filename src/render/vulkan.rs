@@ -6,6 +6,7 @@ use crate::render::Uniforms;
 use crate::core::scene::Scene;
 use crate::math::{Mat4, Vec3};
 use std::ffi::CString;
+use rayon::prelude::*;
 
 pub struct VulkanContext {
     pub entry: Entry,
@@ -759,35 +760,40 @@ impl VulkanContext {
             self.index_count = all_indices.len() as u32;
         }
 
-        unsafe {
-            let data_ptr = self.device.map_memory(self.vertex_buffer_memory, 0, vertex_buffer_size, vk::MemoryMapFlags::empty())
-                .expect("Failed to map vertex memory");
-            
-            let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, vertex_buffer_size as usize);
-            let vertex_bytes: &[u8] = std::slice::from_raw_parts(
-                all_vertices.as_ptr() as *const u8, 
-                vertex_buffer_size as usize
-            );
-            slice.copy_from_slice(vertex_bytes);
-            self.device.unmap_memory(self.vertex_buffer_memory);
-        }
+        // Параллельное копирование данных
+        rayon::join(
+            || {
+                unsafe {
+                    let data_ptr = self.device.map_memory(self.vertex_buffer_memory, 0, vertex_buffer_size, vk::MemoryMapFlags::empty())
+                        .expect("Failed to map vertex memory");
+                    
+                    let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, vertex_buffer_size as usize);
+                    let vertex_bytes: &[u8] = std::slice::from_raw_parts(
+                        all_vertices.as_ptr() as *const u8, 
+                        vertex_buffer_size as usize
+                    );
+                    slice.copy_from_slice(vertex_bytes);
+                    self.device.unmap_memory(self.vertex_buffer_memory);
+                }
+            },
+            || {
+                unsafe {
+                    let data_ptr = self.device.map_memory(self.index_buffer_memory, 0, index_buffer_size, vk::MemoryMapFlags::empty())
+                        .expect("Failed to map index memory");
+                    
+                    let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, index_buffer_size as usize);
+                    let index_bytes: &[u8] = std::slice::from_raw_parts(
+                        all_indices.as_ptr() as *const u8, 
+                        index_buffer_size as usize
+                    );
+                    slice.copy_from_slice(index_bytes);
+                    self.device.unmap_memory(self.index_buffer_memory);
+                }
+            }
+        );
 
-        unsafe {
-            let data_ptr = self.device.map_memory(self.index_buffer_memory, 0, index_buffer_size, vk::MemoryMapFlags::empty())
-                .expect("Failed to map index memory");
-            
-            let slice = std::slice::from_raw_parts_mut(data_ptr as *mut u8, index_buffer_size as usize);
-            let index_bytes: &[u8] = std::slice::from_raw_parts(
-                all_indices.as_ptr() as *const u8, 
-                index_buffer_size as usize
-            );
-            slice.copy_from_slice(index_bytes);
-            self.device.unmap_memory(self.index_buffer_memory);
-        }
-
-        // ======== МНОГОПОТОЧНАЯ ЗАПИСЬ COMMAND BUFFERS ========
-        // ВСЕГО 3 СТРОКИ КОДА:
-        self.command_buffers.iter().enumerate().for_each(|(i, &cmd)| {
+        // Параллельная запись command buffers
+        self.command_buffers.par_iter().enumerate().for_each(|(i, &cmd)| {
             unsafe {
                 self.device.reset_command_buffer(cmd, vk::CommandBufferResetFlags::empty()).unwrap();
                 self.device.begin_command_buffer(cmd, &vk::CommandBufferBeginInfo::default()).unwrap();

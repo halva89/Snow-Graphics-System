@@ -4,6 +4,7 @@ use crate::platform::CustomWindow;
 use crate::scene_parser::{SceneSettings, SceneObject};
 use crate::animation::Animator;
 use crate::math::Vec3;
+use winit::keyboard::KeyCode;
 
 pub struct Engine {
     scene: Scene,
@@ -13,7 +14,6 @@ pub struct Engine {
     is_running: bool,
     camera_pos: Vec3,
     camera_target: Vec3,
-    frame_count: u32,
 }
 
 impl Engine {
@@ -31,7 +31,6 @@ impl Engine {
             is_running: true,
             camera_pos: Vec3::new(0.0, 0.0, 5.0),
             camera_target: Vec3::zero(),
-            frame_count: 0,
         }
     }
 
@@ -49,12 +48,44 @@ impl Engine {
         println!("Engine started");
         println!("Objects in scene: {}", self.scene.len());
 
-        while !self.window.should_close() {
+        // Бесконечный цикл — закрываем через Ctrl+C
+        loop {
             self.window.poll_events();
             
-            // Камера статична
+            // Управление камерой
+            let speed = 3.0 * self.window.time.delta();
+            let forward = (self.camera_target - self.camera_pos).normalize();
+            let right = forward.cross(&Vec3::new(0.0, 0.0, 1.0)).normalize();
+            
+            // Используем стрелки для управления
+            if self.window.input.is_key_pressed(KeyCode::KeyW) {
+                self.camera_pos = self.camera_pos + forward * speed;
+                self.camera_target = self.camera_target + forward * speed;
+            }
+            if self.window.input.is_key_pressed(KeyCode::KeyS) {
+                self.camera_pos = self.camera_pos - forward * speed;
+                self.camera_target = self.camera_target - forward * speed;
+            }
+            if self.window.input.is_key_pressed(KeyCode::KeyA) {
+                self.camera_pos = self.camera_pos - right * speed;
+                self.camera_target = self.camera_target - right * speed;
+            }
+            if self.window.input.is_key_pressed(KeyCode::KeyD) {
+                self.camera_pos = self.camera_pos + right * speed;
+                self.camera_target = self.camera_target + right * speed;
+            }
+            if self.window.input.is_key_pressed(KeyCode::KeyQ) {
+                self.camera_pos.z += speed;
+                self.camera_target.z += speed;
+            }
+            if self.window.input.is_key_pressed(KeyCode::KeyE) {
+                self.camera_pos.z -= speed;
+                self.camera_target.z -= speed;
+            }
+            
             self.renderer.set_camera(self.camera_pos, self.camera_target);
             
+            // Обновляем анимации
             for object in self.scene.get_objects_mut() {
                 if object.is_animated {
                     self.animator.apply(&mut object.transform, "main");
@@ -62,11 +93,7 @@ impl Engine {
             }
             
             self.renderer.render(&self.scene);
-            self.frame_count += 1;
         }
-
-        self.shutdown();
-        println!("Engine stopped");
     }
 
     pub fn shutdown(&mut self) {

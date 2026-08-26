@@ -5,7 +5,14 @@ use crate::types::Color;
 pub fn parse_static(line: &str, lines: &[&str], i: &mut usize) -> Option<SceneObject> {
     println!("[StaticParser] Parsing: '{}'", line);
     
-    if line == "triangle" {
+    let parts: Vec<&str> = line.split_whitespace().collect();
+    if parts.is_empty() {
+        return None;
+    }
+    
+    let shape = parts[0];
+    
+    if shape == "triangle" {
         println!("[StaticParser] Found triangle");
         if *i + 4 >= lines.len() {
             println!("[StaticParser] Not enough lines for triangle");
@@ -17,29 +24,24 @@ pub fn parse_static(line: &str, lines: &[&str], i: &mut usize) -> Option<SceneOb
         let v3 = parse_vec2(lines[*i + 3]);
         let color = parse_color(lines[*i + 4]);
         
-        println!("[StaticParser] Triangle: v1={:?}, v2={:?}, v3={:?}, color={:?}", v1, v2, v3, color);
-        
         let mut mesh = Mesh::triangle(v1, v2, v3);
         mesh.color = color;
         *i += 5;
         return Some(SceneObject::Static(mesh));
     }
 
-    if line == "square" {
+    if shape == "square" {
         println!("[StaticParser] Found square");
         if *i + 2 >= lines.len() {
-            println!("[StaticParser] Not enough lines for square");
             return None;
         }
         
-        let parts: Vec<&str> = lines[*i + 1].split_whitespace().collect();
-        if parts.len() >= 3 {
-            let x = parts[0].parse().unwrap_or(0.0);
-            let y = parts[1].parse().unwrap_or(0.0);
-            let size = parts[2].parse().unwrap_or(0.5);
+        let parts_line: Vec<&str> = lines[*i + 1].split_whitespace().collect();
+        if parts_line.len() >= 3 {
+            let x = parts_line[0].parse().unwrap_or(0.0);
+            let y = parts_line[1].parse().unwrap_or(0.0);
+            let size = parts_line[2].parse().unwrap_or(0.5);
             let color = parse_color(lines[*i + 2]);
-            
-            println!("[StaticParser] Square: x={}, y={}, size={}", x, y, size);
             
             let mut mesh = Mesh::square(x, y, size);
             mesh.color = color;
@@ -48,22 +50,19 @@ pub fn parse_static(line: &str, lines: &[&str], i: &mut usize) -> Option<SceneOb
         }
     }
 
-    if line == "circle" {
+    if shape == "circle" {
         println!("[StaticParser] Found circle");
         if *i + 2 >= lines.len() {
-            println!("[StaticParser] Not enough lines for circle");
             return None;
         }
         
-        let parts: Vec<&str> = lines[*i + 1].split_whitespace().collect();
-        if parts.len() >= 4 {
-            let cx = parts[0].parse().unwrap_or(0.0);
-            let cy = parts[1].parse().unwrap_or(0.0);
-            let radius = parts[2].parse().unwrap_or(0.3);
-            let segments = parts[3].parse().unwrap_or(16);
+        let parts_line: Vec<&str> = lines[*i + 1].split_whitespace().collect();
+        if parts_line.len() >= 4 {
+            let cx = parts_line[0].parse().unwrap_or(0.0);
+            let cy = parts_line[1].parse().unwrap_or(0.0);
+            let radius = parts_line[2].parse().unwrap_or(0.3);
+            let segments = parts_line[3].parse().unwrap_or(16);
             let color = parse_color(lines[*i + 2]);
-            
-            println!("[StaticParser] Circle: cx={}, cy={}, radius={}, segments={}", cx, cy, radius, segments);
             
             let mut mesh = Mesh::circle(cx, cy, radius, segments);
             mesh.color = color;

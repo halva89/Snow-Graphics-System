@@ -42,10 +42,15 @@ impl CustomWindow {
 
     pub fn poll_events(&mut self) {
         self.time.update();
+        // Без событий — просто обновляем время
     }
 
     pub fn should_close(&self) -> bool {
         self.should_close
+    }
+
+    pub fn set_should_close(&mut self, value: bool) {
+        self.should_close = value;
     }
 
     pub fn get_raw_window_handle(&self) -> RawWindowHandle {
