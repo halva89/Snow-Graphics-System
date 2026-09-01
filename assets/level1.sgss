@@ -1,15 +1,7 @@
 window 800 600
-title "Snow Graphics System - 3D Test"
-
+title "Test"
+render_mode heavy
+camera true
 cube
 1.0
 1.0 0.0 0.0
-
-sphere
-0.5
-16
-0.0 1.0 0.0
-
-square
-0 0 2
-1 0 0

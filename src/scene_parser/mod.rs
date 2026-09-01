@@ -3,7 +3,7 @@ pub mod static_objects;
 pub mod animated_objects;
 pub mod mesh_loader;
 
-pub use scene_settings::SceneSettings;
+pub use scene_settings::{SceneSettings, RenderMode};
 pub use static_objects::parse_static;
 pub use animated_objects::parse_animated;
 

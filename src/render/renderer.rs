@@ -10,8 +10,8 @@ pub struct Renderer {
 }
 
 impl Renderer {
-    pub fn new(window: &CustomWindow) -> Self {
-        let vulkan = VulkanContext::new(window);
+    pub fn new(window: &CustomWindow, prefer_discrete: bool) -> Self {
+        let vulkan = VulkanContext::new(window, prefer_discrete);
         Self {
             vulkan,
             width: window.width,
@@ -23,17 +23,11 @@ impl Renderer {
         self.vulkan.set_camera(eye, target);
     }
 
-    pub fn render(&mut self, scene: &Scene) {
-        self.vulkan.render_scene(scene);
-    }
-
-    pub fn resize(&mut self, width: u32, height: u32) {
-        self.width = width;
-        self.height = height;
+    pub fn render(&mut self, scene: &Scene, w: u32, h: u32) {
+        self.vulkan.render_scene(scene, w, h);
     }
 
     pub fn cleanup(&mut self) {
         self.vulkan.cleanup();
-        println!("Renderer cleaned up");
     }
 }

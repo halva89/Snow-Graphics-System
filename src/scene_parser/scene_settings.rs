@@ -1,7 +1,21 @@
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum RenderMode {
+    Light,
+    Heavy,
+}
+
+impl Default for RenderMode {
+    fn default() -> Self {
+        Self::Light
+    }
+}
+
 pub struct SceneSettings {
     pub title: String,
     pub width: u32,
     pub height: u32,
+    pub render_mode: RenderMode,
+    pub camera_enabled: bool,
 }
 
 impl Default for SceneSettings {
@@ -10,6 +24,8 @@ impl Default for SceneSettings {
             title: "Snow Graphics System".to_string(),
             width: 800,
             height: 600,
+            render_mode: RenderMode::Light,
+            camera_enabled: true,
         }
     }
 }
@@ -52,7 +68,35 @@ pub fn parse_settings(lines: &[&str], i: &mut usize) -> SceneSettings {
             continue;
         }
 
-        if line == "triangle" || line == "square" || line == "circle" || line.starts_with("animate") {
+        if line.starts_with("render_mode") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                match parts[1] {
+                    "heavy" | "Heavy" | "HEAVY" => {
+                        settings.render_mode = RenderMode::Heavy;
+                        println!("[SettingsParser] Render mode: Heavy (discrete GPU)");
+                    }
+                    _ => {
+                        settings.render_mode = RenderMode::Light;
+                        println!("[SettingsParser] Render mode: Light (integrated GPU)");
+                    }
+                }
+            }
+            *i += 1;
+            continue;
+        }
+
+        if line.starts_with("camera") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                settings.camera_enabled = parts[1] == "true" || parts[1] == "1" || parts[1] == "on";
+                println!("[SettingsParser] Camera enabled: {}", settings.camera_enabled);
+            }
+            *i += 1;
+            continue;
+        }
+
+        if line == "triangle" || line == "square" || line == "circle" || line == "cube" || line == "sphere" || line.starts_with("animate") {
             println!("[SettingsParser] Found shape, stopping settings parse");
             break;
         }
