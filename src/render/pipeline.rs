@@ -95,6 +95,11 @@ impl Pipeline {
         let multisample = vk::PipelineMultisampleStateCreateInfo::default()
             .rasterization_samples(vk::SampleCountFlags::TYPE_1);
 
+        let depth_stencil = vk::PipelineDepthStencilStateCreateInfo::default()
+            .depth_test_enable(true)
+            .depth_write_enable(true)
+            .depth_compare_op(vk::CompareOp::LESS);
+
         let color_blend_attachment = vk::PipelineColorBlendAttachmentState::default()
             .color_write_mask(vk::ColorComponentFlags::RGBA)
             .blend_enable(false);
@@ -109,6 +114,7 @@ impl Pipeline {
             .viewport_state(&viewport_state)
             .rasterization_state(&rasterizer)
             .multisample_state(&multisample)
+            .depth_stencil_state(&depth_stencil)
             .color_blend_state(&color_blend)
             .layout(layout)
             .render_pass(render_pass)

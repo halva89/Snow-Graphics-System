@@ -20,6 +20,7 @@ impl Mesh {
         }
     }
 
+    // 2D примитивы
     pub fn triangle(v1: (f32, f32), v2: (f32, f32), v3: (f32, f32)) -> Self {
         let mut mesh = Self::new();
         mesh.vertices.extend(&[
@@ -27,7 +28,7 @@ impl Mesh {
             v2.0, v2.1, 0.0,
             v3.0, v3.1, 0.0,
         ]);
-        mesh.indices.extend(&[0, 1, 2]); // Только 3 вершины, индексы 0,1,2
+        mesh.indices.extend(&[0, 1, 2]);
         mesh.vertex_count = 3;
         mesh.index_count = 3;
         mesh
@@ -52,10 +53,7 @@ impl Mesh {
         let mut mesh = Self::new();
         let segments = segments.max(3);
 
-        // Центр
         mesh.vertices.extend(&[cx, cy, 0.0]);
-
-        // Вершины по окружности
         for i in 0..=segments {
             let angle = (i as f32 / segments as f32) * std::f32::consts::TAU;
             mesh.vertices.extend(&[
@@ -65,7 +63,6 @@ impl Mesh {
             ]);
         }
 
-        // Индексы треугольников (веер)
         for i in 0..segments {
             let current = i + 1;
             let next = if i == segments - 1 { 1 } else { i + 2 };
@@ -74,45 +71,38 @@ impl Mesh {
 
         mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
         mesh.index_count = mesh.indices.len() as u32;
-        
         mesh
     }
 
-    pub fn from_animated(anim: crate::animation::AnimatedMesh) -> Self {
-        let mut mesh = Self::new();
-        mesh.vertices = anim.vertices;
-        mesh.indices = anim.indices;
-        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
-        mesh.index_count = mesh.indices.len() as u32;
-        mesh
-    }
-
+    // 3D примитивы
     pub fn cube(size: f32) -> Self {
         let half = size / 2.0;
         let mut mesh = Self::new();
         
+        // 8 вершин куба
         let v = [
-            [-half, -half, -half],
-            [ half, -half, -half],
-            [ half,  half, -half],
-            [-half,  half, -half],
-            [-half, -half,  half],
-            [ half, -half,  half],
-            [ half,  half,  half],
-            [-half,  half,  half],
+            [-half, -half, -half], // 0
+            [ half, -half, -half], // 1
+            [ half,  half, -half], // 2
+            [-half,  half, -half], // 3
+            [-half, -half,  half], // 4
+            [ half, -half,  half], // 5
+            [ half,  half,  half], // 6
+            [-half,  half,  half], // 7
         ];
 
         for vert in v.iter() {
             mesh.vertices.extend(&[vert[0], vert[1], vert[2]]);
         }
 
+        // Индексы для 6 граней (по 2 треугольника на грань)
         let faces = [
-            [0, 1, 2, 0, 2, 3],
-            [4, 6, 5, 4, 7, 6],
-            [1, 5, 6, 1, 6, 2],
-            [0, 3, 7, 0, 7, 4],
-            [3, 2, 6, 3, 6, 7],
-            [0, 4, 5, 0, 5, 1],
+            [0, 1, 2, 0, 2, 3], // front
+            [4, 6, 5, 4, 7, 6], // back
+            [1, 5, 6, 1, 6, 2], // right
+            [0, 3, 7, 0, 7, 4], // left
+            [3, 2, 6, 3, 6, 7], // top
+            [0, 4, 5, 0, 5, 1], // bottom
         ];
 
         for face in faces.iter() {
@@ -123,6 +113,52 @@ impl Mesh {
 
         mesh.vertex_count = 8;
         mesh.index_count = 36;
+        mesh
+    }
+
+    pub fn sphere(radius: f32, segments: u32) -> Self {
+        let mut mesh = Self::new();
+        let segments = segments.max(3);
+        let rings = segments / 2;
+
+        // Вершины
+        for j in 0..=rings {
+            let phi = (j as f32 / rings as f32) * std::f32::consts::PI;
+            for i in 0..=segments {
+                let theta = (i as f32 / segments as f32) * std::f32::consts::TAU;
+                
+                let x = radius * phi.sin() * theta.cos();
+                let y = radius * phi.cos();
+                let z = radius * phi.sin() * theta.sin();
+                
+                mesh.vertices.extend(&[x, y, z]);
+            }
+        }
+
+        // Индексы
+        for j in 0..rings {
+            for i in 0..segments {
+                let a = j * (segments + 1) + i;
+                let b = a + segments + 1;
+                let c = a + 1;
+                let d = b + 1;
+
+                mesh.indices.extend(&[a, b, c]);
+                mesh.indices.extend(&[c, b, d]);
+            }
+        }
+
+        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
+        mesh.index_count = mesh.indices.len() as u32;
+        mesh
+    }
+
+    pub fn from_animated(anim: crate::animation::AnimatedMesh) -> Self {
+        let mut mesh = Self::new();
+        mesh.vertices = anim.vertices;
+        mesh.indices = anim.indices;
+        mesh.vertex_count = (mesh.vertices.len() / 3) as u32;
+        mesh.index_count = mesh.indices.len() as u32;
         mesh
     }
 }

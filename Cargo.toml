@@ -10,7 +10,12 @@ ash-window = "0.13.0"
 raw-window-handle = "0.6.0"
 log = "0.4"
 env_logger = "0.10"
-# rayon = "1.7.0"
+rayon = "1.7.0"
+
+rapier3d = "0.18.0"
+nalgebra = "0.32"
+
+image = "0.25"
 
 [[bin]]
 name = "snow_graphics"
