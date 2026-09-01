@@ -40,17 +40,8 @@ impl Engine {
     }
 
     pub fn add_objects(&mut self, objects: Vec<SceneObject>) {
-        let positions = [
-            (0.0, 0.0, 0.0),   // cube
-            (1.2, 0.0, 0.0),   // sphere
-            (-2.0, 0.0, 0.5),  // square
-        ];
-        for (i, obj) in objects.into_iter().enumerate() {
+        for obj in objects {
             self.scene.add_object(obj);
-            if let Some(pos) = positions.get(i) {
-                let last = self.scene.get_objects_mut().len() - 1;
-                self.scene.get_objects_mut()[last].set_position(pos.0, pos.1, pos.2);
-            }
         }
     }
 

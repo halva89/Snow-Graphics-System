@@ -14,12 +14,13 @@ pub struct Object {
 impl Object {
     pub fn from(scene_obj: SceneObject) -> Self {
         match scene_obj {
-            SceneObject::Static(mesh) => {
+            SceneObject::Static(mesh, position) => {
                 let color = mesh.color;
-                println!("[Object] Creating static with color: {:?}, vertices: {:?}", color, mesh.vertices);
+                let mut transform = Transform::default();
+                transform.set_position(position.x, position.y, position.z);
                 Self {
                     mesh,
-                    transform: Transform::default(),
+                    transform,
                     is_animated: false,
                     color,
                     name: String::from("Static"),
