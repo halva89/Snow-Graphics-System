@@ -11,6 +11,7 @@ pub struct AnimatedMesh {
     pub indices: Vec<u32>,
     pub keyframes: Vec<Keyframe>,
     pub duration: f32,
+    pub name: String,
 }
 
 impl AnimatedMesh {
@@ -20,6 +21,7 @@ impl AnimatedMesh {
             indices: Vec::new(),
             keyframes: Vec::new(),
             duration: 1.0,
+            name: String::new(),
         }
     }
 }

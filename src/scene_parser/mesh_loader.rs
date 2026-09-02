@@ -30,11 +30,19 @@ pub fn load_obj(path: &str) -> Option<LoadedMesh> {
                 pos_temp.push([x, y, z]);
             }
             "f" => {
-                // Face: can be "f v1 v2 v3" or "f v1/t1 v2/t2 v3/t3" or "f v1//n1 v2//n2 v3//n3"
+                let mut face_indices: Vec<u32> = Vec::new();
                 for i in 1..parts.len() {
                     let idx_str = parts[i].split('/').next().unwrap_or("");
                     if let Ok(idx) = idx_str.parse::<u32>() {
-                        ind_temp.push(idx.wrapping_sub(1));
+                        face_indices.push(idx.wrapping_sub(1));
+                    }
+                }
+                if face_indices.len() >= 3 {
+                    let first = face_indices[0];
+                    for i in 1..face_indices.len() - 1 {
+                        ind_temp.push(first);
+                        ind_temp.push(face_indices[i]);
+                        ind_temp.push(face_indices[i + 1]);
                     }
                 }
             }

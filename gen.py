@@ -4,7 +4,7 @@ def generate_grid():
     rows = 100
     cols = 100
     radius = 12
-    segments = 6
+    segments = 2048
     
     print("window 1920 1080")
     print('title "Snow Graphics System - 16384 Circles"')

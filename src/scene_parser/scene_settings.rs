@@ -96,7 +96,7 @@ pub fn parse_settings(lines: &[&str], i: &mut usize) -> SceneSettings {
             continue;
         }
 
-        if line == "triangle" || line == "square" || line == "circle" || line == "cube" || line == "sphere" || line.starts_with("animate") {
+        if line == "triangle" || line == "square" || line == "circle" || line == "cube" || line == "sphere" || line == "mesh" || line.starts_with("position") || line.starts_with("animate") {
             println!("[SettingsParser] Found shape, stopping settings parse");
             break;
         }

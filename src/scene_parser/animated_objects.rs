@@ -62,6 +62,7 @@ pub fn parse_animated(lines: &[&str], i: &mut usize) -> Option<SceneObject> {
     }
 
     let mut mesh = AnimatedMesh::new();
+    mesh.name = format!("anim_{}", shape_type);
     mesh.keyframes = keyframes;
     mesh.duration = mesh.keyframes.last().unwrap().time;
 

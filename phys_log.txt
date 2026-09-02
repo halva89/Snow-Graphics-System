@@ -1,0 +1,376 @@
+[Parser] Loading scene: assets/level1.sgss
+[Parser] Read 16 lines
+[Parser] Line 0: 'window 800 600'
+[SettingsParser] Parsing settings...
+[SettingsParser] Line: 'window 800 600'
+[SettingsParser] Window: 800x600
+[SettingsParser] Line: 'title Physics Test'
+[SettingsParser] Title: 'Physics Test'
+[SettingsParser] Line: 'render_mode light'
+[SettingsParser] Render mode: Light (integrated GPU)
+[SettingsParser] Line: 'camera true'
+[SettingsParser] Camera enabled: true
+[SettingsParser] Line: ''
+[SettingsParser] Line: 'position 0 5 0'
+[SettingsParser] Found shape, stopping settings parse
+[Parser] Line 5: 'position 0 5 0'
+[Parser] Line 6: 'physics: m=1, f=0.5, p=1'
+[Parser] Line 7: 'cube'
+[Parser] Line 10: ''
+[Parser] Line 11: 'position 0 0 0'
+[Parser] Line 12: 'physics: m=0, f=0, p=1'
+[Parser] Line 13: 'cube'
+[Parser] Loaded 2 objects
+[Physics] add_body pos=(0,5,0) half=(0.5,0.5,0.5) mass=1 rest=0.5
+[Physics] Dynamic body created
+[Physics] add_body pos=(0,0,0) half=(0.5,0.5,0.5) mass=0 rest=0
+[Physics] Static body created
+[Engine] Starting event loop
+[Vulkan] Starting initialization...
+[Pipeline] Creating pipeline...
+[Pipeline] Pipeline created successfully!
+[Engine] Window + Vulkan ready
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.9982967
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.993869
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.9867153
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.976837
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.9642344
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.948906
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.930853
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.910075
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.886572
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.8603435
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.8313904
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.799712
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.765309
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.728181
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.688328
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.6457496
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.6004467
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.5524187
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.5016656
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.4481874
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.3919845
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.333056
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.271403
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.207025
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.1399217
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=4.0700936
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.9975407
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.9222627
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.8442595
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.7635314
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.6800785
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.5939004
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.5049975
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.4133697
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.3190165
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.2219384
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.1221352
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=3.019607
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.914354
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.806376
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.695673
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.582245
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.466092
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.3472142
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.225611
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=2.1012828
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.9742297
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.8444517
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.7119486
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.5767206
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.4387676
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2980895
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1546863
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0085582
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=0.859705
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0024477
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0409213
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0766699
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1096934
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.139992
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1675656
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1924142
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2145379
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2339364
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.25061
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2645586
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2757822
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2842808
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2900543
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2931029
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2934265
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2910252
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2858987
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2780472
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2674708
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2541695
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2381431
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.2193916
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1979152
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1737138
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.1467874
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.117136
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0847596
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0496582
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0448437
+[Physics] Body 1 pos: y=0
+[Physics] step bodies=2
+[Physics] step done
+[Physics] Body 0 pos: y=1.0353054
+[Physics] Body 1 pos: y=0

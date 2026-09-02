@@ -12,9 +12,11 @@ use crate::animation::AnimatedMesh;
 use crate::types::Color;
 use crate::math::Vec3;
 use std::fs;
+use crate::scene_parser::mesh_loader::load_obj;
+use crate::physics::PhysicsProps;
 
 pub enum SceneObject {
-    Static(Mesh, Vec3),
+    Static(Mesh, Vec3, PhysicsProps),
     Animated(AnimatedMesh),
 }
 
@@ -31,6 +33,7 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
     let mut objects = Vec::new();
     let mut i = 0;
     let mut pending_pos: Option<Vec3> = None;
+    let mut pending_phys: Option<PhysicsProps> = None;
 
     while i < lines.len() {
         let line = lines[i].trim();
@@ -65,7 +68,29 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             continue;
         }
 
+        if line.starts_with("physics") {
+            let mut p = PhysicsProps::new();
+            let val = line.split(':').nth(1).unwrap_or("");
+            for part in val.split(',') {
+                let kv: Vec<&str> = part.trim().split('=').collect();
+                if kv.len() != 2 { continue; }
+                let v = kv[1].trim().trim_end_matches('g').trim();
+                if let Ok(n) = v.parse::<f32>() {
+                    match kv[0].trim() {
+                        "m" | "mass" => p.mass = n,
+                        "f" | "restitution" | "elasticity" => p.restitution = n,
+                        "p" | "density" => p.density = n,
+                        _ => {}
+                    }
+                }
+            }
+            pending_phys = Some(p);
+            i += 1;
+            continue;
+        }
+
         let pos = pending_pos.take().unwrap_or(Vec3::zero());
+        let phys = pending_phys.take().unwrap_or(PhysicsProps::new());
         let shape = line;
 
         if shape == "cube" {
@@ -75,7 +100,7 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::cube(size);
             mesh.color = color;
             i += 3;
-            objects.push(SceneObject::Static(mesh, pos));
+            objects.push(SceneObject::Static(mesh, pos, phys));
             continue;
         }
 
@@ -87,11 +112,40 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::sphere(radius, segments);
             mesh.color = color;
             i += 4;
-            objects.push(SceneObject::Static(mesh, pos));
+            objects.push(SceneObject::Static(mesh, pos, phys));
             continue;
         }
 
-        if let Some(obj) = parse_static(line, &lines, &mut i, pos) {
+        if shape.starts_with("mesh") || shape == "mesh" {
+            let path = shape.strip_prefix("mesh").unwrap_or("").trim().trim_matches('"');
+            if path.is_empty() && i + 1 < lines.len() {
+                let p = lines[i + 1].trim().trim_matches('"');
+                i += 1;
+                if let Some(loaded) = load_obj(p) {
+                    let mut m = loaded.mesh;
+                    if i + 1 < lines.len() {
+                        let c = parse_color(lines[i + 1]);
+                        m.color = c;
+                        i += 1;
+                    }
+                    objects.push(SceneObject::Static(m, pos, phys.clone()));
+                }
+            } else if !path.is_empty() {
+                if let Some(loaded) = load_obj(path) {
+                    let mut m = loaded.mesh;
+                    if i + 1 < lines.len() {
+                        let c = parse_color(lines[i + 1]);
+                        m.color = c;
+                        i += 1;
+                    }
+                    objects.push(SceneObject::Static(m, pos, phys.clone()));
+                }
+            }
+            i += 1;
+            continue;
+        }
+
+        if let Some(obj) = parse_static(line, &lines, &mut i, pos, phys) {
             objects.push(obj);
             continue;
         }
