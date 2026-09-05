@@ -3,7 +3,11 @@ use crate::scene_parser::SceneObject;
 use crate::types::Color;
 use crate::math::Vec3;
 
+<<<<<<< Updated upstream
 pub fn parse_static(line: &str, lines: &[&str], i: &mut usize, position: Vec3) -> Option<SceneObject> {
+=======
+pub fn parse_static(line: &str, lines: &[&str], i: &mut usize, position: Vec3, phys: Option<PhysicsProps>) -> Option<SceneObject> {
+>>>>>>> Stashed changes
     println!("[StaticParser] Parsing: '{}'", line);
     
     let parts: Vec<&str> = line.split_whitespace().collect();

@@ -116,24 +116,24 @@ impl Mat4 {
         unsafe { &*(self.data.as_ptr() as *const [f32; 16]) }
     }
 
-    // Ортографическая проекция для 2D
+    // Ортографическая проекция для Vulkan (z range: 0..1, Y-flip для совместимости с окном)
     pub fn orthographic(left: f32, right: f32, bottom: f32, top: f32, near: f32, far: f32) -> Self {
         Self {
             data: [
                 [2.0 / (right - left), 0.0, 0.0, -(right + left) / (right - left)],
-                [0.0, 2.0 / (top - bottom), 0.0, -(top + bottom) / (top - bottom)],
-                [0.0, 0.0, -2.0 / (far - near), -(far + near) / (far - near)],
+                [0.0, -2.0 / (top - bottom), 0.0, (top + bottom) / (top - bottom)],
+                [0.0, 0.0, 1.0 / (far - near), -near / (far - near)],
                 [0.0, 0.0, 0.0, 1.0],
             ],
         }
     }
 
-    // Перспективная проекция для Vulkan (z range: 0..1, а не -1..1)
+    // Перспективная проекция для Vulkan (z range: 0..1, Y-flip)
     pub fn perspective(fov: f32, aspect: f32, near: f32, far: f32) -> Self {
         let tan_half_fov = (fov / 2.0).tan();
         let mut result = Self::zero();
         result.data[0][0] = 1.0 / (aspect * tan_half_fov);
-        result.data[1][1] = 1.0 / tan_half_fov;
+        result.data[1][1] = -1.0 / tan_half_fov;
         result.data[2][2] = far / (near - far);
         result.data[2][3] = -(far * near) / (far - near);
         result.data[3][2] = -1.0;

@@ -14,7 +14,11 @@ use crate::math::Vec3;
 use std::fs;
 
 pub enum SceneObject {
+<<<<<<< Updated upstream
     Static(Mesh, Vec3),
+=======
+    Static(Mesh, Vec3, Option<PhysicsProps>),
+>>>>>>> Stashed changes
     Animated(AnimatedMesh),
 }
 
@@ -66,6 +70,10 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
         }
 
         let pos = pending_pos.take().unwrap_or(Vec3::zero());
+<<<<<<< Updated upstream
+=======
+        let phys = pending_phys.take();
+>>>>>>> Stashed changes
         let shape = line;
 
         if shape == "cube" {
@@ -75,7 +83,11 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::cube(size);
             mesh.color = color;
             i += 3;
+<<<<<<< Updated upstream
             objects.push(SceneObject::Static(mesh, pos));
+=======
+            objects.push(SceneObject::Static(mesh, pos, phys.clone()));
+>>>>>>> Stashed changes
             continue;
         }
 
@@ -87,7 +99,11 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::sphere(radius, segments);
             mesh.color = color;
             i += 4;
+<<<<<<< Updated upstream
             objects.push(SceneObject::Static(mesh, pos));
+=======
+            objects.push(SceneObject::Static(mesh, pos, phys.clone()));
+>>>>>>> Stashed changes
             continue;
         }
 

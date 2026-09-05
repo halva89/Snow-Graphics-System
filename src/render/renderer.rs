@@ -23,8 +23,12 @@ impl Renderer {
         self.vulkan.set_camera(eye, target);
     }
 
-    pub fn render(&mut self, scene: &Scene, w: u32, h: u32) {
-        self.vulkan.render_scene(scene, w, h);
+    pub fn set_wireframe(&mut self, on: bool) {
+        self.vulkan.set_wireframe(on);
+    }
+
+    pub fn render(&mut self, scene: &Scene, w: u32, h: u32, hover: u8) {
+        self.vulkan.render_scene(scene, w, h, hover);
     }
 
     pub fn cleanup(&mut self) {

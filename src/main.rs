@@ -4,7 +4,8 @@ use snow_graphics::physics::PhysicsWorld;
 use rapier3d::na::vector;  // <-- ЭТО
 
 fn main() {
-    let (settings, objects) = load_scene("assets/level1.sgss");
+    let path = std::env::args().nth(1).unwrap_or_else(|| "assets/level1.sgss".to_string());
+    let (settings, objects) = load_scene(&path);
     let mut engine = Engine::new(settings);
     engine.add_objects(objects);
     

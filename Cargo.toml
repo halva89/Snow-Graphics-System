@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-winit = "0.30.0"
+glfw = "0.58"
 ash = "0.38.0"
 ash-window = "0.13.0"
 raw-window-handle = "0.6.0"
@@ -16,6 +16,9 @@ rapier3d = "0.18.0"
 nalgebra = "0.32"
 
 image = "0.25"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.52", features = ["Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse", "Win32_Foundation", "Win32_Graphics_Dwm", "Win32_Graphics_Gdi"] }
 
 [[bin]]
 name = "snow_graphics"

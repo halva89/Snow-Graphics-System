@@ -7,3 +7,4 @@ pub mod platform;
 pub mod utils;
 pub mod types;
 pub mod physics;
+pub mod loader;

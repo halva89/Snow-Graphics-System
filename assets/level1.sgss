@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 window 1920 1080
 title "Snow Graphics System - 16384 Circles"
 
@@ -40001,3 +40002,161 @@ circle
 0.9500 0.9500 12 6
 0.97 0.97 0.80
 
+=======
+# Physics Test Scene — Rapier 3D
+window 1280 720
+title "Physics Test — Rapier 3D"
+camera true
+
+# ===== Bouncing balls (разная упругость) =====
+position -6 5 0
+physics: m=1, f=1.0, p=1
+sphere
+0.5
+16
+1.0 0.2 0.2
+
+position -4 5 0
+physics: m=1, f=0.3, p=0.5
+sphere
+0.5
+16
+1.0 0.5 0.2
+
+position -2 5 0
+physics: m=1, f=0.6, p=0.5
+sphere
+0.5
+16
+1.0 0.8 0.2
+
+position 0 5 0
+physics: m=1, f=0.9, p=0.5
+sphere
+0.5
+16
+0.2 1.0 0.2
+
+position 2 5 0
+physics: m=1, f=1.0, p=0.5
+sphere
+0.5
+16
+0.2 0.8 1.0
+
+# ===== Тяжёлая vs лёгкая сфера =====
+position -6 10 -3
+physics: m=0.1, f=0.5, p=0.1
+sphere
+0.5
+16
+1.0 0.4 0.8
+
+position -4 10 -3
+physics: m=10, f=0.5, p=10
+sphere
+0.5
+16
+0.4 0.2 1.0
+
+# ===== Падающие кубы =====
+position -6 8 -6
+physics: m=2, f=0.2, p=1
+cube
+1.0
+0.8 0.4 0.2
+
+position -4 10 -6
+physics: m=2, f=0.4, p=1
+cube
+1.0
+0.8 0.6 0.2
+
+position -2 12 -6
+physics: m=2, f=0.6, p=1
+cube
+1.0
+0.8 0.8 0.2
+
+# ===== Пирамидка из кубов =====
+position -3 1.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.8 0.5
+
+position -1 1.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.8 0.5
+
+position 1 1.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.8 0.5
+
+position 3 1.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.8 0.5
+
+position -2 2.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.6 0.5
+
+position 0 2.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.6 0.5
+
+position 2 2.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.6 0.5
+
+position 0 3.5 -9
+physics: m=1, f=0.1, p=0.5
+cube
+1.0
+0.5 0.4 0.5
+
+# ===== Статическая стена (m=0 → fixed) =====
+position 7 1 0
+physics: m=0, f=0.0, p=0
+cube
+0.5
+0.3 0.3 0.3
+
+position 7 2 0
+physics: m=0, f=0.0, p=0
+cube
+0.5
+0.3 0.3 0.3
+
+position 7 3 0
+physics: m=0, f=0.0, p=0
+cube
+0.5
+0.3 0.3 0.3
+
+position 7 4 0
+physics: m=0, f=0.0, p=0
+cube
+0.5
+0.3 0.3 0.3
+
+# ===== Крупная сфера — бросаем в стену =====
+position 10 3 0
+physics: m=5, f=0.8, p=3
+sphere
+0.8
+24
+0.0 1.0 1.0
+>>>>>>> Stashed changes

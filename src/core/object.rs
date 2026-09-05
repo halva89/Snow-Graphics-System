@@ -2,6 +2,11 @@ use crate::core::transform::Transform;
 use crate::render::mesh::Mesh;
 use crate::scene_parser::SceneObject;
 use crate::types::Color;
+<<<<<<< Updated upstream
+=======
+use crate::physics::PhysicsProps;
+use rapier3d::dynamics::RigidBodyHandle;
+>>>>>>> Stashed changes
 
 pub struct Object {
     pub mesh: Mesh,
@@ -9,6 +14,13 @@ pub struct Object {
     pub is_animated: bool,
     pub color: Color,
     pub name: String,
+<<<<<<< Updated upstream
+=======
+    pub anim_name: String,
+    pub anim_time: f32,
+    pub physics: Option<PhysicsProps>,
+    pub physics_handle: Option<RigidBodyHandle>,
+>>>>>>> Stashed changes
 }
 
 impl Object {
@@ -24,6 +36,13 @@ impl Object {
                     is_animated: false,
                     color,
                     name: String::from("Static"),
+<<<<<<< Updated upstream
+=======
+                    anim_name: String::new(),
+                    anim_time: 0.0,
+                    physics: phys,
+                    physics_handle: None,
+>>>>>>> Stashed changes
                 }
             }
             SceneObject::Animated(animated_mesh) => {
@@ -38,6 +57,13 @@ impl Object {
                     is_animated: true,
                     color,
                     name: String::from("Animated"),
+<<<<<<< Updated upstream
+=======
+                    anim_name,
+                    anim_time: 0.0,
+                    physics: None,
+                    physics_handle: None,
+>>>>>>> Stashed changes
                 }
             }
         }
@@ -49,6 +75,13 @@ impl Object {
             is_animated: false,
             color: Color::white(),
             name: String::from("Object"),
+<<<<<<< Updated upstream
+=======
+            anim_name: String::new(),
+            anim_time: 0.0,
+            physics: None,
+            physics_handle: None,
+>>>>>>> Stashed changes
         }
     }
 

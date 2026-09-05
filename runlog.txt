@@ -1,0 +1,27 @@
+[Parser] Loading scene: assets/level1.sgss
+[Parser] Read 11 lines
+[Parser] Line 0: 'window 800 600'
+[SettingsParser] Parsing settings...
+[SettingsParser] Line: 'window 800 600'
+[SettingsParser] Window: 800x600
+[SettingsParser] Line: 'title "Snow Graphics - Custom Window"'
+[SettingsParser] Title: 'Snow Graphics - Custom Window'
+[SettingsParser] Line: 'decorated false'
+[SettingsParser] Decorated: false
+[SettingsParser] Line: 'resizable true'
+[SettingsParser] Resizable: true
+[SettingsParser] Line: 'render_mode light'
+[SettingsParser] Render mode: Light (integrated GPU)
+[SettingsParser] Line: 'camera true'
+[SettingsParser] Camera enabled: true
+[SettingsParser] Line: ''
+[SettingsParser] Line: 'position 0 0 0'
+[SettingsParser] Found shape, stopping settings parse
+[Parser] Line 7: 'position 0 0 0'
+[Parser] Line 8: 'cube'
+[Parser] Loaded 1 objects
+[Engine] Starting GLFW
+[Vulkan] Starting init...
+[Pipeline] Creating pipeline...
+[Pipeline] Pipeline created successfully!
+[Engine] Window + Vulkan ready

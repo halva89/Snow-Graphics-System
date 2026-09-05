@@ -16,6 +16,9 @@ pub struct SceneSettings {
     pub height: u32,
     pub render_mode: RenderMode,
     pub camera_enabled: bool,
+    pub decorated: bool,
+    pub resizable: bool,
+    pub wireframe: bool,
 }
 
 impl Default for SceneSettings {
@@ -26,6 +29,9 @@ impl Default for SceneSettings {
             height: 600,
             render_mode: RenderMode::Light,
             camera_enabled: true,
+            decorated: true,
+            resizable: true,
+            wireframe: false,
         }
     }
 }
@@ -96,7 +102,41 @@ pub fn parse_settings(lines: &[&str], i: &mut usize) -> SceneSettings {
             continue;
         }
 
+<<<<<<< Updated upstream
         if line == "triangle" || line == "square" || line == "circle" || line == "cube" || line == "sphere" || line.starts_with("animate") {
+=======
+        if line.starts_with("decorated") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                settings.decorated = parts[1] == "true" || parts[1] == "1" || parts[1] == "on";
+                println!("[SettingsParser] Decorated: {}", settings.decorated);
+            }
+            *i += 1;
+            continue;
+        }
+
+        if line.starts_with("resizable") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                settings.resizable = parts[1] == "true" || parts[1] == "1" || parts[1] == "on";
+                println!("[SettingsParser] Resizable: {}", settings.resizable);
+            }
+            *i += 1;
+            continue;
+        }
+
+        if line.starts_with("wireframe") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                settings.wireframe = parts[1] == "true" || parts[1] == "1" || parts[1] == "on";
+                println!("[SettingsParser] Wireframe: {}", settings.wireframe);
+            }
+            *i += 1;
+            continue;
+        }
+
+        if line == "triangle" || line == "square" || line == "circle" || line == "cube" || line == "sphere" || line == "mesh" || line.starts_with("position") || line.starts_with("animate") {
+>>>>>>> Stashed changes
             println!("[SettingsParser] Found shape, stopping settings parse");
             break;
         }

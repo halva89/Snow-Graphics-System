@@ -159,8 +159,15 @@
   </div>
   <div class="sidebar-section">
     <div class="sidebar-section-title">Формат .SGSS</div>
-    <a href="#sgss-syntax">Синтаксис</a>
+    <a href="#sgss-intro">Общий формат</a>
+    <a href="#sgss-settings" class="sub">Настройки окна</a>
+    <a href="#sgss-position" class="sub">Позиция и физика</a>
+    <a href="#sgss-2d" class="sub">2D-примитивы</a>
+    <a href="#sgss-3d" class="sub">3D-примитивы</a>
+    <a href="#sgss-mesh" class="sub">Загрузка OBJ</a>
+    <a href="#sgss-animation" class="sub">Анимация</a>
     <a href="#sgss-examples">Примеры</a>
+    <a href="#sgss-reference" class="sub">Полная BNF</a>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-section-title">Экосистема</div>
@@ -1217,52 +1224,170 @@ pub struct Profiler;       // зарезервировано</code></pre>
 <!-- ====== SGSS FORMAT ====== -->
 <section id="sgss">
 <h1>Формат .SGSS</h1>
-<p>
-<code>.sgss</code> — собственный текстовый формат описания сцен Snow Graphics System.
-Человекочитаемый, не требует компиляции, редактируется в любом текстовом редакторе.
+<p class="tldr">
+<code>.sgss</code> — <b>Snow Graphics Scene System</b>: собственный текстовый формат описания сцен
+Snow Graphics System. Человекочитаемый, не требует компиляции, редактируется в любом текстовом
+редакторе. Парсер (<code>src/scene_parser/</code>) читает файл построчно: строки <code>window</code>/<code>title</code>
+уходят в настройки окна, директивы <code>position</code>/<code>physics</code> запоминаются как «ожидающие»
+и применяются к следующему объекту, а фигуры (<code>triangle</code>, <code>square</code>, <code>circle</code>,
+<code>cube</code>, <code>sphere</code>, <code>mesh</code>, <code>animate</code>) превращаются в
+<code>SceneObject</code>.
 </p>
 
-<h2 id="sgss-syntax">Синтаксис</h2>
-<pre><code>window &lt;width&gt; &lt;height&gt;                # Настройки окна
-title "&lt;заголовок&gt;"                     # Заголовок окна
+<div class="kpis">
+  <div class="kpi"><b>6</b><span>типов фигур</span></div>
+  <div class="kpi"><b>7</b><span>настроек окна</span></div>
+  <div class="kpi"><b>2</b><span>формата keyframe</span></div>
+  <div class="kpi"><b>#</b><span>комментарии</span></div>
+</div>
 
-# 2D-примитивы:
-triangle                                    # Треугольник
-&lt;x1&gt; &lt;y1&gt;
-&lt;x2&gt; &lt;y2&gt;
-&lt;x3&gt; &lt;y3&gt;
-&lt;r&gt; &lt;g&gt; &lt;b&gt;
+<h2 id="sgss-intro">Общий формат</h2>
+<p>
+Файл — это последовательность строк. Пробельные строки игнорируются, строки со знаком <code>#</code>
+в начале считаются комментариями. Порядок: сначала опциональные настройки окна, затем объекты
+сцены. Любая строка, начинающаяся с <code>window</code> или <code>title</code>, переводит парсер
+в режим настроек — весь идущий подряд блок <code>window</code>/<code>title</code>/<code>render_mode</code>/
+<code>camera</code>/<code>decorated</code>/<code>resizable</code>/<code>wireframe</code> разбирается
+до первой фигуры.
+</p>
 
-square                                      # Квадрат
-&lt;x&gt; &lt;y&gt; &lt;size&gt;
-&lt;r&gt; &lt;g&gt; &lt;b&gt;
+<h2 id="sgss-settings">Настройки окна</h2>
+<p>Все настройки опциональны и имеют значения по умолчанию. Разбираются модулем
+<code>scene_settings.rs</code>.</p>
+<table>
+  <tr><th>Директива</th><th>Аргументы</th><th>По умолчанию</th><th>Описание</th></tr>
+  <tr><td><code>window</code></td><td><code>&lt;width&gt; &lt;height&gt;</code></td><td><code>800 600</code></td><td>Размер окна в пикселях</td></tr>
+  <tr><td><code>title</code></td><td><code>"&lt;текст&gt;"</code></td><td><code>"Snow Graphics System"</code></td><td>Заголовок окна (кавычки необязательны)</td></tr>
+  <tr><td><code>render_mode</code></td><td><code>light</code> | <code>heavy</code></td><td><code>light</code></td><td>Light — интегрированная GPU, Heavy — дискретная GPU</td></tr>
+  <tr><td><code>camera</code></td><td><code>true</code> | <code>false</code> | <code>1</code> | <code>0</code> | <code>on</code> | <code>off</code></td><td><code>true</code></td><td>Включить свободную камеру (WASD + Q/E)</td></tr>
+  <tr><td><code>resizable</code></td><td><code>true</code> | <code>false</code> | ...</td><td><code>true</code></td><td>Разрешить изменение размера окна</td></tr>
+  <tr><td><code>wireframe</code></td><td><code>true</code> | <code>false</code> | ...</td><td><code>false</code></td><td>Каркасный режим отрисовки</td></tr>
+</table>
 
-circle                                      # Круг
-&lt;cx&gt; &lt;cy&gt; &lt;radius&gt; &lt;segments&gt;
-&lt;r&gt; &lt;g&gt; &lt;b&gt;
+<h2 id="sgss-position">Позиция и физика</h2>
+<p>
+Директивы <code>position</code> и <code>physics</code> задают свойства <b>следующего</b> объекта.
+Они не создают объект сами, а «прилипают» к нему и сбрасываются после применения.
+</p>
+<table>
+  <tr><th>Директива</th><th>Формат</th><th>Описание</th></tr>
+  <tr><td><code>position</code></td><td><code>position &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Смещение объекта сцены</td></tr>
+  <tr><td><code>physics</code></td><td><code>physics: mass=&lt;m&gt;, restitution=&lt;r&gt;, density=&lt;d&gt;</code></td><td>Физические свойства (Rapier)</td></tr>
+</table>
+<p>
+Ключи физики принимают синонимы: <code>m</code>/<code>mass</code> (по умолчанию 1.0),
+<code>f</code>/<code>restitution</code>/<code>elasticity</code> (по умолчанию 0.0),
+<code>p</code>/<code>density</code> (по умолчанию 1.0). Суффикс <code>g</code> у чисел игнорируется.
+</p>
+<pre><code>position 2.0 0.0 0.0
+physics: mass=5.0, restitution=0.8, density=2.0
 
-# 3D-примитивы:
-cube                                        # Куб
-&lt;size&gt;
-&lt;r&gt; &lt;g&gt; &lt;b&gt;
+cube
+1.0
+1.0 0.0 0.0</code></pre>
 
-sphere                                      # Сфера
-&lt;radius&gt;
-&lt;sectors&gt;
-&lt;r&gt; &lt;g&gt; &lt;b&gt;
+<h2 id="sgss-2d">2D-примитивы</h2>
+<p>Разбираются модулем <code>static_objects.rs</code>. Все координаты 2D-фигур лежат в плоскости Z=0.</p>
 
-# Анимация:
-animate &lt;shape&gt;                             # Анимированный объект
-    keyframe &lt;time&gt;                         # Ключевой кадр
+<h3>triangle — треугольник</h3>
+<pre><code>triangle
+&lt;x1&gt; &lt;y1&gt;    # вершина 1
+&lt;x2&gt; &lt;y2&gt;    # вершина 2
+&lt;x3&gt; &lt;y3&gt;    # вершина 3
+&lt;r&gt; &lt;g&gt; &lt;b&gt;  # цвет</code></pre>
+
+<h3>square — квадрат</h3>
+<pre><code>square
+&lt;x&gt; &lt;y&gt; &lt;size&gt;   # центр (x, y) и длина стороны
+&lt;r&gt; &lt;g&gt; &lt;b&gt;      # цвет</code></pre>
+<p>Квадрат строится из 4 вершин и 2 треугольников: <code>(x±size/2, y±size/2)</code>.</p>
+
+<h3>circle — круг</h3>
+<pre><code>circle
+&lt;cx&gt; &lt;cy&gt; &lt;radius&gt; &lt;segments&gt;   # центр, радиус, число сегментов (мин. 3)
+&lt;r&gt; &lt;g&gt; &lt;b&gt;                       # цвет</code></pre>
+<p>Вырожденный круг из одного центрального треугольника-фана (triangle fan)
+с <code>segments</code> секторами. Меньше 3 сегментов не допускается.</p>
+
+<h2 id="sgss-3d">3D-примитивы</h2>
+<p>Добавлены в Beryllium. Парсятся в <code>mod.rs</code> (вне <code>static_objects.rs</code>).</p>
+
+<h3>cube — куб</h3>
+<pre><code>cube
+&lt;size&gt;       # длина ребра
+&lt;r&gt; &lt;g&gt; &lt;b&gt;  # цвет</code></pre>
+<p>8 вершин, 36 индексов — 6 граней по 2 треугольника.</p>
+
+<h3>sphere — сфера</h3>
+<pre><code>sphere
+&lt;radius&gt;     # радиус
+&lt;sectors&gt;    # число секторов (мин. 3)
+&lt;r&gt; &lt;g&gt; &lt;b&gt;  # цвет</code></pre>
+<p>Параметрическая сфера: <code>rings = sectors / 2</code> широтных колец,
+<code>sectors + 1</code> долготных точек на кольцо.</p>
+
+<h2 id="sgss-mesh">Загрузка внешнего OBJ-меша</h2>
+<pre><code>mesh "&lt;path/to/model.obj&gt;"
+&lt;r&gt; &lt;g&gt; &lt;b&gt;</code></pre>
+<p>
+Загружает меш из Wavefront OBJ-файла (<code>mesh_loader.rs</code>). Поддерживаются вершины
+(<code>v x y z</code>) и грани (<code>f i/j/k ...</code> — нормали/текстурные координаты
+после <code>/</code> игнорируются, индексы переводятся в 0-базис). Многоугольные грани
+триангулируются (fan). Цвет строкой ниже — опционален; без него меш серый (0.7, 0.7, 0.7).
+</p>
+
+<h2 id="sgss-animation">Анимация</h2>
+<p>
+Блок <code>animate</code> (<code>animated_objects.rs</code>) создаёт анимированный объект
+с keyframe-анимацией позиции и цвета. Поддерживаемые фигуры: <code>triangle</code>,
+<code>square</code>, <code>circle</code>, <code>cube</code>, <code>sphere</code>.
+Каждый keyframe — время в секундах, позиция и цвет. Между соседними keyframe значения
+линейно интерполируются (lerp). Длительность анимации = время последнего keyframe.
+</p>
+<pre><code>animate &lt;shape&gt;
+    keyframe &lt;time&gt;
+        pos &lt;x&gt; &lt;y&gt; &lt;z&gt;      # позиция (или position)
+        color &lt;r&gt; &lt;g&gt; &lt;b&gt;    # цвет
+    keyframe &lt;time&gt;
         pos &lt;x&gt; &lt;y&gt; &lt;z&gt;
-        color &lt;r&gt; &lt;g&gt; &lt;b&gt;</code></pre>
+        color &lt;r&gt; &lt;g&gt; &lt;b&gt;
+    # ...</code></pre>
+<p>
+Строки <code>pos</code>/<code>color</code> внутри keyframe опциональны — если пропущены,
+берутся значения по умолчанию (0,0,0 и белый). Блок можно закрыть строкой <code>}</code>
+или новой директивой <code>animate</code>.
+</p>
+
+<h3>Raw-формат keyframe (без ключевых слов)</h3>
+<p>
+Вместо <code>pos</code>/<code>color</code> допустимо писать числа напрямую: первая строка —
+позиция <code>x y z</code>, следующая за ней числовая строка из трёх чисел — цвет.
+Используется в демо-сценах для компактности.
+</p>
+<pre><code>animate triangle
+    keyframe 0.0
+        0.5 0.5 0.0        # pos
+        1.0 0.5 0.5        # color
+    keyframe 2.0
+        -0.5 0.5 0.0
+        0.5 1.0 0.5</code></pre>
+<p>
+Имя анимированного объекта генерируется автоматически как <code>anim_&lt;shape&gt;_&lt;n&gt;</code>
+(счётчик <code>n</code> уникален в рамках запуска), поэтому два одинаковых <code>animate circle</code>
+не конфликтуют.
+</p>
 
 <h2 id="sgss-examples">Примеры</h2>
 
-<h3>Базовый 2D (треугольник + квадрат + круг):</h3>
+<h3>Полная сцена с настройками окна, 3D и физикой:</h3>
 <pre><code>window 800 600
-title "Моя первая сцена"
+title "SGS - Full Scene"
+render_mode heavy
+camera true
+resizable false
+wireframe false
 
+# 2D-примитивы
 triangle
 -0.5 -0.5
 0.5 -0.5
@@ -1275,12 +1400,9 @@ square
 
 circle
 0.5 0.5 0.2 32
-0.0 0.0 1.0</code></pre>
+0.0 0.0 1.0
 
-<h3>3D-сцена (куб + сфера):</h3>
-<pre><code>window 800 600
-title "Snow Graphics System - 3D Test"
-
+# 3D-примитивы
 cube
 1.0
 1.0 0.0 0.0
@@ -1290,9 +1412,17 @@ sphere
 16
 0.0 1.0 0.0
 
-square
-0 0 2
-1 0 0</code></pre>
+# Внешний меш
+mesh "models/model.obj"
+1.0 1.0 1.0
+
+# Позиция и физика применяются к следующему объекту
+position 2.0 0.0 0.0
+physics: mass=5.0, restitution=0.8
+
+cube
+1.0
+1.0 1.0 0.0</code></pre>
 
 <h3>Анимация (круг с изменением позиции и цвета):</h3>
 <pre><code>window 800 600
@@ -1309,16 +1439,75 @@ animate circle
         pos 0.0 0.0 0.0
         color 0.0 0.0 1.0</code></pre>
 
-<h3>144 круга (реальная демо-сцена из Alpha 3.1):</h3>
-<pre><code>window 1000 800
-title "Snow Graphics System - 144 Circles"
+<h3>Реальная демо-сцена <code>assets/level1.sgss</code>:</h3>
+<pre><code>window 800 600
+title "SGS - Animation Demo"
+resizable true
+render_mode heavy
+camera true
+wireframe false
 
-square 0 0 5 0 0 0
+# Круг: летит вправо-вверх, меняя цвет (красный -&gt; зелёный -&gt; синий)
+animate circle
+    keyframe 0.0
+        pos -1.5 -1.0 0.0
+        color 1.0 0.0 0.0
+    keyframe 2.0
+        pos 0.0 1.0 0.0
+        color 0.0 1.0 0.0
+    keyframe 4.0
+        pos 1.5 -1.0 0.0
+        color 0.0 0.0 1.0
 
-# Сетка 12×12 кругов, диаметр 0.06, 45 сегментов
-# Цвета плавно меняются от красного к жёлтому, зелёному, синему
-# Первый круг: -0.85 -0.85 0.06 45 / 1.0 0.0 0.0
-# Последний круг: 0.80 0.80 0.06 45 / 0.6 0.0 0.0</code></pre>
+# Куб: прыгает вверх-вниз (независимые часы анимации)
+animate cube
+    keyframe 0.0
+        pos -1.0 0.5 0.0
+        color 1.0 1.0 0.0
+    keyframe 0.5
+        pos -1.0 -0.5 0.0
+        color 0.0 1.0 1.0
+
+# Треугольник: вращается по кругу (raw-формат)
+animate triangle
+    keyframe 0.0
+        0.5 0.5 0.0
+        1.0 0.5 0.5
+    keyframe 2.0
+        -0.5 0.5 0.0
+        0.5 1.0 0.5
+    keyframe 4.0
+        0.5 0.5 0.0
+        0.5 0.5 1.0</code></pre>
+
+<h2 id="sgss-reference">Полный синтаксис (BNF)</h2>
+<pre><code>scene        := settings? object*
+settings     := ( window | title | render_mode | camera
+                  | decorated | resizable | wireframe )+
+window       := "window" NUM NUM
+title        := "title" STR
+render_mode  := "render_mode" ( "light" | "heavy" )
+camera       := "camera" BOOL
+decorated    := "decorated" BOOL
+resizable    := "resizable" BOOL
+wireframe    := "wireframe" BOOL
+object       := prefix? shape | "animate" shape
+prefix       := ( "position" NUM NUM NUM | "physics:" phys ','* )*
+shape        := "triangle" VEC2 VEC2 VEC2 COLOR
+              | "square" NUM NUM NUM COLOR
+              | "circle" NUM NUM NUM NUM COLOR
+              | "cube" NUM COLOR
+              | "sphere" NUM NUM COLOR
+              | "mesh" STR COLOR?
+animate      := "animate" ( "triangle" | "square" | "circle"
+                            | "cube" | "sphere" )
+                keyframe+ ("}")?
+keyframe     := "keyframe" NUM ( pos/color | raw )+
+phys         := ( "m"|"mass" ) "=" NUM | ( "f"|"restitution"|"elasticity" ) "=" NUM
+              | ( "p"|"density" ) "=" NUM
+BOOL         := "true" | "false" | "1" | "0" | "on" | "off"
+COLOR        := NUM NUM NUM
+VEC2         := NUM NUM</code></pre>
 </section>
 
 <!-- ====== ECOSYSTEM ====== -->
