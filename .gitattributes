@@ -1,7 +1,7 @@
 *.rs linguist-language=Rust
 *.py linguist-language=Python
-*.sgss linguist-language=Python
+*.mff linguist-language=Python
 *.md linguist-language=Markdown
 
-*.sgss linguist-vendored=false
+*.mff linguist-vendored=false
 *.md linguist-documentation=true

@@ -1,0 +1,841 @@
+# main.frame - появление бордовой рамки вдоль края fov
+# Рамка рисуется из левого верхнего угла по часовой стрелке и петляет.
+window 900 600
+title "main.frame - Frame Draw"
+background 0.04 0.01 0.02
+camera true
+camera_pos 0 0.5 16
+camera_target 0 0 0
+aa-type none
+
+# segment 0
+animate square
+keyframe 0.0
+pos -8.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.000
+pos -8.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.012
+pos -8.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 1
+animate square
+keyframe 0.0
+pos -7.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.085
+pos -7.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.097
+pos -7.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -7.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 2
+animate square
+keyframe 0.0
+pos -6.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.170
+pos -6.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.182
+pos -6.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -6.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 3
+animate square
+keyframe 0.0
+pos -5.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.255
+pos -5.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.267
+pos -5.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -5.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 4
+animate square
+keyframe 0.0
+pos -4.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.340
+pos -4.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.352
+pos -4.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -4.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 5
+animate square
+keyframe 0.0
+pos -3.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.425
+pos -3.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.437
+pos -3.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -3.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 6
+animate square
+keyframe 0.0
+pos -2.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.510
+pos -2.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.522
+pos -2.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -2.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 7
+animate square
+keyframe 0.0
+pos -1.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.595
+pos -1.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.607
+pos -1.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -1.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 8
+animate square
+keyframe 0.0
+pos 0.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.680
+pos 0.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.692
+pos 0.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 0.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 9
+animate square
+keyframe 0.0
+pos 1.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.765
+pos 1.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.777
+pos 1.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 1.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 10
+animate square
+keyframe 0.0
+pos 2.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.850
+pos 2.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.862
+pos 2.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 2.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 11
+animate square
+keyframe 0.0
+pos 3.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.935
+pos 3.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 0.947
+pos 3.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 3.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 12
+animate square
+keyframe 0.0
+pos 4.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.020
+pos 4.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.032
+pos 4.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 4.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 13
+animate square
+keyframe 0.0
+pos 5.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.105
+pos 5.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.117
+pos 5.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 5.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 14
+animate square
+keyframe 0.0
+pos 6.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.190
+pos 6.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.202
+pos 6.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 6.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 15
+animate square
+keyframe 0.0
+pos 7.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.275
+pos 7.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.287
+pos 7.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 7.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 16
+animate square
+keyframe 0.0
+pos 8.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.360
+pos 8.000 5.000 0
+color 0.04 0.01 0.02
+keyframe 1.372
+pos 8.000 5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 17
+animate square
+keyframe 0.0
+pos 8.000 4.000 0
+color 0.04 0.01 0.02
+keyframe 1.445
+pos 8.000 4.000 0
+color 0.04 0.01 0.02
+keyframe 1.457
+pos 8.000 4.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 4.000 0
+color 0.55 0.03 0.06
+
+
+# segment 18
+animate square
+keyframe 0.0
+pos 8.000 3.000 0
+color 0.04 0.01 0.02
+keyframe 1.530
+pos 8.000 3.000 0
+color 0.04 0.01 0.02
+keyframe 1.542
+pos 8.000 3.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 3.000 0
+color 0.55 0.03 0.06
+
+
+# segment 19
+animate square
+keyframe 0.0
+pos 8.000 2.000 0
+color 0.04 0.01 0.02
+keyframe 1.615
+pos 8.000 2.000 0
+color 0.04 0.01 0.02
+keyframe 1.627
+pos 8.000 2.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 2.000 0
+color 0.55 0.03 0.06
+
+
+# segment 20
+animate square
+keyframe 0.0
+pos 8.000 1.000 0
+color 0.04 0.01 0.02
+keyframe 1.700
+pos 8.000 1.000 0
+color 0.04 0.01 0.02
+keyframe 1.712
+pos 8.000 1.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 1.000 0
+color 0.55 0.03 0.06
+
+
+# segment 21
+animate square
+keyframe 0.0
+pos 8.000 0.000 0
+color 0.04 0.01 0.02
+keyframe 1.785
+pos 8.000 0.000 0
+color 0.04 0.01 0.02
+keyframe 1.797
+pos 8.000 0.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 0.000 0
+color 0.55 0.03 0.06
+
+
+# segment 22
+animate square
+keyframe 0.0
+pos 8.000 -1.000 0
+color 0.04 0.01 0.02
+keyframe 1.870
+pos 8.000 -1.000 0
+color 0.04 0.01 0.02
+keyframe 1.882
+pos 8.000 -1.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 -1.000 0
+color 0.55 0.03 0.06
+
+
+# segment 23
+animate square
+keyframe 0.0
+pos 8.000 -2.000 0
+color 0.04 0.01 0.02
+keyframe 1.955
+pos 8.000 -2.000 0
+color 0.04 0.01 0.02
+keyframe 1.967
+pos 8.000 -2.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 -2.000 0
+color 0.55 0.03 0.06
+
+
+# segment 24
+animate square
+keyframe 0.0
+pos 8.000 -3.000 0
+color 0.04 0.01 0.02
+keyframe 2.040
+pos 8.000 -3.000 0
+color 0.04 0.01 0.02
+keyframe 2.052
+pos 8.000 -3.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 -3.000 0
+color 0.55 0.03 0.06
+
+
+# segment 25
+animate square
+keyframe 0.0
+pos 8.000 -4.000 0
+color 0.04 0.01 0.02
+keyframe 2.125
+pos 8.000 -4.000 0
+color 0.04 0.01 0.02
+keyframe 2.137
+pos 8.000 -4.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 -4.000 0
+color 0.55 0.03 0.06
+
+
+# segment 26
+animate square
+keyframe 0.0
+pos 8.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.210
+pos 8.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.222
+pos 8.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 8.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 27
+animate square
+keyframe 0.0
+pos 7.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.295
+pos 7.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.307
+pos 7.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 7.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 28
+animate square
+keyframe 0.0
+pos 6.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.380
+pos 6.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.392
+pos 6.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 6.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 29
+animate square
+keyframe 0.0
+pos 5.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.465
+pos 5.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.477
+pos 5.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 5.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 30
+animate square
+keyframe 0.0
+pos 4.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.550
+pos 4.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.562
+pos 4.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 4.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 31
+animate square
+keyframe 0.0
+pos 3.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.635
+pos 3.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.647
+pos 3.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 3.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 32
+animate square
+keyframe 0.0
+pos 2.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.720
+pos 2.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.732
+pos 2.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 2.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 33
+animate square
+keyframe 0.0
+pos 1.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.805
+pos 1.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.817
+pos 1.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 1.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 34
+animate square
+keyframe 0.0
+pos 0.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.890
+pos 0.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.902
+pos 0.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos 0.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 35
+animate square
+keyframe 0.0
+pos -1.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.975
+pos -1.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 2.987
+pos -1.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -1.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 36
+animate square
+keyframe 0.0
+pos -2.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.060
+pos -2.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.072
+pos -2.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -2.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 37
+animate square
+keyframe 0.0
+pos -3.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.145
+pos -3.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.157
+pos -3.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -3.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 38
+animate square
+keyframe 0.0
+pos -4.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.230
+pos -4.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.242
+pos -4.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -4.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 39
+animate square
+keyframe 0.0
+pos -5.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.315
+pos -5.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.327
+pos -5.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -5.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 40
+animate square
+keyframe 0.0
+pos -6.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.400
+pos -6.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.412
+pos -6.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -6.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 41
+animate square
+keyframe 0.0
+pos -7.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.485
+pos -7.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.497
+pos -7.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -7.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 42
+animate square
+keyframe 0.0
+pos -8.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.570
+pos -8.000 -5.000 0
+color 0.04 0.01 0.02
+keyframe 3.582
+pos -8.000 -5.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 -5.000 0
+color 0.55 0.03 0.06
+
+
+# segment 43
+animate square
+keyframe 0.0
+pos -8.000 -4.000 0
+color 0.04 0.01 0.02
+keyframe 3.655
+pos -8.000 -4.000 0
+color 0.04 0.01 0.02
+keyframe 3.667
+pos -8.000 -4.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 -4.000 0
+color 0.55 0.03 0.06
+
+
+# segment 44
+animate square
+keyframe 0.0
+pos -8.000 -3.000 0
+color 0.04 0.01 0.02
+keyframe 3.740
+pos -8.000 -3.000 0
+color 0.04 0.01 0.02
+keyframe 3.752
+pos -8.000 -3.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 -3.000 0
+color 0.55 0.03 0.06
+
+
+# segment 45
+animate square
+keyframe 0.0
+pos -8.000 -2.000 0
+color 0.04 0.01 0.02
+keyframe 3.825
+pos -8.000 -2.000 0
+color 0.04 0.01 0.02
+keyframe 3.837
+pos -8.000 -2.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 -2.000 0
+color 0.55 0.03 0.06
+
+
+# segment 46
+animate square
+keyframe 0.0
+pos -8.000 -1.000 0
+color 0.04 0.01 0.02
+keyframe 3.910
+pos -8.000 -1.000 0
+color 0.04 0.01 0.02
+keyframe 3.922
+pos -8.000 -1.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 -1.000 0
+color 0.55 0.03 0.06
+
+
+# segment 47
+animate square
+keyframe 0.0
+pos -8.000 0.000 0
+color 0.04 0.01 0.02
+keyframe 3.995
+pos -8.000 0.000 0
+color 0.04 0.01 0.02
+keyframe 4.007
+pos -8.000 0.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 0.000 0
+color 0.55 0.03 0.06
+
+
+# segment 48
+animate square
+keyframe 0.0
+pos -8.000 1.000 0
+color 0.04 0.01 0.02
+keyframe 4.080
+pos -8.000 1.000 0
+color 0.04 0.01 0.02
+keyframe 4.092
+pos -8.000 1.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 1.000 0
+color 0.55 0.03 0.06
+
+
+# segment 49
+animate square
+keyframe 0.0
+pos -8.000 2.000 0
+color 0.04 0.01 0.02
+keyframe 4.165
+pos -8.000 2.000 0
+color 0.04 0.01 0.02
+keyframe 4.177
+pos -8.000 2.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 2.000 0
+color 0.55 0.03 0.06
+
+
+# segment 50
+animate square
+keyframe 0.0
+pos -8.000 3.000 0
+color 0.04 0.01 0.02
+keyframe 4.250
+pos -8.000 3.000 0
+color 0.04 0.01 0.02
+keyframe 4.262
+pos -8.000 3.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 3.000 0
+color 0.55 0.03 0.06
+
+
+# segment 51
+animate square
+keyframe 0.0
+pos -8.000 4.000 0
+color 0.04 0.01 0.02
+keyframe 4.335
+pos -8.000 4.000 0
+color 0.04 0.01 0.02
+keyframe 4.347
+pos -8.000 4.000 0
+color 0.55 0.03 0.06
+keyframe 7.000
+pos -8.000 4.000 0
+color 0.55 0.03 0.06
+

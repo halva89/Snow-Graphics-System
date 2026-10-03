@@ -16,6 +16,6 @@ fn main() {
         }
     }
 
-    std::fs::write("assets/sphere_grid.sgss", out).unwrap();
+    std::fs::write("assets/sphere_grid.mff", out).unwrap();
     println!("Generated");
 }

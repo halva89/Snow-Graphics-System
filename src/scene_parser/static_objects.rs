@@ -4,7 +4,11 @@ use crate::types::Color;
 use crate::math::Vec3;
 use crate::physics::PhysicsProps;
 
+<<<<<<< Updated upstream
 pub fn parse_static(line: &str, lines: &[&str], i: &mut usize, position: Vec3, phys: PhysicsProps) -> Option<SceneObject> {
+=======
+pub fn parse_static(line: &str, lines: &[&str], i: &mut usize, position: Vec3, rotation: Vec3, scale: Vec3, phys: Option<PhysicsProps>, temp: f32) -> Option<SceneObject> {
+>>>>>>> Stashed changes
     println!("[StaticParser] Parsing: '{}'", line);
     
     let parts: Vec<&str> = line.split_whitespace().collect();
@@ -29,7 +33,7 @@ pub fn parse_static(line: &str, lines: &[&str], i: &mut usize, position: Vec3, p
 let mut mesh = Mesh::triangle(v1, v2, v3);
         mesh.color = color;
         *i += 5;
-        return Some(SceneObject::Static(mesh, position, phys));
+        return Some(SceneObject::Static(mesh, position, rotation, scale, phys, temp));
     }
 
     if shape == "square" {
@@ -48,7 +52,7 @@ let mut mesh = Mesh::triangle(v1, v2, v3);
             let mut mesh = Mesh::square(x, y, size);
             mesh.color = color;
             *i += 3;
-            return Some(SceneObject::Static(mesh, position, phys));
+            return Some(SceneObject::Static(mesh, position, rotation, scale, phys, temp));
         }
     }
 
@@ -69,7 +73,7 @@ let mut mesh = Mesh::triangle(v1, v2, v3);
             let mut mesh = Mesh::circle(cx, cy, radius, segments);
             mesh.color = color;
             *i += 3;
-            return Some(SceneObject::Static(mesh, position, phys));
+            return Some(SceneObject::Static(mesh, position, rotation, scale, phys, temp));
         }
     }
 

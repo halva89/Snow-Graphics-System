@@ -7,7 +7,7 @@ def generate_grid():
     segments = 2048
     
     print("window 1920 1080")
-    print('title "Snow Graphics System - 16384 Circles"')
+    print('title "main.frame - 16384 Circles"')
     print()
     
     for row in range(rows):
@@ -26,5 +26,5 @@ def generate_grid():
             print()
 
 if __name__ == "__main__":
-    sys.stdout = open("assets/level1.sgss", "w")
+    sys.stdout = open("assets/level1.mff", "w")
     generate_grid()

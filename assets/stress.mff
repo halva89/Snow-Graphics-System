@@ -1,0 +1,1617 @@
+# =======================================================
+# MF — STRESS TEST SCENE
+# Сгенерирована gen_stress.py (запусти снова — изменится нагрузка)
+# Нагрузка: 10x10 кубов, 8x8 сфер, 40 физика-шаров, 6 обелисков, 12 анимаций, 4 obj-анимаций.
+# Тени + wireframe + MSAA включены — это стресс.
+# =======================================================
+
+window 1280 720
+title "MF - Stress Test"
+background 0.12 0.12 0.2
+camera true
+camera_pos 22 30 26
+camera_target 0 1 0
+wireframe false
+render_mode light
+aa-type msaa2
+
+# ===== Пол (ресивер теней) =====
+position 0 -0.15 0
+scale 70 0.3 70
+cube
+1.0
+0.78 0.78 0.85
+
+# ===== КУБОВОЕ ПОЛЕ (без текстур, каждый 4-й с текстурой) =====
+position -14.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+texture "assets/rgb.png" expand
+
+position -14.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -14.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+
+position -14.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -14.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+texture "assets/rgb.png" expand
+
+position -14.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -14.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+
+position -14.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -14.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+texture "assets/rgb.png" expand
+
+position -14.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -12.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+
+position -12.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -12.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+texture "assets/rgb.png" expand
+
+position -12.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -12.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+
+position -12.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -12.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+texture "assets/rgb.png" expand
+
+position -12.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -12.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+
+position -12.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -10.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+texture "assets/rgb.png" expand
+
+position -10.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -10.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+
+position -10.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -10.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+texture "assets/rgb.png" expand
+
+position -10.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -10.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+
+position -10.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -10.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+texture "assets/rgb.png" expand
+
+position -10.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -8.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+
+position -8.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -8.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+texture "assets/rgb.png" expand
+
+position -8.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -8.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+
+position -8.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -8.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+texture "assets/rgb.png" expand
+
+position -8.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -8.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+
+position -8.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -6.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+texture "assets/rgb.png" expand
+
+position -6.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -6.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+
+position -6.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -6.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+texture "assets/rgb.png" expand
+
+position -6.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -6.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+
+position -6.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -6.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+texture "assets/rgb.png" expand
+
+position -6.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -4.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+
+position -4.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -4.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+texture "assets/rgb.png" expand
+
+position -4.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -4.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+
+position -4.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -4.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+texture "assets/rgb.png" expand
+
+position -4.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -4.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+
+position -4.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position -2.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+texture "assets/rgb.png" expand
+
+position -2.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position -2.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+
+position -2.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position -2.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+texture "assets/rgb.png" expand
+
+position -2.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position -2.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+
+position -2.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position -2.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+texture "assets/rgb.png" expand
+
+position -2.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position 0.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+
+position 0.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position 0.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+texture "assets/rgb.png" expand
+
+position 0.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position 0.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+
+position 0.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position 0.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+texture "assets/rgb.png" expand
+
+position 0.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position 0.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+
+position 0.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position 2.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+texture "assets/rgb.png" expand
+
+position 2.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position 2.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+
+position 2.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position 2.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+texture "assets/rgb.png" expand
+
+position 2.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position 2.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+
+position 2.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position 2.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+texture "assets/rgb.png" expand
+
+position 2.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+position 4.00 0.5 -12.00
+rotation 0 0 0.0
+cube
+1.0
+1.00 0.30 0.30
+
+position 4.00 0.5 -10.00
+rotation 0 0 0.1
+cube
+1.0
+0.30 1.00 0.30
+
+position 4.00 0.5 -8.00
+rotation 0 0 0.2
+cube
+1.0
+0.30 0.50 1.00
+texture "assets/rgb.png" expand
+
+position 4.00 0.5 -6.00
+rotation 0 0 0.3
+cube
+1.0
+1.00 0.80 0.20
+
+position 4.00 0.5 -4.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.30 1.00
+
+position 4.00 0.5 -2.00
+rotation 0 0 0.0
+cube
+1.0
+0.30 1.00 1.00
+
+position 4.00 0.5 0.00
+rotation 0 0 0.1
+cube
+1.0
+0.95 0.60 0.30
+texture "assets/rgb.png" expand
+
+position 4.00 0.5 2.00
+rotation 0 0 0.2
+cube
+1.0
+0.60 0.40 1.00
+
+position 4.00 0.5 4.00
+rotation 0 0 0.3
+cube
+1.0
+0.40 0.85 0.40
+
+position 4.00 0.5 6.00
+rotation 0 0 0.4
+cube
+1.0
+1.00 0.60 0.60
+
+# ===== СФЕРНОЕ ПОЛЕ (каждая 3-я с шахматной текстурой) =====
+position -12.00 0.5 8.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+texture "assets/checker.png" expand
+
+position -12.00 0.5 10.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+
+position -12.00 0.5 12.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+
+position -12.00 0.5 14.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+texture "assets/checker.png" expand
+
+position -12.00 0.5 16.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+
+position -12.00 0.5 18.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+
+position -12.00 0.5 20.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+texture "assets/checker.png" expand
+
+position -12.00 0.5 22.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+
+position -10.00 0.5 8.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+
+position -10.00 0.5 10.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+texture "assets/checker.png" expand
+
+position -10.00 0.5 12.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+
+position -10.00 0.5 14.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+
+position -10.00 0.5 16.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+texture "assets/checker.png" expand
+
+position -10.00 0.5 18.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+
+position -10.00 0.5 20.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+
+position -10.00 0.5 22.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+texture "assets/checker.png" expand
+
+position -8.00 0.5 8.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+
+position -8.00 0.5 10.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+
+position -8.00 0.5 12.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+texture "assets/checker.png" expand
+
+position -8.00 0.5 14.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+
+position -8.00 0.5 16.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+
+position -8.00 0.5 18.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+texture "assets/checker.png" expand
+
+position -8.00 0.5 20.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+
+position -8.00 0.5 22.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+
+position -6.00 0.5 8.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+texture "assets/checker.png" expand
+
+position -6.00 0.5 10.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+
+position -6.00 0.5 12.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+
+position -6.00 0.5 14.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+texture "assets/checker.png" expand
+
+position -6.00 0.5 16.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+
+position -6.00 0.5 18.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+
+position -6.00 0.5 20.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+texture "assets/checker.png" expand
+
+position -6.00 0.5 22.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+
+position -4.00 0.5 8.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+
+position -4.00 0.5 10.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+texture "assets/checker.png" expand
+
+position -4.00 0.5 12.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+
+position -4.00 0.5 14.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+
+position -4.00 0.5 16.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+texture "assets/checker.png" expand
+
+position -4.00 0.5 18.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+
+position -4.00 0.5 20.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+
+position -4.00 0.5 22.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+texture "assets/checker.png" expand
+
+position -2.00 0.5 8.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+
+position -2.00 0.5 10.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+
+position -2.00 0.5 12.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+texture "assets/checker.png" expand
+
+position -2.00 0.5 14.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+
+position -2.00 0.5 16.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+
+position -2.00 0.5 18.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+texture "assets/checker.png" expand
+
+position -2.00 0.5 20.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+
+position -2.00 0.5 22.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+
+position 0.00 0.5 8.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+texture "assets/checker.png" expand
+
+position 0.00 0.5 10.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+
+position 0.00 0.5 12.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+
+position 0.00 0.5 14.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+texture "assets/checker.png" expand
+
+position 0.00 0.5 16.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+
+position 0.00 0.5 18.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+
+position 0.00 0.5 20.00
+sphere
+0.5
+18
+0.60 0.40 1.00
+texture "assets/checker.png" expand
+
+position 0.00 0.5 22.00
+sphere
+0.5
+18
+0.40 0.85 0.40
+
+position 2.00 0.5 8.00
+sphere
+0.5
+18
+1.00 0.60 0.60
+
+position 2.00 0.5 10.00
+sphere
+0.5
+18
+1.00 0.30 0.30
+texture "assets/checker.png" expand
+
+position 2.00 0.5 12.00
+sphere
+0.5
+18
+0.30 1.00 0.30
+
+position 2.00 0.5 14.00
+sphere
+0.5
+18
+0.30 0.50 1.00
+
+position 2.00 0.5 16.00
+sphere
+0.5
+18
+1.00 0.80 0.20
+texture "assets/checker.png" expand
+
+position 2.00 0.5 18.00
+sphere
+0.5
+18
+1.00 0.30 1.00
+
+position 2.00 0.5 20.00
+sphere
+0.5
+18
+0.30 1.00 1.00
+
+position 2.00 0.5 22.00
+sphere
+0.5
+18
+0.95 0.60 0.30
+texture "assets/checker.png" expand
+
+# ===== ФИЗИКА: падающие шары (разная упругость) =====
+position 18.00 4.00 -14.00
+physics: m=1, f=0.0, p=1
+sphere
+0.4
+14
+1.00 0.30 0.30
+
+position 20.00 8.00 -14.00
+physics: m=1, f=0.1, p=1
+sphere
+0.4
+14
+0.30 1.00 0.30
+
+position 22.00 12.00 -14.00
+physics: m=1, f=0.2, p=1
+sphere
+0.4
+14
+0.30 0.50 1.00
+
+position 24.00 16.00 -14.00
+physics: m=1, f=0.3, p=1
+sphere
+0.4
+14
+1.00 0.80 0.20
+
+position 26.00 20.00 -14.00
+physics: m=1, f=0.4, p=1
+sphere
+0.4
+14
+1.00 0.30 1.00
+
+position 18.00 4.00 -12.00
+physics: m=1, f=0.5, p=1
+sphere
+0.4
+14
+0.30 1.00 1.00
+
+position 20.00 8.00 -12.00
+physics: m=1, f=0.6, p=1
+sphere
+0.4
+14
+0.95 0.60 0.30
+
+position 22.00 12.00 -12.00
+physics: m=1, f=0.7, p=1
+sphere
+0.4
+14
+0.60 0.40 1.00
+
+position 24.00 16.00 -12.00
+physics: m=1, f=0.8, p=1
+sphere
+0.4
+14
+0.40 0.85 0.40
+
+position 26.00 20.00 -12.00
+physics: m=1, f=0.9, p=1
+sphere
+0.4
+14
+1.00 0.60 0.60
+
+position 18.00 4.00 -10.00
+physics: m=1, f=0.0, p=1
+sphere
+0.4
+14
+1.00 0.30 0.30
+
+position 20.00 8.00 -10.00
+physics: m=1, f=0.1, p=1
+sphere
+0.4
+14
+0.30 1.00 0.30
+
+position 22.00 12.00 -10.00
+physics: m=1, f=0.2, p=1
+sphere
+0.4
+14
+0.30 0.50 1.00
+
+position 24.00 16.00 -10.00
+physics: m=1, f=0.3, p=1
+sphere
+0.4
+14
+1.00 0.80 0.20
+
+position 26.00 20.00 -10.00
+physics: m=1, f=0.4, p=1
+sphere
+0.4
+14
+1.00 0.30 1.00
+
+position 18.00 4.00 -8.00
+physics: m=1, f=0.5, p=1
+sphere
+0.4
+14
+0.30 1.00 1.00
+
+position 20.00 8.00 -8.00
+physics: m=1, f=0.6, p=1
+sphere
+0.4
+14
+0.95 0.60 0.30
+
+position 22.00 12.00 -8.00
+physics: m=1, f=0.7, p=1
+sphere
+0.4
+14
+0.60 0.40 1.00
+
+position 24.00 16.00 -8.00
+physics: m=1, f=0.8, p=1
+sphere
+0.4
+14
+0.40 0.85 0.40
+
+position 26.00 20.00 -8.00
+physics: m=1, f=0.9, p=1
+sphere
+0.4
+14
+1.00 0.60 0.60
+
+position 18.00 4.00 -6.00
+physics: m=1, f=0.0, p=1
+sphere
+0.4
+14
+1.00 0.30 0.30
+
+position 20.00 8.00 -6.00
+physics: m=1, f=0.1, p=1
+sphere
+0.4
+14
+0.30 1.00 0.30
+
+position 22.00 12.00 -6.00
+physics: m=1, f=0.2, p=1
+sphere
+0.4
+14
+0.30 0.50 1.00
+
+position 24.00 16.00 -6.00
+physics: m=1, f=0.3, p=1
+sphere
+0.4
+14
+1.00 0.80 0.20
+
+position 26.00 20.00 -6.00
+physics: m=1, f=0.4, p=1
+sphere
+0.4
+14
+1.00 0.30 1.00
+
+position 18.00 4.00 -4.00
+physics: m=1, f=0.5, p=1
+sphere
+0.4
+14
+0.30 1.00 1.00
+
+position 20.00 8.00 -4.00
+physics: m=1, f=0.6, p=1
+sphere
+0.4
+14
+0.95 0.60 0.30
+
+position 22.00 12.00 -4.00
+physics: m=1, f=0.7, p=1
+sphere
+0.4
+14
+0.60 0.40 1.00
+
+position 24.00 16.00 -4.00
+physics: m=1, f=0.8, p=1
+sphere
+0.4
+14
+0.40 0.85 0.40
+
+position 26.00 20.00 -4.00
+physics: m=1, f=0.9, p=1
+sphere
+0.4
+14
+1.00 0.60 0.60
+
+position 18.00 4.00 -2.00
+physics: m=1, f=0.0, p=1
+sphere
+0.4
+14
+1.00 0.30 0.30
+
+position 20.00 8.00 -2.00
+physics: m=1, f=0.1, p=1
+sphere
+0.4
+14
+0.30 1.00 0.30
+
+position 22.00 12.00 -2.00
+physics: m=1, f=0.2, p=1
+sphere
+0.4
+14
+0.30 0.50 1.00
+
+position 24.00 16.00 -2.00
+physics: m=1, f=0.3, p=1
+sphere
+0.4
+14
+1.00 0.80 0.20
+
+position 26.00 20.00 -2.00
+physics: m=1, f=0.4, p=1
+sphere
+0.4
+14
+1.00 0.30 1.00
+
+position 18.00 4.00 0.00
+physics: m=1, f=0.5, p=1
+sphere
+0.4
+14
+0.30 1.00 1.00
+
+position 20.00 8.00 0.00
+physics: m=1, f=0.6, p=1
+sphere
+0.4
+14
+0.95 0.60 0.30
+
+position 22.00 12.00 0.00
+physics: m=1, f=0.7, p=1
+sphere
+0.4
+14
+0.60 0.40 1.00
+
+position 24.00 16.00 0.00
+physics: m=1, f=0.8, p=1
+sphere
+0.4
+14
+0.40 0.85 0.40
+
+position 26.00 20.00 0.00
+physics: m=1, f=0.9, p=1
+sphere
+0.4
+14
+1.00 0.60 0.60
+
+# ===== ФИЗИКА: пирамидка из кубов =====
+position 12.50 0.50 6.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+1.00 0.30 0.30
+
+position 13.50 0.50 6.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+0.30 1.00 0.30
+
+position 14.50 0.50 6.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+0.30 0.50 1.00
+
+position 15.50 0.50 6.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+1.00 0.80 0.20
+
+position 13.00 1.50 7.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+0.30 1.00 0.30
+
+position 14.00 1.50 7.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+0.30 0.50 1.00
+
+position 15.00 1.50 7.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+1.00 0.80 0.20
+
+position 13.50 2.50 8.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+0.30 0.50 1.00
+
+position 14.50 2.50 8.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+1.00 0.80 0.20
+
+position 14.00 3.50 9.00
+physics: m=2, f=0.2, p=2
+cube
+0.9
+1.00 0.80 0.20
+
+# ===== ТЕНЕВОЙ СТРЕСС: высокие обелиски =====
+position -12.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+0.30 1.00 1.00
+
+position -7.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+0.95 0.60 0.30
+
+position -2.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+0.60 0.40 1.00
+
+position 3.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+0.40 0.85 0.40
+
+position 8.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+1.00 0.60 0.60
+
+position 13.00 2 22
+scale 0.6 4 0.6
+cube
+1.0
+1.00 0.30 0.30
+
+# ===== АНИМАЦИОННЫЙ СТРЕСС: летающие кубы =====
+animate cube
+keyframe 0.0
+pos 2.00 3 -4.00
+color 1.00 0.30 0.30
+keyframe 1.0
+pos 2.00 6 -4.00
+color 1.00 0.30 1.00
+keyframe 2.0
+pos 2.00 3 -4.00
+color 1.00 0.30 0.30
+}
+
+animate cube
+keyframe 0.0
+pos 3.20 3 -3.20
+color 0.30 1.00 0.30
+keyframe 1.0
+pos 3.20 6 -3.20
+color 0.30 1.00 1.00
+keyframe 2.0
+pos 3.20 3 -3.20
+color 0.30 1.00 0.30
+}
+
+animate cube
+keyframe 0.0
+pos 4.40 3 -2.40
+color 0.30 0.50 1.00
+keyframe 1.0
+pos 4.40 6 -2.40
+color 0.95 0.60 0.30
+keyframe 2.0
+pos 4.40 3 -2.40
+color 0.30 0.50 1.00
+}
+
+animate cube
+keyframe 0.0
+pos 5.60 3 -1.60
+color 1.00 0.80 0.20
+keyframe 1.0
+pos 5.60 6 -1.60
+color 0.60 0.40 1.00
+keyframe 2.0
+pos 5.60 3 -1.60
+color 1.00 0.80 0.20
+}
+
+animate cube
+keyframe 0.0
+pos 6.80 3 -0.80
+color 1.00 0.30 1.00
+keyframe 1.0
+pos 6.80 6 -0.80
+color 0.40 0.85 0.40
+keyframe 2.0
+pos 6.80 3 -0.80
+color 1.00 0.30 1.00
+}
+
+animate cube
+keyframe 0.0
+pos 8.00 3 0.00
+color 0.30 1.00 1.00
+keyframe 1.0
+pos 8.00 6 0.00
+color 1.00 0.60 0.60
+keyframe 2.0
+pos 8.00 3 0.00
+color 0.30 1.00 1.00
+}
+
+animate cube
+keyframe 0.0
+pos 9.20 3 0.80
+color 0.95 0.60 0.30
+keyframe 1.0
+pos 9.20 6 0.80
+color 1.00 0.30 0.30
+keyframe 2.0
+pos 9.20 3 0.80
+color 0.95 0.60 0.30
+}
+
+animate cube
+keyframe 0.0
+pos 10.40 3 1.60
+color 0.60 0.40 1.00
+keyframe 1.0
+pos 10.40 6 1.60
+color 0.30 1.00 0.30
+keyframe 2.0
+pos 10.40 3 1.60
+color 0.60 0.40 1.00
+}
+
+animate cube
+keyframe 0.0
+pos 11.60 3 2.40
+color 0.40 0.85 0.40
+keyframe 1.0
+pos 11.60 6 2.40
+color 0.30 0.50 1.00
+keyframe 2.0
+pos 11.60 3 2.40
+color 0.40 0.85 0.40
+}
+
+animate cube
+keyframe 0.0
+pos 12.80 3 3.20
+color 1.00 0.60 0.60
+keyframe 1.0
+pos 12.80 6 3.20
+color 1.00 0.80 0.20
+keyframe 2.0
+pos 12.80 3 3.20
+color 1.00 0.60 0.60
+}
+
+animate cube
+keyframe 0.0
+pos 14.00 3 4.00
+color 1.00 0.30 0.30
+keyframe 1.0
+pos 14.00 6 4.00
+color 1.00 0.30 1.00
+keyframe 2.0
+pos 14.00 3 4.00
+color 1.00 0.30 0.30
+}
+
+animate cube
+keyframe 0.0
+pos 15.20 3 4.80
+color 0.30 1.00 0.30
+keyframe 1.0
+pos 15.20 6 4.80
+color 0.30 1.00 1.00
+keyframe 2.0
+pos 15.20 3 4.80
+color 0.30 1.00 0.30
+}
+
+# ===== OBJ-СТРЕСС: анимированные cube.obj =====
+animate mesh "assets/cube.obj"
+keyframe 0.0
+pos -22.00 3 14.00
+color 0.9 0.9 0.9
+keyframe 2.0
+pos -22.00 5 14.00
+color 0.9 0.9 0.9
+}
+
+animate mesh "assets/cube.obj"
+keyframe 0.0
+pos -19.50 3 16.00
+color 0.9 0.9 0.9
+keyframe 2.0
+pos -19.50 5 16.00
+color 0.9 0.9 0.9
+}
+
+animate mesh "assets/cube.obj"
+keyframe 0.0
+pos -17.00 3 18.00
+color 0.9 0.9 0.9
+keyframe 2.0
+pos -17.00 5 18.00
+color 0.9 0.9 0.9
+}
+
+animate mesh "assets/cube.obj"
+keyframe 0.0
+pos -14.50 3 20.00
+color 0.9 0.9 0.9
+keyframe 2.0
+pos -14.50 5 20.00
+color 0.9 0.9 0.9
+}

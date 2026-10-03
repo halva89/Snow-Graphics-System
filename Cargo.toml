@@ -1,5 +1,5 @@
 [package]
-name = "snow_graphics"
+name = "main_frame"
 version = "0.1.0"
 edition = "2021"
 
@@ -18,5 +18,5 @@ nalgebra = "0.32"
 image = "0.25"
 
 [[bin]]
-name = "snow_graphics"
+name = "main_frame"
 path = "src/main.rs"

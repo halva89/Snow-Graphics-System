@@ -1,0 +1,79 @@
+# main.frame — демо тепловизора
+# Включить тепловой режим:  thermal true
+# Температура объекта задаётся строкой "temp <число>" перед фигурой.
+window 900 600
+title "main.frame - Thermal"
+background 0.1 0.1 0.12
+thermal true
+camera true
+camera_pos 5 4 9
+camera_target 0 1 0
+aa-type none
+
+# ===== Пол (тёмный фон, без температуры) =====
+position 0 -0.2 0
+scale 12 0.2 9
+cube
+0.45 0.45 0.5
+
+# ===== Шкала температур: холод -> очень горячий =====
+temp -30
+position -4 0.5 2
+sphere
+1.0
+16
+
+temp 0
+position -2.5 0.5 2
+sphere
+1.0
+16
+
+temp 40
+position -1 0.5 2
+sphere
+1.0
+16
+
+temp 300
+position 0.5 0.5 2
+sphere
+1.0
+16
+
+temp 800
+position 2 0.5 2
+sphere
+1.0
+16
+
+temp 2000
+position 3.5 0.5 2
+sphere
+1.0
+16
+
+# ===== Комната из кубов с разной температурой =====
+temp 15
+position -3 1.5 -2
+scale 1.5 1.5 0.2
+cube
+1.0
+
+temp 60
+position 0 1.5 -2
+scale 1.5 1.5 0.2
+cube
+1.0
+
+temp 1200
+position 3 1.5 -2
+scale 1.5 1.5 0.2
+cube
+1.0
+
+temp 3500
+position 1.5 3 -2
+scale 1.5 1.5 0.2
+cube
+1.0

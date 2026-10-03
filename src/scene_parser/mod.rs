@@ -3,7 +3,7 @@ pub mod static_objects;
 pub mod animated_objects;
 pub mod mesh_loader;
 
-pub use scene_settings::{SceneSettings, RenderMode};
+pub use scene_settings::{SceneSettings, RenderMode, AaType};
 pub use static_objects::parse_static;
 pub use animated_objects::parse_animated;
 
@@ -11,13 +11,23 @@ use crate::render::mesh::Mesh;
 use crate::animation::AnimatedMesh;
 use crate::types::Color;
 use crate::math::Vec3;
+<<<<<<< Updated upstream
+=======
+use crate::physics::PhysicsProps;
+use crate::render::mesh::TextureMode;
+>>>>>>> Stashed changes
 use std::fs;
 use crate::scene_parser::mesh_loader::load_obj;
 use crate::physics::PhysicsProps;
 
 pub enum SceneObject {
+<<<<<<< Updated upstream
     Static(Mesh, Vec3, PhysicsProps),
     Animated(AnimatedMesh),
+=======
+    Static(Mesh, Vec3, Vec3, Vec3, Option<PhysicsProps>, f32),
+    Animated(AnimatedMesh, f32),
+>>>>>>> Stashed changes
 }
 
 pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
@@ -33,7 +43,10 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
     let mut objects = Vec::new();
     let mut i = 0;
     let mut pending_pos: Option<Vec3> = None;
+    let mut pending_rot: Option<Vec3> = None;
+    let mut pending_scale: Option<Vec3> = None;
     let mut pending_phys: Option<PhysicsProps> = None;
+    let mut pending_temp: Option<f32> = None;
 
     while i < lines.len() {
         let line = lines[i].trim();
@@ -50,7 +63,7 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
         }
 
         if line.starts_with("animate") {
-            if let Some(obj) = animated_objects::parse_animated(&lines, &mut i) {
+            if let Some(obj) = animated_objects::parse_animated(&lines, &mut i, pending_temp.take().unwrap_or(0.0)) {
                 objects.push(obj);
             }
             continue;
@@ -63,6 +76,30 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
                 let y = parts[2].parse().unwrap_or(0.0);
                 let z = parts[3].parse().unwrap_or(0.0);
                 pending_pos = Some(Vec3::new(x, y, z));
+            }
+            i += 1;
+            continue;
+        }
+
+        if line.starts_with("rotation") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 4 {
+                let x = parts[1].parse().unwrap_or(0.0);
+                let y = parts[2].parse().unwrap_or(0.0);
+                let z = parts[3].parse().unwrap_or(0.0);
+                pending_rot = Some(Vec3::new(x, y, z));
+            }
+            i += 1;
+            continue;
+        }
+
+        if line.starts_with("scale") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 4 {
+                let x = parts[1].parse().unwrap_or(1.0);
+                let y = parts[2].parse().unwrap_or(1.0);
+                let z = parts[3].parse().unwrap_or(1.0);
+                pending_scale = Some(Vec3::new(x, y, z));
             }
             i += 1;
             continue;
@@ -89,8 +126,25 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             continue;
         }
 
+        if line.starts_with("temp") {
+            let parts: Vec<&str> = line.split_whitespace().collect();
+            if parts.len() >= 2 {
+                pending_temp = parts[1].parse().ok();
+                println!("[Parser] Pending temp: {:?}", pending_temp);
+            }
+            i += 1;
+            continue;
+        }
+
         let pos = pending_pos.take().unwrap_or(Vec3::zero());
+<<<<<<< Updated upstream
         let phys = pending_phys.take().unwrap_or(PhysicsProps::new());
+=======
+        let rot = pending_rot.take().unwrap_or(Vec3::zero());
+        let scale = pending_scale.take().unwrap_or(Vec3::one());
+        let phys = pending_phys.take();
+        let temp = pending_temp.take().unwrap_or(0.0);
+>>>>>>> Stashed changes
         let shape = line;
 
         if shape == "cube" {
@@ -100,7 +154,16 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::cube(size);
             mesh.color = color;
             i += 3;
-            objects.push(SceneObject::Static(mesh, pos, phys));
+
+            // Optional texture lines follow the cube
+            if i < lines.len() {
+                let tline = lines[i].trim();
+                if tline.starts_with("texture") {
+                    apply_texture_directive(&mut mesh, tline);
+                    i += 1;
+                }
+            }
+            objects.push(SceneObject::Static(mesh, pos, rot, scale, phys, temp));
             continue;
         }
 
@@ -112,10 +175,19 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
             let mut mesh = Mesh::sphere(radius, segments);
             mesh.color = color;
             i += 4;
-            objects.push(SceneObject::Static(mesh, pos, phys));
+
+            if i < lines.len() {
+                let tline = lines[i].trim();
+                if tline.starts_with("texture") {
+                    apply_texture_directive(&mut mesh, tline);
+                    i += 1;
+                }
+            }
+            objects.push(SceneObject::Static(mesh, pos, rot, scale, phys, temp));
             continue;
         }
 
+<<<<<<< Updated upstream
         if shape.starts_with("mesh") || shape == "mesh" {
             let path = shape.strip_prefix("mesh").unwrap_or("").trim().trim_matches('"');
             if path.is_empty() && i + 1 < lines.len() {
@@ -146,6 +218,9 @@ pub fn load_scene(path: &str) -> (SceneSettings, Vec<SceneObject>) {
         }
 
         if let Some(obj) = parse_static(line, &lines, &mut i, pos, phys) {
+=======
+        if let Some(obj) = parse_static(line, &lines, &mut i, pos, rot, scale, phys, temp) {
+>>>>>>> Stashed changes
             objects.push(obj);
             continue;
         }
@@ -167,5 +242,21 @@ fn parse_color(line: &str) -> Color {
         )
     } else {
         Color::white()
+    }
+}
+
+fn apply_texture_directive(mesh: &mut Mesh, line: &str) {
+    let rest = line.strip_prefix("texture").unwrap_or("").trim();
+    let parts: Vec<&str> = rest.split_whitespace().collect();
+    if !parts.is_empty() {
+        mesh.texture = Some(parts[0].trim_matches('"').to_string());
+        for p in &parts[1..] {
+            match *p {
+                "expand" => mesh.texture_mode = TextureMode::Expand,
+                "fill" => mesh.texture_mode = TextureMode::Fill,
+                _ => {}
+            }
+        }
+        println!("[Parser] Mesh texture: {:?} mode={:?}", mesh.texture, mesh.texture_mode);
     }
 }

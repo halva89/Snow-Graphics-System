@@ -1,0 +1,7173 @@
+# main.frame - Dyson Sphere (Spiral Collapse)
+window 1024 768
+title "Dyson Sphere - 4096 Cubes"
+render_mode heavy
+camera true
+
+# Cube 0 at (0.25, 0.00, 3.99)
+position 0.25 0.00 3.99
+animate cube
+    keyframe 0.00
+        pos 0.25 0.00 3.99
+        color 0.53 0.50 1.00
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.53 0.50 1.00
+    keyframe 6.00
+        pos 0.25 0.00 3.99
+        color 0.53 0.50 1.00
+}
+
+# Cube 1 at (-0.32, -0.29, 3.98)
+position -0.32 -0.29 3.98
+animate cube
+    keyframe 0.02
+        pos -0.32 -0.29 3.98
+        color 0.46 0.46 1.00
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.46 0.46 1.00
+    keyframe 6.02
+        pos -0.32 -0.29 3.98
+        color 0.46 0.46 1.00
+}
+
+# Cube 2 at (0.05, 0.56, 3.96)
+position 0.05 0.56 3.96
+animate cube
+    keyframe 0.04
+        pos 0.05 0.56 3.96
+        color 0.51 0.57 1.00
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.51 0.57 1.00
+    keyframe 6.04
+        pos 0.05 0.56 3.96
+        color 0.51 0.57 1.00
+}
+
+# Cube 3 at (0.40, -0.52, 3.95)
+position 0.40 -0.52 3.95
+animate cube
+    keyframe 0.06
+        pos 0.40 -0.52 3.95
+        color 0.55 0.43 0.99
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.55 0.43 0.99
+    keyframe 6.06
+        pos 0.40 -0.52 3.95
+        color 0.55 0.43 0.99
+}
+
+# Cube 4 at (-0.74, 0.13, 3.93)
+position -0.74 0.13 3.93
+animate cube
+    keyframe 0.08
+        pos -0.74 0.13 3.93
+        color 0.41 0.52 0.99
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.41 0.52 0.99
+    keyframe 6.08
+        pos -0.74 0.13 3.93
+        color 0.41 0.52 0.99
+}
+
+# Cube 5 at (0.70, 0.44, 3.91)
+position 0.70 0.44 3.91
+animate cube
+    keyframe 0.10
+        pos 0.70 0.44 3.91
+        color 0.59 0.56 0.99
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.59 0.56 0.99
+    keyframe 6.10
+        pos 0.70 0.44 3.91
+        color 0.59 0.56 0.99
+}
+
+# Cube 6 at (-0.23, -0.86, 3.90)
+position -0.23 -0.86 3.90
+animate cube
+    keyframe 0.12
+        pos -0.23 -0.86 3.90
+        color 0.47 0.39 0.99
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.47 0.39 0.99
+    keyframe 6.12
+        pos -0.23 -0.86 3.90
+        color 0.47 0.39 0.99
+}
+
+# Cube 7 at (-0.44, 0.85, 3.88)
+position -0.44 0.85 3.88
+animate cube
+    keyframe 0.14
+        pos -0.44 0.85 3.88
+        color 0.44 0.61 0.99
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.44 0.61 0.99
+    keyframe 6.14
+        pos -0.44 0.85 3.88
+        color 0.44 0.61 0.99
+}
+
+# Cube 8 at (0.96, -0.35, 3.87)
+position 0.96 -0.35 3.87
+animate cube
+    keyframe 0.16
+        pos 0.96 -0.35 3.87
+        color 0.62 0.46 0.98
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.62 0.46 0.98
+    keyframe 6.16
+        pos 0.96 -0.35 3.87
+        color 0.62 0.46 0.98
+}
+
+# Cube 9 at (-1.00, -0.41, 3.85)
+position -1.00 -0.41 3.85
+animate cube
+    keyframe 0.18
+        pos -1.00 -0.41 3.85
+        color 0.38 0.45 0.98
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.38 0.45 0.98
+    keyframe 6.18
+        pos -1.00 -0.41 3.85
+        color 0.38 0.45 0.98
+}
+
+# Cube 10 at (0.48, 1.03, 3.84)
+position 0.48 1.03 3.84
+animate cube
+    keyframe 0.20
+        pos 0.48 1.03 3.84
+        color 0.56 0.63 0.98
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.56 0.63 0.98
+    keyframe 6.20
+        pos 0.48 1.03 3.84
+        color 0.56 0.63 0.98
+}
+
+# Cube 11 at (0.35, -1.13, 3.82)
+position 0.35 -1.13 3.82
+animate cube
+    keyframe 0.22
+        pos 0.35 -1.13 3.82
+        color 0.54 0.36 0.98
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.54 0.36 0.98
+    keyframe 6.22
+        pos 0.35 -1.13 3.82
+        color 0.54 0.36 0.98
+}
+
+# Cube 12 at (-1.07, 0.62, 3.80)
+position -1.07 0.62 3.80
+animate cube
+    keyframe 0.24
+        pos -1.07 0.62 3.80
+        color 0.37 0.58 0.98
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.37 0.58 0.98
+    keyframe 6.24
+        pos -1.07 0.62 3.80
+        color 0.37 0.58 0.98
+}
+
+# Cube 13 at (1.25, 0.28, 3.79)
+position 1.25 0.28 3.79
+animate cube
+    keyframe 0.26
+        pos 1.25 0.28 3.79
+        color 0.66 0.53 0.97
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.66 0.53 0.97
+    keyframe 6.26
+        pos 1.25 0.28 3.79
+        color 0.66 0.53 0.97
+}
+
+# Cube 14 at (-0.76, -1.09, 3.77)
+position -0.76 -1.09 3.77
+animate cube
+    keyframe 0.28
+        pos -0.76 -1.09 3.77
+        color 0.40 0.36 0.97
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.40 0.36 0.97
+    keyframe 6.28
+        pos -0.76 -1.09 3.77
+        color 0.40 0.36 0.97
+}
+
+# Cube 15 at (-0.18, 1.36, 3.76)
+position -0.18 1.36 3.76
+animate cube
+    keyframe 0.30
+        pos -0.18 1.36 3.76
+        color 0.48 0.67 0.97
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.48 0.67 0.97
+    keyframe 6.30
+        pos -0.18 1.36 3.76
+        color 0.48 0.67 0.97
+}
+
+# Cube 16 at (1.08, -0.91, 3.74)
+position 1.08 -0.91 3.74
+animate cube
+    keyframe 0.32
+        pos 1.08 -0.91 3.74
+        color 0.64 0.39 0.97
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.64 0.39 0.97
+    keyframe 6.32
+        pos 1.08 -0.91 3.74
+        color 0.64 0.39 0.97
+}
+
+# Cube 17 at (-1.45, -0.06, 3.73)
+position -1.45 -0.06 3.73
+animate cube
+    keyframe 0.34
+        pos -1.45 -0.06 3.73
+        color 0.32 0.49 0.97
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.32 0.49 0.97
+    keyframe 6.34
+        pos -1.45 -0.06 3.73
+        color 0.32 0.49 0.97
+}
+
+# Cube 18 at (1.06, 1.05, 3.71)
+position 1.06 1.05 3.71
+animate cube
+    keyframe 0.36
+        pos 1.06 1.05 3.71
+        color 0.63 0.63 0.96
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.63 0.63 0.96
+    keyframe 6.36
+        pos 1.06 1.05 3.71
+        color 0.63 0.63 0.96
+}
+
+# Cube 19 at (-0.07, -1.53, 3.70)
+position -0.07 -1.53 3.70
+animate cube
+    keyframe 0.38
+        pos -0.07 -1.53 3.70
+        color 0.49 0.31 0.96
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.49 0.31 0.96
+    keyframe 6.38
+        pos -0.07 -1.53 3.70
+        color 0.49 0.31 0.96
+}
+
+# Cube 20 at (-1.00, 1.20, 3.68)
+position -1.00 1.20 3.68
+animate cube
+    keyframe 0.40
+        pos -1.00 1.20 3.68
+        color 0.37 0.65 0.96
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.37 0.65 0.96
+    keyframe 6.40
+        pos -1.00 1.20 3.68
+        color 0.37 0.65 0.96
+}
+
+# Cube 21 at (1.59, -0.21, 3.66)
+position 1.59 -0.21 3.66
+animate cube
+    keyframe 0.42
+        pos 1.59 -0.21 3.66
+        color 0.70 0.47 0.96
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.70 0.47 0.96
+    keyframe 6.42
+        pos 1.59 -0.21 3.66
+        color 0.70 0.47 0.96
+}
+
+# Cube 22 at (-1.35, -0.94, 3.65)
+position -1.35 -0.94 3.65
+animate cube
+    keyframe 0.44
+        pos -1.35 -0.94 3.65
+        color 0.33 0.38 0.96
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.33 0.38 0.96
+    keyframe 6.44
+        pos -1.35 -0.94 3.65
+        color 0.33 0.38 0.96
+}
+
+# Cube 23 at (0.37, 1.63, 3.63)
+position 0.37 1.63 3.63
+animate cube
+    keyframe 0.46
+        pos 0.37 1.63 3.63
+        color 0.55 0.70 0.95
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.55 0.70 0.95
+    keyframe 6.46
+        pos 0.37 1.63 3.63
+        color 0.55 0.70 0.95
+}
+
+# Cube 24 at (0.85, -1.48, 3.62)
+position 0.85 -1.48 3.62
+animate cube
+    keyframe 0.48
+        pos 0.85 -1.48 3.62
+        color 0.61 0.31 0.95
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.61 0.31 0.95
+    keyframe 6.48
+        pos 0.85 -1.48 3.62
+        color 0.61 0.31 0.95
+}
+
+# Cube 25 at (-1.66, 0.53, 3.60)
+position -1.66 0.53 3.60
+animate cube
+    keyframe 0.50
+        pos -1.66 0.53 3.60
+        color 0.29 0.57 0.95
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.29 0.57 0.95
+    keyframe 6.50
+        pos -1.66 0.53 3.60
+        color 0.29 0.57 0.95
+}
+
+# Cube 26 at (1.61, 0.74, 3.59)
+position 1.61 0.74 3.59
+animate cube
+    keyframe 0.52
+        pos 1.61 0.74 3.59
+        color 0.70 0.59 0.95
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.70 0.59 0.95
+    keyframe 6.52
+        pos 1.61 0.74 3.59
+        color 0.70 0.59 0.95
+}
+
+# Cube 27 at (-0.70, -1.66, 3.57)
+position -0.70 -1.66 3.57
+animate cube
+    keyframe 0.54
+        pos -0.70 -1.66 3.57
+        color 0.41 0.29 0.95
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.41 0.29 0.95
+    keyframe 6.54
+        pos -0.70 -1.66 3.57
+        color 0.41 0.29 0.95
+}
+
+# Cube 28 at (-0.62, 1.73, 3.55)
+position -0.62 1.73 3.55
+animate cube
+    keyframe 0.56
+        pos -0.62 1.73 3.55
+        color 0.42 0.72 0.94
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.42 0.72 0.94
+    keyframe 6.56
+        pos -0.62 1.73 3.55
+        color 0.42 0.72 0.94
+}
+
+# Cube 29 at (1.65, -0.87, 3.54)
+position 1.65 -0.87 3.54
+animate cube
+    keyframe 0.58
+        pos 1.65 -0.87 3.54
+        color 0.71 0.39 0.94
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.71 0.39 0.94
+    keyframe 6.58
+        pos 1.65 -0.87 3.54
+        color 0.71 0.39 0.94
+}
+
+# Cube 30 at (-1.83, -0.48, 3.52)
+position -1.83 -0.48 3.52
+animate cube
+    keyframe 0.60
+        pos -1.83 -0.48 3.52
+        color 0.27 0.44 0.94
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.27 0.44 0.94
+    keyframe 6.60
+        pos -1.83 -0.48 3.52
+        color 0.27 0.44 0.94
+}
+
+# Cube 31 at (1.04, 1.62, 3.51)
+position 1.04 1.62 3.51
+animate cube
+    keyframe 0.62
+        pos 1.04 1.62 3.51
+        color 0.63 0.70 0.94
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.63 0.70 0.94
+    keyframe 6.62
+        pos 1.04 1.62 3.51
+        color 0.63 0.70 0.94
+}
+
+# Cube 32 at (0.33, -1.92, 3.49)
+position 0.33 -1.92 3.49
+animate cube
+    keyframe 0.64
+        pos 0.33 -1.92 3.49
+        color 0.54 0.26 0.94
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.54 0.26 0.94
+    keyframe 6.64
+        pos 0.33 -1.92 3.49
+        color 0.54 0.26 0.94
+}
+
+# Cube 33 at (-1.56, 1.21, 3.48)
+position -1.56 1.21 3.48
+animate cube
+    keyframe 0.66
+        pos -1.56 1.21 3.48
+        color 0.30 0.65 0.93
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.30 0.65 0.93
+    keyframe 6.66
+        pos -1.56 1.21 3.48
+        color 0.30 0.65 0.93
+}
+
+# Cube 34 at (2.00, 0.17, 3.46)
+position 2.00 0.17 3.46
+animate cube
+    keyframe 0.68
+        pos 2.00 0.17 3.46
+        color 0.75 0.52 0.93
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.75 0.52 0.93
+    keyframe 6.68
+        pos 2.00 0.17 3.46
+        color 0.75 0.52 0.93
+}
+
+# Cube 35 at (-1.38, -1.49, 3.45)
+position -1.38 -1.49 3.45
+animate cube
+    keyframe 0.70
+        pos -1.38 -1.49 3.45
+        color 0.33 0.31 0.93
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.33 0.31 0.93
+    keyframe 6.70
+        pos -1.38 -1.49 3.45
+        color 0.33 0.31 0.93
+}
+
+# Cube 36 at (0.01, 2.06, 3.43)
+position 0.01 2.06 3.43
+animate cube
+    keyframe 0.72
+        pos 0.01 2.06 3.43
+        color 0.50 0.76 0.93
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.50 0.76 0.93
+    keyframe 6.72
+        pos 0.01 2.06 3.43
+        color 0.50 0.76 0.93
+}
+
+# Cube 37 at (1.40, -1.54, 3.41)
+position 1.40 -1.54 3.41
+animate cube
+    keyframe 0.74
+        pos 1.40 -1.54 3.41
+        color 0.68 0.31 0.93
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.68 0.31 0.93
+    keyframe 6.74
+        pos 1.40 -1.54 3.41
+        color 0.68 0.31 0.93
+}
+
+# Cube 38 at (-2.10, 0.19, 3.40)
+position -2.10 0.19 3.40
+animate cube
+    keyframe 0.76
+        pos -2.10 0.19 3.40
+        color 0.24 0.52 0.92
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.24 0.52 0.92
+    keyframe 6.76
+        pos -2.10 0.19 3.40
+        color 0.24 0.52 0.92
+}
+
+# Cube 39 at (1.70, 1.29, 3.38)
+position 1.70 1.29 3.38
+animate cube
+    keyframe 0.78
+        pos 1.70 1.29 3.38
+        color 0.71 0.66 0.92
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.71 0.66 0.92
+    keyframe 6.78
+        pos 1.70 1.29 3.38
+        color 0.71 0.66 0.92
+}
+
+# Cube 40 at (-0.39, -2.12, 3.37)
+position -0.39 -2.12 3.37
+animate cube
+    keyframe 0.80
+        pos -0.39 -2.12 3.37
+        color 0.45 0.23 0.92
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.45 0.23 0.92
+    keyframe 6.80
+        pos -0.39 -2.12 3.37
+        color 0.45 0.23 0.92
+}
+
+# Cube 41 at (-1.16, 1.85, 3.35)
+position -1.16 1.85 3.35
+animate cube
+    keyframe 0.82
+        pos -1.16 1.85 3.35
+        color 0.35 0.73 0.92
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.35 0.73 0.92
+    keyframe 6.82
+        pos -1.16 1.85 3.35
+        color 0.35 0.73 0.92
+}
+
+# Cube 42 at (2.13, -0.58, 3.34)
+position 2.13 -0.58 3.34
+animate cube
+    keyframe 0.84
+        pos 2.13 -0.58 3.34
+        color 0.77 0.43 0.92
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.77 0.43 0.92
+    keyframe 6.84
+        pos 2.13 -0.58 3.34
+        color 0.77 0.43 0.92
+}
+
+# Cube 43 at (-1.98, -1.02, 3.32)
+position -1.98 -1.02 3.32
+animate cube
+    keyframe 0.86
+        pos -1.98 -1.02 3.32
+        color 0.25 0.37 0.92
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.25 0.37 0.92
+    keyframe 6.86
+        pos -1.98 -1.02 3.32
+        color 0.25 0.37 0.92
+}
+
+# Cube 44 at (0.78, 2.11, 3.30)
+position 0.78 2.11 3.30
+animate cube
+    keyframe 0.88
+        pos 0.78 2.11 3.30
+        color 0.60 0.76 0.91
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.60 0.76 0.91
+    keyframe 6.88
+        pos 0.78 2.11 3.30
+        color 0.60 0.76 0.91
+}
+
+# Cube 45 at (0.86, -2.11, 3.29)
+position 0.86 -2.11 3.29
+animate cube
+    keyframe 0.90
+        pos 0.86 -2.11 3.29
+        color 0.61 0.24 0.91
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.61 0.24 0.91
+    keyframe 6.90
+        pos 0.86 -2.11 3.29
+        color 0.61 0.24 0.91
+}
+
+# Cube 46 at (-2.08, 0.98, 3.27)
+position -2.08 0.98 3.27
+animate cube
+    keyframe 0.92
+        pos -2.08 0.98 3.27
+        color 0.24 0.62 0.91
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.24 0.62 0.91
+    keyframe 6.92
+        pos -2.08 0.98 3.27
+        color 0.24 0.62 0.91
+}
+
+# Cube 47 at (2.22, 0.68, 3.26)
+position 2.22 0.68 3.26
+animate cube
+    keyframe 0.94
+        pos 2.22 0.68 3.26
+        color 0.78 0.59 0.91
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.78 0.59 0.91
+    keyframe 6.94
+        pos 2.22 0.68 3.26
+        color 0.78 0.59 0.91
+}
+
+# Cube 48 at (-1.18, -2.02, 3.24)
+position -1.18 -2.02 3.24
+animate cube
+    keyframe 0.96
+        pos -1.18 -2.02 3.24
+        color 0.35 0.25 0.91
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.35 0.25 0.91
+    keyframe 6.96
+        pos -1.18 -2.02 3.24
+        color 0.35 0.25 0.91
+}
+
+# Cube 49 at (-0.50, 2.31, 3.23)
+position -0.50 2.31 3.23
+animate cube
+    keyframe 0.98
+        pos -0.50 2.31 3.23
+        color 0.44 0.79 0.90
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.44 0.79 0.90
+    keyframe 6.98
+        pos -0.50 2.31 3.23
+        color 0.44 0.79 0.90
+}
+
+# Cube 50 at (1.94, -1.38, 3.21)
+position 1.94 -1.38 3.21
+animate cube
+    keyframe 1.00
+        pos 1.94 -1.38 3.21
+        color 0.74 0.33 0.90
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.74 0.33 0.90
+    keyframe 7.00
+        pos 1.94 -1.38 3.21
+        color 0.74 0.33 0.90
+}
+
+# Cube 51 at (-2.39, -0.30, 3.20)
+position -2.39 -0.30 3.20
+animate cube
+    keyframe 1.02
+        pos -2.39 -0.30 3.20
+        color 0.20 0.46 0.90
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.20 0.46 0.90
+    keyframe 7.02
+        pos -2.39 -0.30 3.20
+        color 0.20 0.46 0.90
+}
+
+# Cube 52 at (1.57, 1.85, 3.18)
+position 1.57 1.85 3.18
+animate cube
+    keyframe 1.04
+        pos 1.57 1.85 3.18
+        color 0.70 0.73 0.90
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.70 0.73 0.90
+    keyframe 7.04
+        pos 1.57 1.85 3.18
+        color 0.70 0.73 0.90
+}
+
+# Cube 53 at (0.09, -2.45, 3.16)
+position 0.09 -2.45 3.16
+animate cube
+    keyframe 1.06
+        pos 0.09 -2.45 3.16
+        color 0.51 0.19 0.90
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.51 0.19 0.90
+    keyframe 7.06
+        pos 0.09 -2.45 3.16
+        color 0.51 0.19 0.90
+}
+
+# Cube 54 at (-1.73, 1.76, 3.15)
+position -1.73 1.76 3.15
+animate cube
+    keyframe 1.08
+        pos -1.73 1.76 3.15
+        color 0.28 0.72 0.89
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.28 0.72 0.89
+    keyframe 7.08
+        pos -1.73 1.76 3.15
+        color 0.28 0.72 0.89
+}
+
+# Cube 55 at (2.48, -0.13, 3.13)
+position 2.48 -0.13 3.13
+animate cube
+    keyframe 1.10
+        pos 2.48 -0.13 3.13
+        color 0.81 0.48 0.89
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.81 0.48 0.89
+    keyframe 7.10
+        pos 2.48 -0.13 3.13
+        color 0.81 0.48 0.89
+}
+
+# Cube 56 at (-1.93, -1.60, 3.12)
+position -1.93 -1.60 3.12
+animate cube
+    keyframe 1.12
+        pos -1.93 -1.60 3.12
+        color 0.26 0.30 0.89
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.26 0.30 0.89
+    keyframe 7.12
+        pos -1.93 -1.60 3.12
+        color 0.26 0.30 0.89
+}
+
+# Cube 57 at (0.35, 2.50, 3.10)
+position 0.35 2.50 3.10
+animate cube
+    keyframe 1.14
+        pos 0.35 2.50 3.10
+        color 0.54 0.81 0.89
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.54 0.81 0.89
+    keyframe 7.14
+        pos 0.35 2.50 3.10
+        color 0.54 0.81 0.89
+}
+
+# Cube 58 at (1.44, -2.10, 3.09)
+position 1.44 -2.10 3.09
+animate cube
+    keyframe 1.16
+        pos 1.44 -2.10 3.09
+        color 0.68 0.24 0.89
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.68 0.24 0.89
+    keyframe 7.16
+        pos 1.44 -2.10 3.09
+        color 0.68 0.24 0.89
+}
+
+# Cube 59 at (-2.50, 0.57, 3.07)
+position -2.50 0.57 3.07
+animate cube
+    keyframe 1.18
+        pos -2.50 0.57 3.07
+        color 0.19 0.57 0.88
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.19 0.57 0.88
+    keyframe 7.18
+        pos -2.50 0.57 3.07
+        color 0.19 0.57 0.88
+}
+
+# Cube 60 at (2.25, 1.27, 3.05)
+position 2.25 1.27 3.05
+animate cube
+    keyframe 1.20
+        pos 2.25 1.27 3.05
+        color 0.78 0.66 0.88
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.78 0.66 0.88
+    keyframe 7.20
+        pos 2.25 1.27 3.05
+        color 0.78 0.66 0.88
+}
+
+# Cube 61 at (-0.80, -2.47, 3.04)
+position -0.80 -2.47 3.04
+animate cube
+    keyframe 1.22
+        pos -0.80 -2.47 3.04
+        color 0.40 0.19 0.88
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.40 0.19 0.88
+    keyframe 7.22
+        pos -0.80 -2.47 3.04
+        color 0.40 0.19 0.88
+}
+
+# Cube 62 at (-1.09, 2.38, 3.02)
+position -1.09 2.38 3.02
+animate cube
+    keyframe 1.24
+        pos -1.09 2.38 3.02
+        color 0.36 0.80 0.88
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.36 0.80 0.88
+    keyframe 7.24
+        pos -1.09 2.38 3.02
+        color 0.36 0.80 0.88
+}
+
+# Cube 63 at (2.43, -1.03, 3.01)
+position 2.43 -1.03 3.01
+animate cube
+    keyframe 1.26
+        pos 2.43 -1.03 3.01
+        color 0.80 0.37 0.88
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.80 0.37 0.88
+    keyframe 7.26
+        pos 2.43 -1.03 3.01
+        color 0.80 0.37 0.88
+}
+
+# Cube 64 at (-2.50, -0.89, 2.99)
+position -2.50 -0.89 2.99
+animate cube
+    keyframe 0.00
+        pos -2.50 -0.89 2.99
+        color 0.19 0.39 0.87
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.19 0.39 0.87
+    keyframe 6.00
+        pos -2.50 -0.89 2.99
+        color 0.19 0.39 0.87
+}
+
+# Cube 65 at (1.25, 2.36, 2.98)
+position 1.25 2.36 2.98
+animate cube
+    keyframe 0.02
+        pos 1.25 2.36 2.98
+        color 0.66 0.79 0.87
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.66 0.79 0.87
+    keyframe 6.02
+        pos 1.25 2.36 2.98
+        color 0.66 0.79 0.87
+}
+
+# Cube 66 at (0.67, -2.60, 2.96)
+position 0.67 -2.60 2.96
+animate cube
+    keyframe 0.04
+        pos 0.67 -2.60 2.96
+        color 0.58 0.17 0.87
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.58 0.17 0.87
+    keyframe 6.04
+        pos 0.67 -2.60 2.96
+        color 0.58 0.17 0.87
+}
+
+# Cube 67 at (-2.27, 1.47, 2.95)
+position -2.27 1.47 2.95
+animate cube
+    keyframe 0.06
+        pos -2.27 1.47 2.95
+        color 0.22 0.68 0.87
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.22 0.68 0.87
+    keyframe 6.06
+        pos -2.27 1.47 2.95
+        color 0.22 0.68 0.87
+}
+
+# Cube 68 at (2.69, 0.45, 2.93)
+position 2.69 0.45 2.93
+animate cube
+    keyframe 0.08
+        pos 2.69 0.45 2.93
+        color 0.84 0.56 0.87
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.84 0.56 0.87
+    keyframe 6.08
+        pos 2.69 0.45 2.93
+        color 0.84 0.56 0.87
+}
+
+# Cube 69 at (-1.69, -2.16, 2.91)
+position -1.69 -2.16 2.91
+animate cube
+    keyframe 0.10
+        pos -1.69 -2.16 2.91
+        color 0.29 0.23 0.86
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.29 0.23 0.86
+    keyframe 6.10
+        pos -1.69 -2.16 2.91
+        color 0.29 0.23 0.86
+}
+
+# Cube 70 at (-0.21, 2.75, 2.90)
+position -0.21 2.75 2.90
+animate cube
+    keyframe 0.12
+        pos -0.21 2.75 2.90
+        color 0.47 0.84 0.86
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.47 0.84 0.86
+    keyframe 6.12
+        pos -0.21 2.75 2.90
+        color 0.47 0.84 0.86
+}
+
+# Cube 71 at (2.03, -1.89, 2.88)
+position 2.03 -1.89 2.88
+animate cube
+    keyframe 0.14
+        pos 2.03 -1.89 2.88
+        color 0.75 0.26 0.86
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.75 0.26 0.86
+    keyframe 6.14
+        pos 2.03 -1.89 2.88
+        color 0.75 0.26 0.86
+}
+
+# Cube 72 at (-2.79, 0.03, 2.87)
+position -2.79 0.03 2.87
+animate cube
+    keyframe 0.16
+        pos -2.79 0.03 2.87
+        color 0.15 0.50 0.86
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.15 0.50 0.86
+    keyframe 6.16
+        pos -2.79 0.03 2.87
+        color 0.15 0.50 0.86
+}
+
+# Cube 73 at (2.09, 1.87, 2.85)
+position 2.09 1.87 2.85
+animate cube
+    keyframe 0.18
+        pos 2.09 1.87 2.85
+        color 0.76 0.73 0.86
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.76 0.73 0.86
+    keyframe 6.18
+        pos 2.09 1.87 2.85
+        color 0.76 0.73 0.86
+}
+
+# Cube 74 at (-0.27, -2.81, 2.84)
+position -0.27 -2.81 2.84
+animate cube
+    keyframe 0.20
+        pos -0.27 -2.81 2.84
+        color 0.47 0.15 0.85
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.47 0.15 0.85
+    keyframe 6.20
+        pos -0.27 -2.81 2.84
+        color 0.47 0.15 0.85
+}
+
+# Cube 75 at (-1.70, 2.27, 2.82)
+position -1.70 2.27 2.82
+animate cube
+    keyframe 0.22
+        pos -1.70 2.27 2.82
+        color 0.29 0.78 0.85
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.29 0.78 0.85
+    keyframe 6.22
+        pos -1.70 2.27 2.82
+        color 0.29 0.78 0.85
+}
+
+# Cube 76 at (2.80, -0.52, 2.80)
+position 2.80 -0.52 2.80
+animate cube
+    keyframe 0.24
+        pos 2.80 -0.52 2.80
+        color 0.85 0.43 0.85
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.85 0.43 0.85
+    keyframe 6.24
+        pos 2.80 -0.52 2.80
+        color 0.85 0.43 0.85
+}
+
+# Cube 77 at (-2.43, -1.52, 2.79)
+position -2.43 -1.52 2.79
+animate cube
+    keyframe 0.26
+        pos -2.43 -1.52 2.79
+        color 0.20 0.31 0.85
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.20 0.31 0.85
+    keyframe 6.26
+        pos -2.43 -1.52 2.79
+        color 0.20 0.31 0.85
+}
+
+# Cube 78 at (0.78, 2.78, 2.77)
+position 0.78 2.78 2.77
+animate cube
+    keyframe 0.28
+        pos 0.78 2.78 2.77
+        color 0.60 0.85 0.85
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.60 0.85 0.85
+    keyframe 6.28
+        pos 0.78 2.78 2.77
+        color 0.60 0.85 0.85
+}
+
+# Cube 79 at (1.31, -2.58, 2.76)
+position 1.31 -2.58 2.76
+animate cube
+    keyframe 0.30
+        pos 1.31 -2.58 2.76
+        color 0.66 0.18 0.84
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.66 0.18 0.84
+    keyframe 6.30
+        pos 1.31 -2.58 2.76
+        color 0.66 0.18 0.84
+}
+
+# Cube 80 at (-2.73, 1.03, 2.74)
+position -2.73 1.03 2.74
+animate cube
+    keyframe 0.32
+        pos -2.73 1.03 2.74
+        color 0.16 0.63 0.84
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.16 0.63 0.84
+    keyframe 6.32
+        pos -2.73 1.03 2.74
+        color 0.16 0.63 0.84
+}
+
+# Cube 81 at (2.72, 1.09, 2.73)
+position 2.72 1.09 2.73
+animate cube
+    keyframe 0.34
+        pos 2.72 1.09 2.73
+        color 0.84 0.64 0.84
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.84 0.64 0.84
+    keyframe 6.34
+        pos 2.72 1.09 2.73
+        color 0.84 0.64 0.84
+}
+
+# Cube 82 at (-1.27, -2.65, 2.71)
+position -1.27 -2.65 2.71
+animate cube
+    keyframe 0.36
+        pos -1.27 -2.65 2.71
+        color 0.34 0.17 0.84
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.34 0.17 0.84
+    keyframe 6.36
+        pos -1.27 -2.65 2.71
+        color 0.34 0.17 0.84
+}
+
+# Cube 83 at (-0.86, 2.83, 2.70)
+position -0.86 2.83 2.70
+animate cube
+    keyframe 0.38
+        pos -0.86 2.83 2.70
+        color 0.39 0.85 0.84
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.39 0.85 0.84
+    keyframe 6.38
+        pos -0.86 2.83 2.70
+        color 0.39 0.85 0.84
+}
+
+# Cube 84 at (2.55, -1.51, 2.68)
+position 2.55 -1.51 2.68
+animate cube
+    keyframe 0.40
+        pos 2.55 -1.51 2.68
+        color 0.82 0.31 0.83
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.82 0.31 0.83
+    keyframe 6.40
+        pos 2.55 -1.51 2.68
+        color 0.82 0.31 0.83
+}
+
+# Cube 85 at (-2.92, -0.61, 2.66)
+position -2.92 -0.61 2.66
+animate cube
+    keyframe 0.42
+        pos -2.92 -0.61 2.66
+        color 0.13 0.42 0.83
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.13 0.42 0.83
+    keyframe 6.42
+        pos -2.92 -0.61 2.66
+        color 0.13 0.42 0.83
+}
+
+# Cube 86 at (1.75, 2.44, 2.65)
+position 1.75 2.44 2.65
+animate cube
+    keyframe 0.44
+        pos 1.75 2.44 2.65
+        color 0.72 0.80 0.83
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.72 0.80 0.83
+    keyframe 6.44
+        pos 1.75 2.44 2.65
+        color 0.72 0.80 0.83
+}
+
+# Cube 87 at (0.36, -2.99, 2.63)
+position 0.36 -2.99 2.63
+animate cube
+    keyframe 0.46
+        pos 0.36 -2.99 2.63
+        color 0.54 0.13 0.83
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.54 0.13 0.83
+    keyframe 6.46
+        pos 0.36 -2.99 2.63
+        color 0.54 0.13 0.83
+}
+
+# Cube 88 at (-2.29, 1.97, 2.62)
+position -2.29 1.97 2.62
+animate cube
+    keyframe 0.48
+        pos -2.29 1.97 2.62
+        color 0.21 0.75 0.83
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.21 0.75 0.83
+    keyframe 6.48
+        pos -2.29 1.97 2.62
+        color 0.21 0.75 0.83
+}
+
+# Cube 89 at (3.04, 0.10, 2.60)
+position 3.04 0.10 2.60
+animate cube
+    keyframe 0.50
+        pos 3.04 0.10 2.60
+        color 0.88 0.51 0.83
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.88 0.51 0.83
+    keyframe 6.50
+        pos 3.04 0.10 2.60
+        color 0.88 0.51 0.83
+}
+
+# Cube 90 at (-2.18, -2.13, 2.59)
+position -2.18 -2.13 2.59
+animate cube
+    keyframe 0.52
+        pos -2.18 -2.13 2.59
+        color 0.23 0.23 0.82
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.23 0.23 0.82
+    keyframe 6.52
+        pos -2.18 -2.13 2.59
+        color 0.23 0.23 0.82
+}
+
+# Cube 91 at (0.17, 3.06, 2.57)
+position 0.17 3.06 2.57
+animate cube
+    keyframe 0.54
+        pos 0.17 3.06 2.57
+        color 0.52 0.88 0.82
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.52 0.88 0.82
+    keyframe 6.54
+        pos 0.17 3.06 2.57
+        color 0.52 0.88 0.82
+}
+
+# Cube 92 at (1.95, -2.38, 2.55)
+position 1.95 -2.38 2.55
+animate cube
+    keyframe 0.56
+        pos 1.95 -2.38 2.55
+        color 0.74 0.20 0.82
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.74 0.20 0.82
+    keyframe 6.56
+        pos 1.95 -2.38 2.55
+        color 0.74 0.20 0.82
+}
+
+# Cube 93 at (-3.06, 0.44, 2.54)
+position -3.06 0.44 2.54
+animate cube
+    keyframe 0.58
+        pos -3.06 0.44 2.54
+        color 0.12 0.56 0.82
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.12 0.56 0.82
+    keyframe 6.58
+        pos -3.06 0.44 2.54
+        color 0.12 0.56 0.82
+}
+
+# Cube 94 at (2.56, 1.75, 2.52)
+position 2.56 1.75 2.52
+animate cube
+    keyframe 0.60
+        pos 2.56 1.75 2.52
+        color 0.82 0.72 0.82
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.82 0.72 0.82
+    keyframe 6.60
+        pos 2.56 1.75 2.52
+        color 0.82 0.72 0.82
+}
+
+# Cube 95 at (-0.71, -3.03, 2.51)
+position -0.71 -3.03 2.51
+animate cube
+    keyframe 0.62
+        pos -0.71 -3.03 2.51
+        color 0.41 0.12 0.81
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.41 0.12 0.81
+    keyframe 6.62
+        pos -0.71 -3.03 2.51
+        color 0.41 0.12 0.81
+}
+
+# Cube 96 at (-1.53, 2.73, 2.49)
+position -1.53 2.73 2.49
+animate cube
+    keyframe 0.64
+        pos -1.53 2.73 2.49
+        color 0.31 0.84 0.81
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.31 0.84 0.81
+    keyframe 6.64
+        pos -1.53 2.73 2.49
+        color 0.31 0.84 0.81
+}
+
+# Cube 97 at (2.98, -0.98, 2.48)
+position 2.98 -0.98 2.48
+animate cube
+    keyframe 0.66
+        pos 2.98 -0.98 2.48
+        color 0.87 0.38 0.81
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.87 0.38 0.81
+    keyframe 6.66
+        pos 2.98 -0.98 2.48
+        color 0.87 0.38 0.81
+}
+
+# Cube 98 at (-2.88, -1.29, 2.46)
+position -2.88 -1.29 2.46
+animate cube
+    keyframe 0.68
+        pos -2.88 -1.29 2.46
+        color 0.14 0.34 0.81
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.14 0.34 0.81
+    keyframe 6.68
+        pos -2.88 -1.29 2.46
+        color 0.14 0.34 0.81
+}
+
+# Cube 99 at (1.25, 2.91, 2.45)
+position 1.25 2.91 2.45
+animate cube
+    keyframe 0.70
+        pos 1.25 2.91 2.45
+        color 0.66 0.86 0.81
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.66 0.86 0.81
+    keyframe 6.70
+        pos 1.25 2.91 2.45
+        color 0.66 0.86 0.81
+}
+
+# Cube 100 at (1.05, -3.00, 2.43)
+position 1.05 -3.00 2.43
+animate cube
+    keyframe 0.72
+        pos 1.05 -3.00 2.43
+        color 0.63 0.12 0.80
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.63 0.12 0.80
+    keyframe 6.72
+        pos 1.05 -3.00 2.43
+        color 0.63 0.12 0.80
+}
+
+# Cube 101 at (-2.81, 1.51, 2.41)
+position -2.81 1.51 2.41
+animate cube
+    keyframe 0.74
+        pos -2.81 1.51 2.41
+        color 0.15 0.69 0.80
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.15 0.69 0.80
+    keyframe 6.74
+        pos -2.81 1.51 2.41
+        color 0.15 0.69 0.80
+}
+
+# Cube 102 at (3.10, 0.79, 2.40)
+position 3.10 0.79 2.40
+animate cube
+    keyframe 0.76
+        pos 3.10 0.79 2.40
+        color 0.89 0.60 0.80
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.89 0.60 0.80
+    keyframe 6.76
+        pos 3.10 0.79 2.40
+        color 0.89 0.60 0.80
+}
+
+# Cube 103 at (-1.76, -2.69, 2.38)
+position -1.76 -2.69 2.38
+animate cube
+    keyframe 0.78
+        pos -1.76 -2.69 2.38
+        color 0.28 0.16 0.80
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.28 0.16 0.80
+    keyframe 6.78
+        pos -1.76 -2.69 2.38
+        color 0.28 0.16 0.80
+}
+
+# Cube 104 at (-0.52, 3.18, 2.37)
+position -0.52 3.18 2.37
+animate cube
+    keyframe 0.80
+        pos -0.52 3.18 2.37
+        color 0.44 0.90 0.80
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.44 0.90 0.80
+    keyframe 6.80
+        pos -0.52 3.18 2.37
+        color 0.44 0.90 0.80
+}
+
+# Cube 105 at (2.54, -2.01, 2.35)
+position 2.54 -2.01 2.35
+animate cube
+    keyframe 0.82
+        pos 2.54 -2.01 2.35
+        color 0.82 0.25 0.79
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.82 0.25 0.79
+    keyframe 6.82
+        pos 2.54 -2.01 2.35
+        color 0.82 0.25 0.79
+}
+
+# Cube 106 at (-3.24, -0.24, 2.34)
+position -3.24 -0.24 2.34
+animate cube
+    keyframe 0.84
+        pos -3.24 -0.24 2.34
+        color 0.10 0.47 0.79
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.10 0.47 0.79
+    keyframe 6.84
+        pos -3.24 -0.24 2.34
+        color 0.10 0.47 0.79
+}
+
+# Cube 107 at (2.24, 2.37, 2.32)
+position 2.24 2.37 2.32
+animate cube
+    keyframe 0.86
+        pos 2.24 2.37 2.32
+        color 0.78 0.80 0.79
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.78 0.80 0.79
+    keyframe 6.86
+        pos 2.24 2.37 2.32
+        color 0.78 0.80 0.79
+}
+
+# Cube 108 at (-0.05, -3.27, 2.30)
+position -0.05 -3.27 2.30
+animate cube
+    keyframe 0.88
+        pos -0.05 -3.27 2.30
+        color 0.49 0.09 0.79
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.49 0.09 0.79
+    keyframe 6.88
+        pos -0.05 -3.27 2.30
+        color 0.49 0.09 0.79
+}
+
+# Cube 109 at (-2.18, 2.45, 2.29)
+position -2.18 2.45 2.29
+animate cube
+    keyframe 0.90
+        pos -2.18 2.45 2.29
+        color 0.23 0.81 0.79
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.23 0.81 0.79
+    keyframe 6.90
+        pos -2.18 2.45 2.29
+        color 0.23 0.81 0.79
+}
+
+# Cube 110 at (3.27, -0.34, 2.27)
+position 3.27 -0.34 2.27
+animate cube
+    keyframe 0.92
+        pos 3.27 -0.34 2.27
+        color 0.91 0.46 0.78
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.91 0.46 0.78
+    keyframe 6.92
+        pos 3.27 -0.34 2.27
+        color 0.91 0.46 0.78
+}
+
+# Cube 111 at (-2.65, -1.97, 2.26)
+position -2.65 -1.97 2.26
+animate cube
+    keyframe 0.94
+        pos -2.65 -1.97 2.26
+        color 0.17 0.25 0.78
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.17 0.25 0.78
+    keyframe 6.94
+        pos -2.65 -1.97 2.26
+        color 0.17 0.25 0.78
+}
+
+# Cube 112 at (0.62, 3.25, 2.24)
+position 0.62 3.25 2.24
+animate cube
+    keyframe 0.96
+        pos 0.62 3.25 2.24
+        color 0.58 0.91 0.78
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.58 0.91 0.78
+    keyframe 6.96
+        pos 0.62 3.25 2.24
+        color 0.58 0.91 0.78
+}
+
+# Cube 113 at (1.74, -2.83, 2.23)
+position 1.74 -2.83 2.23
+animate cube
+    keyframe 0.98
+        pos 1.74 -2.83 2.23
+        color 0.72 0.15 0.78
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.72 0.15 0.78
+    keyframe 6.98
+        pos 1.74 -2.83 2.23
+        color 0.72 0.15 0.78
+}
+
+# Cube 114 at (-3.21, 0.91, 2.21)
+position -3.21 0.91 2.21
+animate cube
+    keyframe 1.00
+        pos -3.21 0.91 2.21
+        color 0.10 0.61 0.78
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.10 0.61 0.78
+    keyframe 7.00
+        pos -3.21 0.91 2.21
+        color 0.10 0.61 0.78
+}
+
+# Cube 115 at (2.99, 1.50, 2.20)
+position 2.99 1.50 2.20
+animate cube
+    keyframe 1.02
+        pos 2.99 1.50 2.20
+        color 0.87 0.69 0.77
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.87 0.69 0.77
+    keyframe 7.02
+        pos 2.99 1.50 2.20
+        color 0.87 0.69 0.77
+}
+
+# Cube 116 at (-1.20, -3.13, 2.18)
+position -1.20 -3.13 2.18
+animate cube
+    keyframe 1.04
+        pos -1.20 -3.13 2.18
+        color 0.35 0.11 0.77
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.35 0.11 0.77
+    keyframe 7.04
+        pos -1.20 -3.13 2.18
+        color 0.35 0.11 0.77
+}
+
+# Cube 117 at (-1.24, 3.13, 2.16)
+position -1.24 3.13 2.16
+animate cube
+    keyframe 1.06
+        pos -1.24 3.13 2.16
+        color 0.35 0.89 0.77
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.35 0.89 0.77
+    keyframe 7.06
+        pos -1.24 3.13 2.16
+        color 0.35 0.89 0.77
+}
+
+# Cube 118 at (3.03, -1.47, 2.15)
+position 3.03 -1.47 2.15
+animate cube
+    keyframe 1.08
+        pos 3.03 -1.47 2.15
+        color 0.88 0.32 0.77
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.88 0.32 0.77
+    keyframe 7.08
+        pos 3.03 -1.47 2.15
+        color 0.88 0.32 0.77
+}
+
+# Cube 119 at (-3.24, -0.97, 2.13)
+position -3.24 -0.97 2.13
+animate cube
+    keyframe 1.10
+        pos -3.24 -0.97 2.13
+        color 0.09 0.38 0.77
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.09 0.38 0.77
+    keyframe 7.10
+        pos -3.24 -0.97 2.13
+        color 0.09 0.38 0.77
+}
+
+# Cube 120 at (1.74, 2.91, 2.12)
+position 1.74 2.91 2.12
+animate cube
+    keyframe 1.12
+        pos 1.74 2.91 2.12
+        color 0.72 0.86 0.76
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.72 0.86 0.76
+    keyframe 7.12
+        pos 1.74 2.91 2.12
+        color 0.72 0.86 0.76
+}
+
+# Cube 121 at (0.68, -3.33, 2.10)
+position 0.68 -3.33 2.10
+animate cube
+    keyframe 1.14
+        pos 0.68 -3.33 2.10
+        color 0.59 0.08 0.76
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.59 0.08 0.76
+    keyframe 7.14
+        pos 0.68 -3.33 2.10
+        color 0.59 0.08 0.76
+}
+
+# Cube 122 at (-2.76, 2.00, 2.09)
+position -2.76 2.00 2.09
+animate cube
+    keyframe 1.16
+        pos -2.76 2.00 2.09
+        color 0.15 0.75 0.76
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.15 0.75 0.76
+    keyframe 7.16
+        pos -2.76 2.00 2.09
+        color 0.15 0.75 0.76
+}
+
+# Cube 123 at (3.40, 0.39, 2.07)
+position 3.40 0.39 2.07
+animate cube
+    keyframe 1.18
+        pos 3.40 0.39 2.07
+        color 0.93 0.55 0.76
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.93 0.55 0.76
+    keyframe 7.18
+        pos 3.40 0.39 2.07
+        color 0.93 0.55 0.76
+}
+
+# Cube 124 at (-2.25, -2.59, 2.05)
+position -2.25 -2.59 2.05
+animate cube
+    keyframe 1.20
+        pos -2.25 -2.59 2.05
+        color 0.22 0.18 0.76
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.22 0.18 0.76
+    keyframe 7.20
+        pos -2.25 -2.59 2.05
+        color 0.22 0.18 0.76
+}
+
+# Cube 125 at (-0.09, 3.44, 2.04)
+position -0.09 3.44 2.04
+animate cube
+    keyframe 1.22
+        pos -0.09 3.44 2.04
+        color 0.49 0.93 0.75
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.49 0.93 0.75
+    keyframe 7.22
+        pos -0.09 3.44 2.04
+        color 0.49 0.93 0.75
+}
+
+# Cube 126 at (2.40, -2.48, 2.02)
+position 2.40 -2.48 2.02
+animate cube
+    keyframe 1.24
+        pos 2.40 -2.48 2.02
+        color 0.80 0.19 0.75
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.80 0.19 0.75
+    keyframe 7.24
+        pos 2.40 -2.48 2.02
+        color 0.80 0.19 0.75
+}
+
+# Cube 127 at (-3.45, 0.21, 2.01)
+position -3.45 0.21 2.01
+animate cube
+    keyframe 1.26
+        pos -3.45 0.21 2.01
+        color 0.07 0.53 0.75
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.07 0.53 0.75
+    keyframe 7.26
+        pos -3.45 0.21 2.01
+        color 0.07 0.53 0.75
+}
+
+# Cube 128 at (2.70, 2.18, 1.99)
+position 2.70 2.18 1.99
+animate cube
+    keyframe 0.00
+        pos 2.70 2.18 1.99
+        color 0.84 0.77 0.75
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.84 0.77 0.75
+    keyframe 6.00
+        pos 2.70 2.18 1.99
+        color 0.84 0.77 0.75
+}
+
+# Cube 129 at (-0.51, -3.44, 1.98)
+position -0.51 -3.44 1.98
+animate cube
+    keyframe 0.02
+        pos -0.51 -3.44 1.98
+        color 0.44 0.07 0.75
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.44 0.07 0.75
+    keyframe 6.02
+        pos -0.51 -3.44 1.98
+        color 0.44 0.07 0.75
+}
+
+# Cube 130 at (-1.95, 2.89, 1.96)
+position -1.95 2.89 1.96
+animate cube
+    keyframe 0.04
+        pos -1.95 2.89 1.96
+        color 0.26 0.86 0.75
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.26 0.86 0.75
+    keyframe 6.04
+        pos -1.95 2.89 1.96
+        color 0.26 0.86 0.75
+}
+
+# Cube 131 at (3.40, -0.82, 1.95)
+position 3.40 -0.82 1.95
+animate cube
+    keyframe 0.06
+        pos 3.40 -0.82 1.95
+        color 0.92 0.40 0.74
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.92 0.40 0.74
+    keyframe 6.06
+        pos 3.40 -0.82 1.95
+        color 0.92 0.40 0.74
+}
+
+# Cube 132 at (-3.07, -1.70, 1.93)
+position -3.07 -1.70 1.93
+animate cube
+    keyframe 0.08
+        pos -3.07 -1.70 1.93
+        color 0.12 0.29 0.74
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.12 0.29 0.74
+    keyframe 6.08
+        pos -3.07 -1.70 1.93
+        color 0.12 0.29 0.74
+}
+
+# Cube 133 at (1.12, 3.33, 1.91)
+position 1.12 3.33 1.91
+animate cube
+    keyframe 0.10
+        pos 1.12 3.33 1.91
+        color 0.64 0.92 0.74
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.64 0.92 0.74
+    keyframe 6.10
+        pos 1.12 3.33 1.91
+        color 0.64 0.92 0.74
+}
+
+# Cube 134 at (1.43, -3.22, 1.90)
+position 1.43 -3.22 1.90
+animate cube
+    keyframe 0.12
+        pos 1.43 -3.22 1.90
+        color 0.68 0.10 0.74
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.68 0.10 0.74
+    keyframe 6.12
+        pos 1.43 -3.22 1.90
+        color 0.68 0.10 0.74
+}
+
+# Cube 135 at (-3.24, 1.41, 1.88)
+position -3.24 1.41 1.88
+animate cube
+    keyframe 0.14
+        pos -3.24 1.41 1.88
+        color 0.10 0.68 0.74
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.10 0.68 0.74
+    keyframe 6.14
+        pos -3.24 1.41 1.88
+        color 0.10 0.68 0.74
+}
+
+# Cube 136 at (3.35, 1.15, 1.87)
+position 3.35 1.15 1.87
+animate cube
+    keyframe 0.16
+        pos 3.35 1.15 1.87
+        color 0.92 0.64 0.73
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.92 0.64 0.73
+    keyframe 6.16
+        pos 3.35 1.15 1.87
+        color 0.92 0.64 0.73
+}
+
+# Cube 137 at (-1.70, -3.11, 1.85)
+position -1.70 -3.11 1.85
+animate cube
+    keyframe 0.18
+        pos -1.70 -3.11 1.85
+        color 0.29 0.11 0.73
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.29 0.11 0.73
+    keyframe 6.18
+        pos -1.70 -3.11 1.85
+        color 0.29 0.11 0.73
+}
+
+# Cube 138 at (-0.86, 3.45, 1.84)
+position -0.86 3.45 1.84
+animate cube
+    keyframe 0.20
+        pos -0.86 3.45 1.84
+        color 0.39 0.93 0.73
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.39 0.93 0.73
+    keyframe 6.20
+        pos -0.86 3.45 1.84
+        color 0.39 0.93 0.73
+}
+
+# Cube 139 at (2.97, -1.97, 1.82)
+position 2.97 -1.97 1.82
+animate cube
+    keyframe 0.22
+        pos 2.97 -1.97 1.82
+        color 0.87 0.25 0.73
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.87 0.25 0.73
+    keyframe 6.22
+        pos 2.97 -1.97 1.82
+        color 0.87 0.25 0.73
+}
+
+# Cube 140 at (-3.53, -0.55, 1.80)
+position -3.53 -0.55 1.80
+animate cube
+    keyframe 0.24
+        pos -3.53 -0.55 1.80
+        color 0.06 0.43 0.73
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.06 0.43 0.73
+    keyframe 6.24
+        pos -3.53 -0.55 1.80
+        color 0.06 0.43 0.73
+}
+
+# Cube 141 at (2.23, 2.80, 1.79)
+position 2.23 2.80 1.79
+animate cube
+    keyframe 0.26
+        pos 2.23 2.80 1.79
+        color 0.78 0.85 0.72
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.78 0.85 0.72
+    keyframe 6.26
+        pos 2.23 2.80 1.79
+        color 0.78 0.85 0.72
+}
+
+# Cube 142 at (0.24, -3.58, 1.77)
+position 0.24 -3.58 1.77
+animate cube
+    keyframe 0.28
+        pos 0.24 -3.58 1.77
+        color 0.53 0.05 0.72
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.53 0.05 0.72
+    keyframe 6.28
+        pos 0.24 -3.58 1.77
+        color 0.53 0.05 0.72
+}
+
+# Cube 143 at (-2.60, 2.48, 1.76)
+position -2.60 2.48 1.76
+animate cube
+    keyframe 0.30
+        pos -2.60 2.48 1.76
+        color 0.17 0.81 0.72
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.17 0.81 0.72
+    keyframe 6.30
+        pos -2.60 2.48 1.76
+        color 0.17 0.81 0.72
+}
+
+# Cube 144 at (3.60, -0.07, 1.74)
+position 3.60 -0.07 1.74
+animate cube
+    keyframe 0.32
+        pos 3.60 -0.07 1.74
+        color 0.95 0.49 0.72
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.95 0.49 0.72
+    keyframe 6.32
+        pos 3.60 -0.07 1.74
+        color 0.95 0.49 0.72
+}
+
+# Cube 145 at (-2.71, -2.38, 1.73)
+position -2.71 -2.38 1.73
+animate cube
+    keyframe 0.34
+        pos -2.71 -2.38 1.73
+        color 0.16 0.20 0.72
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.16 0.20 0.72
+    keyframe 6.34
+        pos -2.71 -2.38 1.73
+        color 0.16 0.20 0.72
+}
+
+# Cube 146 at (0.39, 3.59, 1.71)
+position 0.39 3.59 1.71
+animate cube
+    keyframe 0.36
+        pos 0.39 3.59 1.71
+        color 0.55 0.95 0.71
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.55 0.95 0.71
+    keyframe 6.36
+        pos 0.39 3.59 1.71
+        color 0.55 0.95 0.71
+}
+
+# Cube 147 at (2.15, -2.92, 1.70)
+position 2.15 -2.92 1.70
+animate cube
+    keyframe 0.38
+        pos 2.15 -2.92 1.70
+        color 0.77 0.14 0.71
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.77 0.14 0.71
+    keyframe 6.38
+        pos 2.15 -2.92 1.70
+        color 0.77 0.14 0.71
+}
+
+# Cube 148 at (-3.56, 0.70, 1.68)
+position -3.56 0.70 1.68
+animate cube
+    keyframe 0.40
+        pos -3.56 0.70 1.68
+        color 0.05 0.59 0.71
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.05 0.59 0.71
+    keyframe 6.40
+        pos -3.56 0.70 1.68
+        color 0.05 0.59 0.71
+}
+
+# Cube 149 at (3.11, 1.89, 1.66)
+position 3.11 1.89 1.66
+animate cube
+    keyframe 0.42
+        pos 3.11 1.89 1.66
+        color 0.89 0.74 0.71
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.89 0.74 0.71
+    keyframe 6.42
+        pos 3.11 1.89 1.66
+        color 0.89 0.74 0.71
+}
+
+# Cube 150 at (-1.01, -3.50, 1.65)
+position -1.01 -3.50 1.65
+animate cube
+    keyframe 0.44
+        pos -1.01 -3.50 1.65
+        color 0.37 0.06 0.71
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.37 0.06 0.71
+    keyframe 6.44
+        pos -1.01 -3.50 1.65
+        color 0.37 0.06 0.71
+}
+
+# Cube 151 at (-1.62, 3.27, 1.63)
+position -1.62 3.27 1.63
+animate cube
+    keyframe 0.46
+        pos -1.62 3.27 1.63
+        color 0.30 0.91 0.70
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.30 0.91 0.70
+    keyframe 6.46
+        pos -1.62 3.27 1.63
+        color 0.30 0.91 0.70
+}
+
+# Cube 152 at (3.41, -1.32, 1.62)
+position 3.41 -1.32 1.62
+animate cube
+    keyframe 0.48
+        pos 3.41 -1.32 1.62
+        color 0.93 0.33 0.70
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.93 0.33 0.70
+    keyframe 6.48
+        pos 3.41 -1.32 1.62
+        color 0.93 0.33 0.70
+}
+
+# Cube 153 at (-3.41, -1.33, 1.60)
+position -3.41 -1.33 1.60
+animate cube
+    keyframe 0.50
+        pos -3.41 -1.33 1.60
+        color 0.07 0.33 0.70
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.07 0.33 0.70
+    keyframe 6.50
+        pos -3.41 -1.33 1.60
+        color 0.07 0.33 0.70
+}
+
+# Cube 154 at (1.62, 3.30, 1.59)
+position 1.62 3.30 1.59
+animate cube
+    keyframe 0.52
+        pos 1.62 3.30 1.59
+        color 0.70 0.91 0.70
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.70 0.91 0.70
+    keyframe 6.52
+        pos 1.62 3.30 1.59
+        color 0.70 0.91 0.70
+}
+
+# Cube 155 at (1.03, -3.53, 1.57)
+position 1.03 -3.53 1.57
+animate cube
+    keyframe 0.54
+        pos 1.03 -3.53 1.57
+        color 0.63 0.06 0.70
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.63 0.06 0.70
+    keyframe 6.54
+        pos 1.03 -3.53 1.57
+        color 0.63 0.06 0.70
+}
+
+# Cube 156 at (-3.15, 1.91, 1.55)
+position -3.15 1.91 1.55
+animate cube
+    keyframe 0.56
+        pos -3.15 1.91 1.55
+        color 0.11 0.74 0.69
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.11 0.74 0.69
+    keyframe 6.56
+        pos -3.15 1.91 1.55
+        color 0.11 0.74 0.69
+}
+
+# Cube 157 at (3.62, 0.72, 1.54)
+position 3.62 0.72 1.54
+animate cube
+    keyframe 0.58
+        pos 3.62 0.72 1.54
+        color 0.95 0.59 0.69
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.95 0.59 0.69
+    keyframe 6.58
+        pos 3.62 0.72 1.54
+        color 0.95 0.59 0.69
+}
+
+# Cube 158 at (-2.19, -2.98, 1.52)
+position -2.19 -2.98 1.52
+animate cube
+    keyframe 0.60
+        pos -2.19 -2.98 1.52
+        color 0.23 0.13 0.69
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.23 0.13 0.69
+    keyframe 6.60
+        pos -2.19 -2.98 1.52
+        color 0.23 0.13 0.69
+}
+
+# Cube 159 at (-0.40, 3.68, 1.51)
+position -0.40 3.68 1.51
+animate cube
+    keyframe 0.62
+        pos -0.40 3.68 1.51
+        color 0.45 0.96 0.69
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.45 0.96 0.69
+    keyframe 6.62
+        pos -0.40 3.68 1.51
+        color 0.45 0.96 0.69
+}
+
+# Cube 160 at (2.79, -2.45, 1.49)
+position 2.79 -2.45 1.49
+animate cube
+    keyframe 0.64
+        pos 2.79 -2.45 1.49
+        color 0.85 0.19 0.69
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.85 0.19 0.69
+    keyframe 6.64
+        pos 2.79 -2.45 1.49
+        color 0.85 0.19 0.69
+}
+
+# Cube 161 at (-3.72, -0.08, 1.48)
+position -3.72 -0.08 1.48
+animate cube
+    keyframe 0.66
+        pos -3.72 -0.08 1.48
+        color 0.04 0.49 0.68
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.04 0.49 0.68
+    keyframe 6.66
+        pos -3.72 -0.08 1.48
+        color 0.04 0.49 0.68
+}
+
+# Cube 162 at (2.69, 2.57, 1.46)
+position 2.69 2.57 1.46
+animate cube
+    keyframe 0.68
+        pos 2.69 2.57 1.46
+        color 0.84 0.82 0.68
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.84 0.82 0.68
+    keyframe 6.68
+        pos 2.69 2.57 1.46
+        color 0.84 0.82 0.68
+}
+
+# Cube 163 at (-0.24, -3.72, 1.45)
+position -0.24 -3.72 1.45
+animate cube
+    keyframe 0.70
+        pos -0.24 -3.72 1.45
+        color 0.47 0.03 0.68
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.47 0.03 0.68
+    keyframe 6.70
+        pos -0.24 -3.72 1.45
+        color 0.47 0.03 0.68
+}
+
+# Cube 164 at (-2.34, 2.91, 1.43)
+position -2.34 2.91 1.43
+animate cube
+    keyframe 0.72
+        pos -2.34 2.91 1.43
+        color 0.21 0.86 0.68
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.21 0.86 0.68
+    keyframe 6.72
+        pos -2.34 2.91 1.43
+        color 0.21 0.86 0.68
+}
+
+# Cube 165 at (3.70, -0.57, 1.41)
+position 3.70 -0.57 1.41
+animate cube
+    keyframe 0.74
+        pos 3.70 -0.57 1.41
+        color 0.96 0.43 0.68
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.96 0.43 0.68
+    keyframe 6.74
+        pos 3.70 -0.57 1.41
+        color 0.96 0.43 0.68
+}
+
+# Cube 166 at (-3.12, -2.08, 1.40)
+position -3.12 -2.08 1.40
+animate cube
+    keyframe 0.76
+        pos -3.12 -2.08 1.40
+        color 0.11 0.24 0.67
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.11 0.24 0.67
+    keyframe 6.76
+        pos -3.12 -2.08 1.40
+        color 0.11 0.24 0.67
+}
+
+# Cube 167 at (0.90, 3.65, 1.38)
+position 0.90 3.65 1.38
+animate cube
+    keyframe 0.78
+        pos 0.90 3.65 1.38
+        color 0.61 0.96 0.67
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.61 0.96 0.67
+    keyframe 6.78
+        pos 0.90 3.65 1.38
+        color 0.61 0.96 0.67
+}
+
+# Cube 168 at (1.80, -3.30, 1.37)
+position 1.80 -3.30 1.37
+animate cube
+    keyframe 0.80
+        pos 1.80 -3.30 1.37
+        color 0.73 0.09 0.67
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.73 0.09 0.67
+    keyframe 6.80
+        pos 1.80 -3.30 1.37
+        color 0.73 0.09 0.67
+}
+
+# Cube 169 at (-3.56, 1.21, 1.35)
+position -3.56 1.21 1.35
+animate cube
+    keyframe 0.82
+        pos -3.56 1.21 1.35
+        color 0.05 0.65 0.67
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.05 0.65 0.67
+    keyframe 6.82
+        pos -3.56 1.21 1.35
+        color 0.05 0.65 0.67
+}
+
+# Cube 170 at (3.45, 1.51, 1.34)
+position 3.45 1.51 1.34
+animate cube
+    keyframe 0.84
+        pos 3.45 1.51 1.34
+        color 0.93 0.69 0.67
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.93 0.69 0.67
+    keyframe 6.84
+        pos 3.45 1.51 1.34
+        color 0.93 0.69 0.67
+}
+
+# Cube 171 at (-1.53, -3.45, 1.32)
+position -1.53 -3.45 1.32
+animate cube
+    keyframe 0.86
+        pos -1.53 -3.45 1.32
+        color 0.31 0.07 0.67
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.31 0.07 0.67
+    keyframe 6.86
+        pos -1.53 -3.45 1.32
+        color 0.31 0.07 0.67
+}
+
+# Cube 172 at (-1.21, 3.58, 1.30)
+position -1.21 3.58 1.30
+animate cube
+    keyframe 0.88
+        pos -1.21 3.58 1.30
+        color 0.35 0.95 0.66
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.35 0.95 0.66
+    keyframe 6.88
+        pos -1.21 3.58 1.30
+        color 0.35 0.95 0.66
+}
+
+# Cube 173 at (3.32, -1.83, 1.29)
+position 3.32 -1.83 1.29
+animate cube
+    keyframe 0.90
+        pos 3.32 -1.83 1.29
+        color 0.91 0.27 0.66
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.91 0.27 0.66
+    keyframe 6.90
+        pos 3.32 -1.83 1.29
+        color 0.91 0.27 0.66
+}
+
+# Cube 174 at (-3.68, -0.89, 1.27)
+position -3.68 -0.89 1.27
+animate cube
+    keyframe 0.92
+        pos -3.68 -0.89 1.27
+        color 0.04 0.39 0.66
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.04 0.39 0.66
+    keyframe 6.92
+        pos -3.68 -0.89 1.27
+        color 0.04 0.39 0.66
+}
+
+# Cube 175 at (2.12, 3.15, 1.26)
+position 2.12 3.15 1.26
+animate cube
+    keyframe 0.94
+        pos 2.12 3.15 1.26
+        color 0.76 0.89 0.66
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.76 0.89 0.66
+    keyframe 6.94
+        pos 2.12 3.15 1.26
+        color 0.76 0.89 0.66
+}
+
+# Cube 176 at (0.57, -3.76, 1.24)
+position 0.57 -3.76 1.24
+animate cube
+    keyframe 0.96
+        pos 0.57 -3.76 1.24
+        color 0.57 0.03 0.66
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.57 0.03 0.66
+    keyframe 6.96
+        pos 0.57 -3.76 1.24
+        color 0.57 0.03 0.66
+}
+
+# Cube 177 at (-2.96, 2.39, 1.23)
+position -2.96 2.39 1.23
+animate cube
+    keyframe 0.98
+        pos -2.96 2.39 1.23
+        color 0.13 0.80 0.65
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.13 0.80 0.65
+    keyframe 6.98
+        pos -2.96 2.39 1.23
+        color 0.13 0.80 0.65
+}
+
+# Cube 178 at (3.80, 0.24, 1.21)
+position 3.80 0.24 1.21
+animate cube
+    keyframe 1.00
+        pos 3.80 0.24 1.21
+        color 0.98 0.53 0.65
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.98 0.53 0.65
+    keyframe 7.00
+        pos 3.80 0.24 1.21
+        color 0.98 0.53 0.65
+}
+
+# Cube 179 at (-2.65, -2.75, 1.20)
+position -2.65 -2.75 1.20
+animate cube
+    keyframe 1.02
+        pos -2.65 -2.75 1.20
+        color 0.17 0.16 0.65
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.17 0.16 0.65
+    keyframe 7.02
+        pos -2.65 -2.75 1.20
+        color 0.17 0.16 0.65
+}
+
+# Cube 180 at (0.09, 3.82, 1.18)
+position 0.09 3.82 1.18
+animate cube
+    keyframe 1.04
+        pos 0.09 3.82 1.18
+        color 0.51 0.98 0.65
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.51 0.98 0.65
+    keyframe 7.04
+        pos 0.09 3.82 1.18
+        color 0.51 0.98 0.65
+}
+
+# Cube 181 at (2.52, -2.88, 1.16)
+position 2.52 -2.88 1.16
+animate cube
+    keyframe 1.06
+        pos 2.52 -2.88 1.16
+        color 0.81 0.14 0.65
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.81 0.14 0.65
+    keyframe 7.06
+        pos 2.52 -2.88 1.16
+        color 0.81 0.14 0.65
+}
+
+# Cube 182 at (-3.81, 0.43, 1.15)
+position -3.81 0.43 1.15
+animate cube
+    keyframe 1.08
+        pos -3.81 0.43 1.15
+        color 0.02 0.55 0.64
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.02 0.55 0.64
+    keyframe 7.08
+        pos -3.81 0.43 1.15
+        color 0.02 0.55 0.64
+}
+
+# Cube 183 at (3.10, 2.26, 1.13)
+position 3.10 2.26 1.13
+animate cube
+    keyframe 1.10
+        pos 3.10 2.26 1.13
+        color 0.89 0.78 0.64
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.89 0.78 0.64
+    keyframe 7.10
+        pos 3.10 2.26 1.13
+        color 0.89 0.78 0.64
+}
+
+# Cube 184 at (-0.76, -3.76, 1.12)
+position -0.76 -3.76 1.12
+animate cube
+    keyframe 1.12
+        pos -0.76 -3.76 1.12
+        color 0.40 0.03 0.64
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.40 0.03 0.64
+    keyframe 7.12
+        pos -0.76 -3.76 1.12
+        color 0.40 0.03 0.64
+}
+
+# Cube 185 at (-1.98, 3.29, 1.10)
+position -1.98 3.29 1.10
+animate cube
+    keyframe 1.14
+        pos -1.98 3.29 1.10
+        color 0.25 0.91 0.64
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.25 0.91 0.64
+    keyframe 7.14
+        pos -1.98 3.29 1.10
+        color 0.25 0.91 0.64
+}
+
+# Cube 186 at (3.69, -1.09, 1.09)
+position 3.69 -1.09 1.09
+animate cube
+    keyframe 1.16
+        pos 3.69 -1.09 1.09
+        color 0.96 0.36 0.64
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.96 0.36 0.64
+    keyframe 7.16
+        pos 3.69 -1.09 1.09
+        color 0.96 0.36 0.64
+}
+
+# Cube 187 at (-3.46, -1.69, 1.07)
+position -3.46 -1.69 1.07
+animate cube
+    keyframe 1.18
+        pos -3.46 -1.69 1.07
+        color 0.07 0.29 0.63
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.07 0.29 0.63
+    keyframe 7.18
+        pos -3.46 -1.69 1.07
+        color 0.07 0.29 0.63
+}
+
+# Cube 188 at (1.41, 3.59, 1.05)
+position 1.41 3.59 1.05
+animate cube
+    keyframe 1.20
+        pos 1.41 3.59 1.05
+        color 0.68 0.95 0.63
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.68 0.95 0.63
+    keyframe 7.20
+        pos 1.41 3.59 1.05
+        color 0.68 0.95 0.63
+}
+
+# Cube 189 at (1.39, -3.61, 1.04)
+position 1.39 -3.61 1.04
+animate cube
+    keyframe 1.22
+        pos 1.39 -3.61 1.04
+        color 0.67 0.05 0.63
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.67 0.05 0.63
+    keyframe 7.22
+        pos 1.39 -3.61 1.04
+        color 0.67 0.05 0.63
+}
+
+# Cube 190 at (-3.46, 1.72, 1.02)
+position -3.46 1.72 1.02
+animate cube
+    keyframe 1.24
+        pos -3.46 1.72 1.02
+        color 0.07 0.72 0.63
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.07 0.72 0.63
+    keyframe 7.24
+        pos -3.46 1.72 1.02
+        color 0.07 0.72 0.63
+}
+
+# Cube 191 at (3.72, 1.07, 1.01)
+position 3.72 1.07 1.01
+animate cube
+    keyframe 1.26
+        pos 3.72 1.07 1.01
+        color 0.97 0.63 0.63
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.97 0.63 0.63
+    keyframe 7.26
+        pos 3.72 1.07 1.01
+        color 0.97 0.63 0.63
+}
+
+# Cube 192 at (-2.02, -3.30, 0.99)
+position -2.02 -3.30 0.99
+animate cube
+    keyframe 0.00
+        pos -2.02 -3.30 0.99
+        color 0.25 0.09 0.62
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.25 0.09 0.62
+    keyframe 6.00
+        pos -2.02 -3.30 0.99
+        color 0.25 0.09 0.62
+}
+
+# Cube 193 at (-0.74, 3.81, 0.98)
+position -0.74 3.81 0.98
+animate cube
+    keyframe 0.02
+        pos -0.74 3.81 0.98
+        color 0.41 0.98 0.62
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.41 0.98 0.62
+    keyframe 6.02
+        pos -0.74 3.81 0.98
+        color 0.41 0.98 0.62
+}
+
+# Cube 194 at (3.12, -2.31, 0.96)
+position 3.12 -2.31 0.96
+animate cube
+    keyframe 0.04
+        pos 3.12 -2.31 0.96
+        color 0.89 0.21 0.62
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.89 0.21 0.62
+    keyframe 6.04
+        pos 3.12 -2.31 0.96
+        color 0.89 0.21 0.62
+}
+
+# Cube 195 at (-3.87, -0.41, 0.95)
+position -3.87 -0.41 0.95
+animate cube
+    keyframe 0.06
+        pos -3.87 -0.41 0.95
+        color 0.02 0.45 0.62
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.02 0.45 0.62
+    keyframe 6.06
+        pos -3.87 -0.41 0.95
+        color 0.02 0.45 0.62
+}
+
+# Cube 196 at (2.58, 2.91, 0.93)
+position 2.58 2.91 0.93
+animate cube
+    keyframe 0.08
+        pos 2.58 2.91 0.93
+        color 0.82 0.86 0.62
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.82 0.86 0.62
+    keyframe 6.08
+        pos 2.58 2.91 0.93
+        color 0.82 0.86 0.62
+}
+
+# Cube 197 at (0.07, -3.89, 0.91)
+position 0.07 -3.89 0.91
+animate cube
+    keyframe 0.10
+        pos 0.07 -3.89 0.91
+        color 0.51 0.01 0.61
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.51 0.01 0.61
+    keyframe 6.10
+        pos 0.07 -3.89 0.91
+        color 0.51 0.01 0.61
+}
+
+# Cube 198 at (-2.68, 2.83, 0.90)
+position -2.68 2.83 0.90
+animate cube
+    keyframe 0.12
+        pos -2.68 2.83 0.90
+        color 0.16 0.85 0.61
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.16 0.85 0.61
+    keyframe 6.12
+        pos -2.68 2.83 0.90
+        color 0.16 0.85 0.61
+}
+
+# Cube 199 at (3.89, -0.28, 0.88)
+position 3.89 -0.28 0.88
+animate cube
+    keyframe 0.14
+        pos 3.89 -0.28 0.88
+        color 0.99 0.47 0.61
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.99 0.47 0.61
+    keyframe 6.14
+        pos 3.89 -0.28 0.88
+        color 0.99 0.47 0.61
+}
+
+# Cube 200 at (-3.06, -2.43, 0.87)
+position -3.06 -2.43 0.87
+animate cube
+    keyframe 0.16
+        pos -3.06 -2.43 0.87
+        color 0.12 0.20 0.61
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.12 0.20 0.61
+    keyframe 6.16
+        pos -3.06 -2.43 0.87
+        color 0.12 0.20 0.61
+}
+
+# Cube 201 at (0.62, 3.86, 0.85)
+position 0.62 3.86 0.85
+animate cube
+    keyframe 0.18
+        pos 0.62 3.86 0.85
+        color 0.58 0.98 0.61
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.58 0.98 0.61
+    keyframe 6.18
+        pos 0.62 3.86 0.85
+        color 0.58 0.98 0.61
+}
+
+# Cube 202 at (2.16, -3.26, 0.84)
+position 2.16 -3.26 0.84
+animate cube
+    keyframe 0.20
+        pos 2.16 -3.26 0.84
+        color 0.77 0.09 0.60
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.77 0.09 0.60
+    keyframe 6.20
+        pos 2.16 -3.26 0.84
+        color 0.77 0.09 0.60
+}
+
+# Cube 203 at (-3.80, 0.95, 0.82)
+position -3.80 0.95 0.82
+animate cube
+    keyframe 0.22
+        pos -3.80 0.95 0.82
+        color 0.03 0.62 0.60
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.03 0.62 0.60
+    keyframe 6.22
+        pos -3.80 0.95 0.82
+        color 0.03 0.62 0.60
+}
+
+# Cube 204 at (3.45, 1.86, 0.80)
+position 3.45 1.86 0.80
+animate cube
+    keyframe 0.24
+        pos 3.45 1.86 0.80
+        color 0.93 0.73 0.60
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.93 0.73 0.60
+    keyframe 6.24
+        pos 3.45 1.86 0.80
+        color 0.93 0.73 0.60
+}
+
+# Cube 205 at (-1.28, -3.71, 0.79)
+position -1.28 -3.71 0.79
+animate cube
+    keyframe 0.26
+        pos -1.28 -3.71 0.79
+        color 0.34 0.04 0.60
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.34 0.04 0.60
+    keyframe 6.26
+        pos -1.28 -3.71 0.79
+        color 0.34 0.04 0.60
+}
+
+# Cube 206 at (-1.56, 3.60, 0.77)
+position -1.56 3.60 0.77
+animate cube
+    keyframe 0.28
+        pos -1.56 3.60 0.77
+        color 0.31 0.95 0.60
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.31 0.95 0.60
+    keyframe 6.28
+        pos -1.56 3.60 0.77
+        color 0.31 0.95 0.60
+}
+
+# Cube 207 at (3.59, -1.60, 0.76)
+position 3.59 -1.60 0.76
+animate cube
+    keyframe 0.30
+        pos 3.59 -1.60 0.76
+        color 0.95 0.30 0.59
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.95 0.30 0.59
+    keyframe 6.30
+        pos 3.59 -1.60 0.76
+        color 0.95 0.30 0.59
+}
+
+# Cube 208 at (-3.73, -1.24, 0.74)
+position -3.73 -1.24 0.74
+animate cube
+    keyframe 0.32
+        pos -3.73 -1.24 0.74
+        color 0.03 0.35 0.59
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.03 0.35 0.59
+    keyframe 6.32
+        pos -3.73 -1.24 0.74
+        color 0.03 0.35 0.59
+}
+
+# Cube 209 at (1.91, 3.44, 0.73)
+position 1.91 3.44 0.73
+animate cube
+    keyframe 0.34
+        pos 1.91 3.44 0.73
+        color 0.74 0.93 0.59
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.74 0.93 0.59
+    keyframe 6.34
+        pos 1.91 3.44 0.73
+        color 0.74 0.93 0.59
+}
+
+# Cube 210 at (0.91, -3.83, 0.71)
+position 0.91 -3.83 0.71
+animate cube
+    keyframe 0.36
+        pos 0.91 -3.83 0.71
+        color 0.61 0.02 0.59
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.61 0.02 0.59
+    keyframe 6.36
+        pos 0.91 -3.83 0.71
+        color 0.61 0.02 0.59
+}
+
+# Cube 211 at (-3.26, 2.21, 0.70)
+position -3.26 2.21 0.70
+animate cube
+    keyframe 0.38
+        pos -3.26 2.21 0.70
+        color 0.09 0.78 0.59
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.09 0.78 0.59
+    keyframe 6.38
+        pos -3.26 2.21 0.70
+        color 0.09 0.78 0.59
+}
+
+# Cube 212 at (3.90, 0.57, 0.68)
+position 3.90 0.57 0.68
+animate cube
+    keyframe 0.40
+        pos 3.90 0.57 0.68
+        color 0.99 0.57 0.58
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.99 0.57 0.58
+    keyframe 6.40
+        pos 3.90 0.57 0.68
+        color 0.99 0.57 0.58
+}
+
+# Cube 213 at (-2.49, -3.06, 0.66)
+position -2.49 -3.06 0.66
+animate cube
+    keyframe 0.42
+        pos -2.49 -3.06 0.66
+        color 0.19 0.12 0.58
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.19 0.12 0.58
+    keyframe 6.42
+        pos -2.49 -3.06 0.66
+        color 0.19 0.12 0.58
+}
+
+# Cube 214 at (-0.23, 3.94, 0.65)
+position -0.23 3.94 0.65
+animate cube
+    keyframe 0.44
+        pos -0.23 3.94 0.65
+        color 0.47 0.99 0.58
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.47 0.99 0.58
+    keyframe 6.44
+        pos -0.23 3.94 0.65
+        color 0.47 0.99 0.58
+}
+
+# Cube 215 at (2.83, -2.75, 0.63)
+position 2.83 -2.75 0.63
+animate cube
+    keyframe 0.46
+        pos 2.83 -2.75 0.63
+        color 0.85 0.16 0.58
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.85 0.16 0.58
+    keyframe 6.46
+        pos 2.83 -2.75 0.63
+        color 0.85 0.16 0.58
+}
+
+# Cube 216 at (-3.95, 0.12, 0.62)
+position -3.95 0.12 0.62
+animate cube
+    keyframe 0.48
+        pos -3.95 0.12 0.62
+        color 0.01 0.51 0.58
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.01 0.51 0.58
+    keyframe 6.48
+        pos -3.95 0.12 0.62
+        color 0.01 0.51 0.58
+}
+
+# Cube 217 at (2.99, 2.58, 0.60)
+position 2.99 2.58 0.60
+animate cube
+    keyframe 0.50
+        pos 2.99 2.58 0.60
+        color 0.87 0.82 0.58
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.87 0.82 0.58
+    keyframe 6.50
+        pos 2.99 2.58 0.60
+        color 0.87 0.82 0.58
+}
+
+# Cube 218 at (-0.46, -3.93, 0.59)
+position -0.46 -3.93 0.59
+animate cube
+    keyframe 0.52
+        pos -0.46 -3.93 0.59
+        color 0.44 0.01 0.57
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.44 0.01 0.57
+    keyframe 6.52
+        pos -0.46 -3.93 0.59
+        color 0.44 0.01 0.57
+}
+
+# Cube 219 at (-2.32, 3.21, 0.57)
+position -2.32 3.21 0.57
+animate cube
+    keyframe 0.54
+        pos -2.32 3.21 0.57
+        color 0.21 0.90 0.57
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.21 0.90 0.57
+    keyframe 6.54
+        pos -2.32 3.21 0.57
+        color 0.21 0.90 0.57
+}
+
+# Cube 220 at (3.88, -0.80, 0.55)
+position 3.88 -0.80 0.55
+animate cube
+    keyframe 0.56
+        pos 3.88 -0.80 0.55
+        color 0.98 0.40 0.57
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.98 0.40 0.57
+    keyframe 6.56
+        pos 3.88 -0.80 0.55
+        color 0.98 0.40 0.57
+}
+
+# Cube 221 at (-3.41, -2.03, 0.54)
+position -3.41 -2.03 0.54
+animate cube
+    keyframe 0.58
+        pos -3.41 -2.03 0.54
+        color 0.07 0.25 0.57
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.07 0.25 0.57
+    keyframe 6.58
+        pos -3.41 -2.03 0.54
+        color 0.07 0.25 0.57
+}
+
+# Cube 222 at (1.14, 3.80, 0.52)
+position 1.14 3.80 0.52
+animate cube
+    keyframe 0.60
+        pos 1.14 3.80 0.52
+        color 0.64 0.97 0.57
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.64 0.97 0.57
+    keyframe 6.60
+        pos 1.14 3.80 0.52
+        color 0.64 0.97 0.57
+}
+
+# Cube 223 at (1.72, -3.57, 0.51)
+position 1.72 -3.57 0.51
+animate cube
+    keyframe 0.62
+        pos 1.72 -3.57 0.51
+        color 0.72 0.05 0.56
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.72 0.05 0.56
+    keyframe 6.62
+        pos 1.72 -3.57 0.51
+        color 0.72 0.05 0.56
+}
+
+# Cube 224 at (-3.69, 1.47, 0.49)
+position -3.69 1.47 0.49
+animate cube
+    keyframe 0.64
+        pos -3.69 1.47 0.49
+        color 0.04 0.68 0.56
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.04 0.68 0.56
+    keyframe 6.64
+        pos -3.69 1.47 0.49
+        color 0.04 0.68 0.56
+}
+
+# Cube 225 at (3.71, 1.41, 0.48)
+position 3.71 1.41 0.48
+animate cube
+    keyframe 0.66
+        pos 3.71 1.41 0.48
+        color 0.96 0.68 0.56
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.96 0.68 0.56
+    keyframe 6.66
+        pos 3.71 1.41 0.48
+        color 0.96 0.68 0.56
+}
+
+# Cube 226 at (-1.79, -3.55, 0.46)
+position -1.79 -3.55 0.46
+animate cube
+    keyframe 0.68
+        pos -1.79 -3.55 0.46
+        color 0.28 0.06 0.56
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.28 0.06 0.56
+    keyframe 6.68
+        pos -1.79 -3.55 0.46
+        color 0.28 0.06 0.56
+}
+
+# Cube 227 at (-1.08, 3.83, 0.45)
+position -1.08 3.83 0.45
+animate cube
+    keyframe 0.70
+        pos -1.08 3.83 0.45
+        color 0.37 0.98 0.56
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.37 0.98 0.56
+    keyframe 6.70
+        pos -1.08 3.83 0.45
+        color 0.37 0.98 0.56
+}
+
+# Cube 228 at (3.38, -2.09, 0.43)
+position 3.38 -2.09 0.43
+animate cube
+    keyframe 0.72
+        pos 3.38 -2.09 0.43
+        color 0.92 0.24 0.55
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.92 0.24 0.55
+    keyframe 6.72
+        pos 3.38 -2.09 0.43
+        color 0.92 0.24 0.55
+}
+
+# Cube 229 at (-3.91, -0.74, 0.41)
+position -3.91 -0.74 0.41
+animate cube
+    keyframe 0.74
+        pos -3.91 -0.74 0.41
+        color 0.01 0.41 0.55
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.01 0.41 0.55
+    keyframe 6.74
+        pos -3.91 -0.74 0.41
+        color 0.01 0.41 0.55
+}
+
+# Cube 230 at (2.38, 3.19, 0.40)
+position 2.38 3.19 0.40
+animate cube
+    keyframe 0.76
+        pos 2.38 3.19 0.40
+        color 0.80 0.90 0.55
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.80 0.90 0.55
+    keyframe 6.76
+        pos 2.38 3.19 0.40
+        color 0.80 0.90 0.55
+}
+
+# Cube 231 at (0.40, -3.96, 0.38)
+position 0.40 -3.96 0.38
+animate cube
+    keyframe 0.78
+        pos 0.40 -3.96 0.38
+        color 0.55 0.00 0.55
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.55 0.00 0.55
+    keyframe 6.78
+        pos 0.40 -3.96 0.38
+        color 0.55 0.00 0.55
+}
+
+# Cube 232 at (-2.97, 2.65, 0.37)
+position -2.97 2.65 0.37
+animate cube
+    keyframe 0.80
+        pos -2.97 2.65 0.37
+        color 0.13 0.83 0.55
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.13 0.83 0.55
+    keyframe 6.80
+        pos -2.97 2.65 0.37
+        color 0.13 0.83 0.55
+}
+
+# Cube 233 at (3.98, 0.05, 0.35)
+position 3.98 0.05 0.35
+animate cube
+    keyframe 0.82
+        pos 3.98 0.05 0.35
+        color 1.00 0.51 0.54
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 1.00 0.51 0.54
+    keyframe 6.82
+        pos 3.98 0.05 0.35
+        color 1.00 0.51 0.54
+}
+
+# Cube 234 at (-2.91, -2.73, 0.34)
+position -2.91 -2.73 0.34
+animate cube
+    keyframe 0.84
+        pos -2.91 -2.73 0.34
+        color 0.14 0.16 0.54
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.14 0.16 0.54
+    keyframe 6.84
+        pos -2.91 -2.73 0.34
+        color 0.14 0.16 0.54
+}
+
+# Cube 235 at (0.30, 3.98, 0.32)
+position 0.30 3.98 0.32
+animate cube
+    keyframe 0.86
+        pos 0.30 3.98 0.32
+        color 0.54 1.00 0.54
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.54 1.00 0.54
+    keyframe 6.86
+        pos 0.30 3.98 0.32
+        color 0.54 1.00 0.54
+}
+
+# Cube 236 at (2.46, -3.14, 0.30)
+position 2.46 -3.14 0.30
+animate cube
+    keyframe 0.88
+        pos 2.46 -3.14 0.30
+        color 0.81 0.11 0.54
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.81 0.11 0.54
+    keyframe 6.88
+        pos 2.46 -3.14 0.30
+        color 0.81 0.11 0.54
+}
+
+# Cube 237 at (-3.94, 0.65, 0.29)
+position -3.94 0.65 0.29
+animate cube
+    keyframe 0.90
+        pos -3.94 0.65 0.29
+        color 0.01 0.58 0.54
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.01 0.58 0.54
+    keyframe 6.90
+        pos -3.94 0.65 0.29
+        color 0.01 0.58 0.54
+}
+
+# Cube 238 at (3.34, 2.18, 0.27)
+position 3.34 2.18 0.27
+animate cube
+    keyframe 0.92
+        pos 3.34 2.18 0.27
+        color 0.92 0.77 0.53
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.92 0.77 0.53
+    keyframe 6.92
+        pos 3.34 2.18 0.27
+        color 0.92 0.77 0.53
+}
+
+# Cube 239 at (-0.99, -3.87, 0.26)
+position -0.99 -3.87 0.26
+animate cube
+    keyframe 0.94
+        pos -0.99 -3.87 0.26
+        color 0.38 0.02 0.53
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.38 0.02 0.53
+    keyframe 6.94
+        pos -0.99 -3.87 0.26
+        color 0.38 0.02 0.53
+}
+
+# Cube 240 at (-1.88, 3.52, 0.24)
+position -1.88 3.52 0.24
+animate cube
+    keyframe 0.96
+        pos -1.88 3.52 0.24
+        color 0.26 0.94 0.53
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.26 0.94 0.53
+    keyframe 6.96
+        pos -1.88 3.52 0.24
+        color 0.26 0.94 0.53
+}
+
+# Cube 241 at (3.77, -1.32, 0.23)
+position 3.77 -1.32 0.23
+animate cube
+    keyframe 0.98
+        pos 3.77 -1.32 0.23
+        color 0.97 0.33 0.53
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.97 0.33 0.53
+    keyframe 6.98
+        pos 3.77 -1.32 0.23
+        color 0.97 0.33 0.53
+}
+
+# Cube 242 at (-3.67, -1.57, 0.21)
+position -3.67 -1.57 0.21
+animate cube
+    keyframe 1.00
+        pos -3.67 -1.57 0.21
+        color 0.04 0.30 0.53
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.04 0.30 0.53
+    keyframe 7.00
+        pos -3.67 -1.57 0.21
+        color 0.04 0.30 0.53
+}
+
+# Cube 243 at (1.65, 3.64, 0.20)
+position 1.65 3.64 0.20
+animate cube
+    keyframe 1.02
+        pos 1.65 3.64 0.20
+        color 0.71 0.95 0.52
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.71 0.95 0.52
+    keyframe 7.02
+        pos 1.65 3.64 0.20
+        color 0.71 0.95 0.52
+}
+
+# Cube 244 at (1.24, -3.80, 0.18)
+position 1.24 -3.80 0.18
+animate cube
+    keyframe 1.04
+        pos 1.24 -3.80 0.18
+        color 0.66 0.03 0.52
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.66 0.03 0.52
+    keyframe 7.04
+        pos 1.24 -3.80 0.18
+        color 0.66 0.03 0.52
+}
+
+# Cube 245 at (-3.48, 1.96, 0.16)
+position -3.48 1.96 0.16
+animate cube
+    keyframe 1.06
+        pos -3.48 1.96 0.16
+        color 0.06 0.75 0.52
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.06 0.75 0.52
+    keyframe 7.06
+        pos -3.48 1.96 0.16
+        color 0.06 0.75 0.52
+}
+
+# Cube 246 at (3.89, 0.91, 0.15)
+position 3.89 0.91 0.15
+animate cube
+    keyframe 1.08
+        pos 3.89 0.91 0.15
+        color 0.99 0.61 0.52
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.99 0.61 0.52
+    keyframe 7.08
+        pos 3.89 0.91 0.15
+        color 0.99 0.61 0.52
+}
+
+# Cube 247 at (-2.26, -3.30, 0.13)
+position -2.26 -3.30 0.13
+animate cube
+    keyframe 1.10
+        pos -2.26 -3.30 0.13
+        color 0.22 0.09 0.52
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.22 0.09 0.52
+    keyframe 7.10
+        pos -2.26 -3.30 0.13
+        color 0.22 0.09 0.52
+}
+
+# Cube 248 at (-0.56, 3.96, 0.12)
+position -0.56 3.96 0.12
+animate cube
+    keyframe 1.12
+        pos -0.56 3.96 0.12
+        color 0.43 0.99 0.51
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.43 0.99 0.51
+    keyframe 7.12
+        pos -0.56 3.96 0.12
+        color 0.43 0.99 0.51
+}
+
+# Cube 249 at (3.09, -2.54, 0.10)
+position 3.09 -2.54 0.10
+animate cube
+    keyframe 1.14
+        pos 3.09 -2.54 0.10
+        color 0.89 0.18 0.51
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.89 0.18 0.51
+    keyframe 7.14
+        pos 3.09 -2.54 0.10
+        color 0.89 0.18 0.51
+}
+
+# Cube 250 at (-3.99, -0.21, 0.09)
+position -3.99 -0.21 0.09
+animate cube
+    keyframe 1.16
+        pos -3.99 -0.21 0.09
+        color 0.00 0.47 0.51
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.00 0.47 0.51
+    keyframe 7.16
+        pos -3.99 -0.21 0.09
+        color 0.00 0.47 0.51
+}
+
+# Cube 251 at (2.80, 2.86, 0.07)
+position 2.80 2.86 0.07
+animate cube
+    keyframe 1.18
+        pos 2.80 2.86 0.07
+        color 0.85 0.86 0.51
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.85 0.86 0.51
+    keyframe 7.18
+        pos 2.80 2.86 0.07
+        color 0.85 0.86 0.51
+}
+
+# Cube 252 at (-0.14, -4.00, 0.05)
+position -0.14 -4.00 0.05
+animate cube
+    keyframe 1.20
+        pos -0.14 -4.00 0.05
+        color 0.48 0.00 0.51
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.48 0.00 0.51
+    keyframe 7.20
+        pos -0.14 -4.00 0.05
+        color 0.48 0.00 0.51
+}
+
+# Cube 253 at (-2.60, 3.04, 0.04)
+position -2.60 3.04 0.04
+animate cube
+    keyframe 1.22
+        pos -2.60 3.04 0.04
+        color 0.18 0.88 0.50
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.18 0.88 0.50
+    keyframe 7.22
+        pos -2.60 3.04 0.04
+        color 0.18 0.88 0.50
+}
+
+# Cube 254 at (3.97, -0.49, 0.02)
+position 3.97 -0.49 0.02
+animate cube
+    keyframe 1.24
+        pos 3.97 -0.49 0.02
+        color 1.00 0.44 0.50
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 1.00 0.44 0.50
+    keyframe 7.24
+        pos 3.97 -0.49 0.02
+        color 1.00 0.44 0.50
+}
+
+# Cube 255 at (-3.26, -2.32, 0.01)
+position -3.26 -2.32 0.01
+animate cube
+    keyframe 1.26
+        pos -3.26 -2.32 0.01
+        color 0.09 0.21 0.50
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.09 0.21 0.50
+    keyframe 7.26
+        pos -3.26 -2.32 0.01
+        color 0.09 0.21 0.50
+}
+
+# Cube 256 at (0.83, 3.91, -0.01)
+position 0.83 3.91 -0.01
+animate cube
+    keyframe 0.00
+        pos 0.83 3.91 -0.01
+        color 0.60 0.99 0.50
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.60 0.99 0.50
+    keyframe 6.00
+        pos 0.83 3.91 -0.01
+        color 0.60 0.99 0.50
+}
+
+# Cube 257 at (2.03, -3.45, -0.02)
+position 2.03 -3.45 -0.02
+animate cube
+    keyframe 0.02
+        pos 2.03 -3.45 -0.02
+        color 0.75 0.07 0.50
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.75 0.07 0.50
+    keyframe 6.02
+        pos 2.03 -3.45 -0.02
+        color 0.75 0.07 0.50
+}
+
+# Cube 258 at (-3.82, 1.17, -0.04)
+position -3.82 1.17 -0.04
+animate cube
+    keyframe 0.04
+        pos -3.82 1.17 -0.04
+        color 0.02 0.65 0.50
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.02 0.65 0.50
+    keyframe 6.04
+        pos -3.82 1.17 -0.04
+        color 0.02 0.65 0.50
+}
+
+# Cube 259 at (3.61, 1.72, -0.05)
+position 3.61 1.72 -0.05
+animate cube
+    keyframe 0.06
+        pos 3.61 1.72 -0.05
+        color 0.95 0.72 0.49
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.95 0.72 0.49
+    keyframe 6.06
+        pos 3.61 1.72 -0.05
+        color 0.95 0.72 0.49
+}
+
+# Cube 260 at (-1.50, -3.71, -0.07)
+position -1.50 -3.71 -0.07
+animate cube
+    keyframe 0.08
+        pos -1.50 -3.71 -0.07
+        color 0.31 0.04 0.49
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.31 0.04 0.49
+    keyframe 6.08
+        pos -1.50 -3.71 -0.07
+        color 0.31 0.04 0.49
+}
+
+# Cube 261 at (-1.40, 3.75, -0.09)
+position -1.40 3.75 -0.09
+animate cube
+    keyframe 0.10
+        pos -1.40 3.75 -0.09
+        color 0.33 0.97 0.49
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.33 0.97 0.49
+    keyframe 6.10
+        pos -1.40 3.75 -0.09
+        color 0.33 0.97 0.49
+}
+
+# Cube 262 at (3.56, -1.82, -0.10)
+position 3.56 -1.82 -0.10
+animate cube
+    keyframe 0.12
+        pos 3.56 -1.82 -0.10
+        color 0.95 0.27 0.49
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.95 0.27 0.49
+    keyframe 6.12
+        pos 3.56 -1.82 -0.10
+        color 0.95 0.27 0.49
+}
+
+# Cube 263 at (-3.85, -1.07, -0.12)
+position -3.85 -1.07 -0.12
+animate cube
+    keyframe 0.14
+        pos -3.85 -1.07 -0.12
+        color 0.02 0.37 0.49
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.02 0.37 0.49
+    keyframe 6.14
+        pos -3.85 -1.07 -0.12
+        color 0.02 0.37 0.49
+}
+
+# Cube 264 at (2.12, 3.39, -0.13)
+position 2.12 3.39 -0.13
+animate cube
+    keyframe 0.16
+        pos 2.12 3.39 -0.13
+        color 0.77 0.92 0.48
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.77 0.92 0.48
+    keyframe 6.16
+        pos 2.12 3.39 -0.13
+        color 0.77 0.92 0.48
+}
+
+# Cube 265 at (0.72, -3.93, -0.15)
+position 0.72 -3.93 -0.15
+animate cube
+    keyframe 0.18
+        pos 0.72 -3.93 -0.15
+        color 0.59 0.01 0.48
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.59 0.01 0.48
+    keyframe 6.18
+        pos 0.72 -3.93 -0.15
+        color 0.59 0.01 0.48
+}
+
+# Cube 266 at (-3.19, 2.41, -0.16)
+position -3.19 2.41 -0.16
+animate cube
+    keyframe 0.20
+        pos -3.19 2.41 -0.16
+        color 0.10 0.80 0.48
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.10 0.80 0.48
+    keyframe 6.20
+        pos -3.19 2.41 -0.16
+        color 0.10 0.80 0.48
+}
+
+# Cube 267 at (3.98, 0.38, -0.18)
+position 3.98 0.38 -0.18
+animate cube
+    keyframe 0.22
+        pos 3.98 0.38 -0.18
+        color 1.00 0.55 0.48
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 1.00 0.55 0.48
+    keyframe 6.22
+        pos 3.98 0.38 -0.18
+        color 1.00 0.55 0.48
+}
+
+# Cube 268 at (-2.68, -2.97, -0.20)
+position -2.68 -2.97 -0.20
+animate cube
+    keyframe 0.24
+        pos -2.68 -2.97 -0.20
+        color 0.17 0.13 0.48
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.17 0.13 0.48
+    keyframe 6.24
+        pos -2.68 -2.97 -0.20
+        color 0.17 0.13 0.48
+}
+
+# Cube 269 at (-0.03, 3.99, -0.21)
+position -0.03 3.99 -0.21
+animate cube
+    keyframe 0.26
+        pos -0.03 3.99 -0.21
+        color 0.50 1.00 0.47
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.50 1.00 0.47
+    keyframe 6.26
+        pos -0.03 3.99 -0.21
+        color 0.50 1.00 0.47
+}
+
+# Cube 270 at (2.72, -2.93, -0.23)
+position 2.72 -2.93 -0.23
+animate cube
+    keyframe 0.28
+        pos 2.72 -2.93 -0.23
+        color 0.84 0.13 0.47
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.84 0.13 0.47
+    keyframe 6.28
+        pos 2.72 -2.93 -0.23
+        color 0.84 0.13 0.47
+}
+
+# Cube 271 at (-3.98, 0.32, -0.24)
+position -3.98 0.32 -0.24
+animate cube
+    keyframe 0.30
+        pos -3.98 0.32 -0.24
+        color 0.00 0.54 0.47
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.00 0.54 0.47
+    keyframe 6.30
+        pos -3.98 0.32 -0.24
+        color 0.00 0.54 0.47
+}
+
+# Cube 272 at (3.15, 2.45, -0.26)
+position 3.15 2.45 -0.26
+animate cube
+    keyframe 0.32
+        pos 3.15 2.45 -0.26
+        color 0.89 0.81 0.47
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.89 0.81 0.47
+    keyframe 6.32
+        pos 3.15 2.45 -0.26
+        color 0.89 0.81 0.47
+}
+
+# Cube 273 at (-0.67, -3.93, -0.27)
+position -0.67 -3.93 -0.27
+animate cube
+    keyframe 0.34
+        pos -0.67 -3.93 -0.27
+        color 0.42 0.01 0.47
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.42 0.01 0.47
+    keyframe 6.34
+        pos -0.67 -3.93 -0.27
+        color 0.42 0.01 0.47
+}
+
+# Cube 274 at (-2.17, 3.35, -0.29)
+position -2.17 3.35 -0.29
+animate cube
+    keyframe 0.36
+        pos -2.17 3.35 -0.29
+        color 0.23 0.92 0.46
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.23 0.92 0.46
+    keyframe 6.36
+        pos -2.17 3.35 -0.29
+        color 0.23 0.92 0.46
+}
+
+# Cube 275 at (3.86, -1.01, -0.30)
+position 3.86 -1.01 -0.30
+animate cube
+    keyframe 0.38
+        pos 3.86 -1.01 -0.30
+        color 0.98 0.37 0.46
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.98 0.37 0.46
+    keyframe 6.38
+        pos 3.86 -1.01 -0.30
+        color 0.98 0.37 0.46
+}
+
+# Cube 276 at (-3.53, -1.86, -0.32)
+position -3.53 -1.86 -0.32
+animate cube
+    keyframe 0.40
+        pos -3.53 -1.86 -0.32
+        color 0.06 0.27 0.46
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.06 0.27 0.46
+    keyframe 6.40
+        pos -3.53 -1.86 -0.32
+        color 0.06 0.27 0.46
+}
+
+# Cube 277 at (1.34, 3.75, -0.34)
+position 1.34 3.75 -0.34
+animate cube
+    keyframe 0.42
+        pos 1.34 3.75 -0.34
+        color 0.67 0.97 0.46
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.67 0.97 0.46
+    keyframe 6.42
+        pos 1.34 3.75 -0.34
+        color 0.67 0.97 0.46
+}
+
+# Cube 278 at (1.55, -3.67, -0.35)
+position 1.55 -3.67 -0.35
+animate cube
+    keyframe 0.44
+        pos 1.55 -3.67 -0.35
+        color 0.69 0.04 0.46
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.69 0.04 0.46
+    keyframe 6.44
+        pos 1.55 -3.67 -0.35
+        color 0.69 0.04 0.46
+}
+
+# Cube 279 at (-3.62, 1.66, -0.37)
+position -3.62 1.66 -0.37
+animate cube
+    keyframe 0.46
+        pos -3.62 1.66 -0.37
+        color 0.05 0.71 0.45
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.05 0.71 0.45
+    keyframe 6.46
+        pos -3.62 1.66 -0.37
+        color 0.05 0.71 0.45
+}
+
+# Cube 280 at (3.79, 1.22, -0.38)
+position 3.79 1.22 -0.38
+animate cube
+    keyframe 0.48
+        pos 3.79 1.22 -0.38
+        color 0.97 0.65 0.45
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.97 0.65 0.45
+    keyframe 6.48
+        pos 3.79 1.22 -0.38
+        color 0.97 0.65 0.45
+}
+
+# Cube 281 at (-1.97, -3.46, -0.40)
+position -1.97 -3.46 -0.40
+animate cube
+    keyframe 0.50
+        pos -1.97 -3.46 -0.40
+        color 0.25 0.07 0.45
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.25 0.07 0.45
+    keyframe 6.50
+        pos -1.97 -3.46 -0.40
+        color 0.25 0.07 0.45
+}
+
+# Cube 282 at (-0.88, 3.88, -0.41)
+position -0.88 3.88 -0.41
+animate cube
+    keyframe 0.52
+        pos -0.88 3.88 -0.41
+        color 0.39 0.98 0.45
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.39 0.98 0.45
+    keyframe 6.52
+        pos -0.88 3.88 -0.41
+        color 0.39 0.98 0.45
+}
+
+# Cube 283 at (3.27, -2.26, -0.43)
+position 3.27 -2.26 -0.43
+animate cube
+    keyframe 0.54
+        pos 3.27 -2.26 -0.43
+        color 0.91 0.22 0.45
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.91 0.22 0.45
+    keyframe 6.54
+        pos 3.27 -2.26 -0.43
+        color 0.91 0.22 0.45
+}
+
+# Cube 284 at (-3.94, -0.54, -0.45)
+position -3.94 -0.54 -0.45
+animate cube
+    keyframe 0.56
+        pos -3.94 -0.54 -0.45
+        color 0.01 0.43 0.44
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.01 0.43 0.44
+    keyframe 6.56
+        pos -3.94 -0.54 -0.45
+        color 0.01 0.43 0.44
+}
+
+# Cube 285 at (2.54, 3.06, -0.46)
+position 2.54 3.06 -0.46
+animate cube
+    keyframe 0.58
+        pos 2.54 3.06 -0.46
+        color 0.82 0.88 0.44
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.82 0.88 0.44
+    keyframe 6.58
+        pos 2.54 3.06 -0.46
+        color 0.82 0.88 0.44
+}
+
+# Cube 286 at (0.19, -3.97, -0.48)
+position 0.19 -3.97 -0.48
+animate cube
+    keyframe 0.60
+        pos 0.19 -3.97 -0.48
+        color 0.52 0.00 0.44
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.52 0.00 0.44
+    keyframe 6.60
+        pos 0.19 -3.97 -0.48
+        color 0.52 0.00 0.44
+}
+
+# Cube 287 at (-2.82, 2.79, -0.49)
+position -2.82 2.79 -0.49
+animate cube
+    keyframe 0.62
+        pos -2.82 2.79 -0.49
+        color 0.15 0.85 0.44
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.15 0.85 0.44
+    keyframe 6.62
+        pos -2.82 2.79 -0.49
+        color 0.15 0.85 0.44
+}
+
+# Cube 288 at (3.96, -0.15, -0.51)
+position 3.96 -0.15 -0.51
+animate cube
+    keyframe 0.64
+        pos 3.96 -0.15 -0.51
+        color 1.00 0.48 0.44
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 1.00 0.48 0.44
+    keyframe 6.64
+        pos 3.96 -0.15 -0.51
+        color 1.00 0.48 0.44
+}
+
+# Cube 289 at (-3.03, -2.56, -0.52)
+position -3.03 -2.56 -0.52
+animate cube
+    keyframe 0.66
+        pos -3.03 -2.56 -0.52
+        color 0.12 0.18 0.43
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.12 0.18 0.43
+    keyframe 6.66
+        pos -3.03 -2.56 -0.52
+        color 0.12 0.18 0.43
+}
+
+# Cube 290 at (0.50, 3.93, -0.54)
+position 0.50 3.93 -0.54
+animate cube
+    keyframe 0.68
+        pos 0.50 3.93 -0.54
+        color 0.56 0.99 0.43
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.56 0.99 0.43
+    keyframe 6.68
+        pos 0.50 3.93 -0.54
+        color 0.56 0.99 0.43
+}
+
+# Cube 291 at (2.29, -3.24, -0.55)
+position 2.29 -3.24 -0.55
+animate cube
+    keyframe 0.70
+        pos 2.29 -3.24 -0.55
+        color 0.79 0.10 0.43
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.79 0.10 0.43
+    keyframe 6.70
+        pos 2.29 -3.24 -0.55
+        color 0.79 0.10 0.43
+}
+
+# Cube 292 at (-3.87, 0.84, -0.57)
+position -3.87 0.84 -0.57
+animate cube
+    keyframe 0.72
+        pos -3.87 0.84 -0.57
+        color 0.02 0.61 0.43
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.02 0.61 0.43
+    keyframe 6.72
+        pos -3.87 0.84 -0.57
+        color 0.02 0.61 0.43
+}
+
+# Cube 293 at (3.42, 1.99, -0.59)
+position 3.42 1.99 -0.59
+animate cube
+    keyframe 0.74
+        pos 3.42 1.99 -0.59
+        color 0.93 0.75 0.43
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.93 0.75 0.43
+    keyframe 6.74
+        pos 3.42 1.99 -0.59
+        color 0.93 0.75 0.43
+}
+
+# Cube 294 at (-1.17, -3.78, -0.60)
+position -1.17 -3.78 -0.60
+animate cube
+    keyframe 0.76
+        pos -1.17 -3.78 -0.60
+        color 0.35 0.03 0.42
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.35 0.03 0.42
+    keyframe 6.76
+        pos -1.17 -3.78 -0.60
+        color 0.35 0.03 0.42
+}
+
+# Cube 295 at (-1.68, 3.58, -0.62)
+position -1.68 3.58 -0.62
+animate cube
+    keyframe 0.78
+        pos -1.68 3.58 -0.62
+        color 0.29 0.95 0.42
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.29 0.95 0.42
+    keyframe 6.78
+        pos -1.68 3.58 -0.62
+        color 0.29 0.95 0.42
+}
+
+# Cube 296 at (3.65, -1.50, -0.63)
+position 3.65 -1.50 -0.63
+animate cube
+    keyframe 0.80
+        pos 3.65 -1.50 -0.63
+        color 0.96 0.31 0.42
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.96 0.31 0.42
+    keyframe 6.80
+        pos 3.65 -1.50 -0.63
+        color 0.96 0.31 0.42
+}
+
+# Cube 297 at (-3.70, -1.36, -0.65)
+position -3.70 -1.36 -0.65
+animate cube
+    keyframe 0.82
+        pos -3.70 -1.36 -0.65
+        color 0.04 0.33 0.42
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.04 0.33 0.42
+    keyframe 6.82
+        pos -3.70 -1.36 -0.65
+        color 0.04 0.33 0.42
+}
+
+# Cube 298 at (1.81, 3.50, -0.66)
+position 1.81 3.50 -0.66
+animate cube
+    keyframe 0.84
+        pos 1.81 3.50 -0.66
+        color 0.73 0.94 0.42
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.73 0.94 0.42
+    keyframe 6.84
+        pos 1.81 3.50 -0.66
+        color 0.73 0.94 0.42
+}
+
+# Cube 299 at (1.03, -3.80, -0.68)
+position 1.03 -3.80 -0.68
+animate cube
+    keyframe 0.86
+        pos 1.03 -3.80 -0.68
+        color 0.63 0.02 0.42
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.63 0.02 0.42
+    keyframe 6.86
+        pos 1.03 -3.80 -0.68
+        color 0.63 0.02 0.42
+}
+
+# Cube 300 at (-3.33, 2.11, -0.70)
+position -3.33 2.11 -0.70
+animate cube
+    keyframe 0.88
+        pos -3.33 2.11 -0.70
+        color 0.08 0.76 0.41
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.08 0.76 0.41
+    keyframe 6.88
+        pos -3.33 2.11 -0.70
+        color 0.08 0.76 0.41
+}
+
+# Cube 301 at (3.87, 0.69, -0.71)
+position 3.87 0.69 -0.71
+animate cube
+    keyframe 0.90
+        pos 3.87 0.69 -0.71
+        color 0.98 0.59 0.41
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.98 0.59 0.41
+    keyframe 6.90
+        pos 3.87 0.69 -0.71
+        color 0.98 0.59 0.41
+}
+
+# Cube 302 at (-2.39, -3.13, -0.73)
+position -2.39 -3.13 -0.73
+animate cube
+    keyframe 0.92
+        pos -2.39 -3.13 -0.73
+        color 0.20 0.11 0.41
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.20 0.11 0.41
+    keyframe 6.92
+        pos -2.39 -3.13 -0.73
+        color 0.20 0.11 0.41
+}
+
+# Cube 303 at (-0.35, 3.91, -0.74)
+position -0.35 3.91 -0.74
+animate cube
+    keyframe 0.94
+        pos -0.35 3.91 -0.74
+        color 0.46 0.99 0.41
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.46 0.99 0.41
+    keyframe 6.94
+        pos -0.35 3.91 -0.74
+        color 0.46 0.99 0.41
+}
+
+# Cube 304 at (2.90, -2.65, -0.76)
+position 2.90 -2.65 -0.76
+animate cube
+    keyframe 0.96
+        pos 2.90 -2.65 -0.76
+        color 0.86 0.17 0.41
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.86 0.17 0.41
+    keyframe 6.96
+        pos 2.90 -2.65 -0.76
+        color 0.86 0.17 0.41
+}
+
+# Cube 305 at (-3.92, -0.01, -0.77)
+position -3.92 -0.01 -0.77
+animate cube
+    keyframe 0.98
+        pos -3.92 -0.01 -0.77
+        color 0.01 0.50 0.40
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.01 0.50 0.40
+    keyframe 6.98
+        pos -3.92 -0.01 -0.77
+        color 0.01 0.50 0.40
+}
+
+# Cube 306 at (2.89, 2.66, -0.79)
+position 2.89 2.66 -0.79
+animate cube
+    keyframe 1.00
+        pos 2.89 2.66 -0.79
+        color 0.86 0.83 0.40
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.86 0.83 0.40
+    keyframe 7.00
+        pos 2.89 2.66 -0.79
+        color 0.86 0.83 0.40
+}
+
+# Cube 307 at (-0.33, -3.90, -0.80)
+position -0.33 -3.90 -0.80
+animate cube
+    keyframe 1.02
+        pos -0.33 -3.90 -0.80
+        color 0.46 0.01 0.40
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.46 0.01 0.40
+    keyframe 7.02
+        pos -0.33 -3.90 -0.80
+        color 0.46 0.01 0.40
+}
+
+# Cube 308 at (-2.39, 3.10, -0.82)
+position -2.39 3.10 -0.82
+animate cube
+    keyframe 1.04
+        pos -2.39 3.10 -0.82
+        color 0.20 0.89 0.40
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.20 0.89 0.40
+    keyframe 7.04
+        pos -2.39 3.10 -0.82
+        color 0.20 0.89 0.40
+}
+
+# Cube 309 at (3.85, -0.67, -0.84)
+position 3.85 -0.67 -0.84
+animate cube
+    keyframe 1.06
+        pos 3.85 -0.67 -0.84
+        color 0.98 0.42 0.40
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.98 0.42 0.40
+    keyframe 7.06
+        pos 3.85 -0.67 -0.84
+        color 0.98 0.42 0.40
+}
+
+# Cube 310 at (-3.29, -2.11, -0.85)
+position -3.29 -2.11 -0.85
+animate cube
+    keyframe 1.08
+        pos -3.29 -2.11 -0.85
+        color 0.09 0.24 0.39
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.09 0.24 0.39
+    keyframe 7.08
+        pos -3.29 -2.11 -0.85
+        color 0.09 0.24 0.39
+}
+
+# Cube 311 at (1.01, 3.77, -0.87)
+position 1.01 3.77 -0.87
+animate cube
+    keyframe 1.10
+        pos 1.01 3.77 -0.87
+        color 0.63 0.97 0.39
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.63 0.97 0.39
+    keyframe 7.10
+        pos 1.01 3.77 -0.87
+        color 0.63 0.97 0.39
+}
+
+# Cube 312 at (1.81, -3.46, -0.88)
+position 1.81 -3.46 -0.88
+animate cube
+    keyframe 1.12
+        pos 1.81 -3.46 -0.88
+        color 0.73 0.07 0.39
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.73 0.07 0.39
+    keyframe 7.12
+        pos 1.81 -3.46 -0.88
+        color 0.73 0.07 0.39
+}
+
+# Cube 313 at (-3.66, 1.33, -0.90)
+position -3.66 1.33 -0.90
+animate cube
+    keyframe 1.14
+        pos -3.66 1.33 -0.90
+        color 0.04 0.67 0.39
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.04 0.67 0.39
+    keyframe 7.14
+        pos -3.66 1.33 -0.90
+        color 0.04 0.67 0.39
+}
+
+# Cube 314 at (3.60, 1.49, -0.91)
+position 3.60 1.49 -0.91
+animate cube
+    keyframe 1.16
+        pos 3.60 1.49 -0.91
+        color 0.95 0.69 0.39
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.95 0.69 0.39
+    keyframe 7.16
+        pos 3.60 1.49 -0.91
+        color 0.95 0.69 0.39
+}
+
+# Cube 315 at (-1.64, -3.53, -0.93)
+position -1.64 -3.53 -0.93
+animate cube
+    keyframe 1.18
+        pos -1.64 -3.53 -0.93
+        color 0.29 0.06 0.38
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.29 0.06 0.38
+    keyframe 7.18
+        pos -1.64 -3.53 -0.93
+        color 0.29 0.06 0.38
+}
+
+# Cube 316 at (-1.17, 3.71, -0.95)
+position -1.17 3.71 -0.95
+animate cube
+    keyframe 1.20
+        pos -1.17 3.71 -0.95
+        color 0.35 0.96 0.38
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.35 0.96 0.38
+    keyframe 7.20
+        pos -1.17 3.71 -0.95
+        color 0.35 0.96 0.38
+}
+
+# Cube 317 at (3.36, -1.94, -0.96)
+position 3.36 -1.94 -0.96
+animate cube
+    keyframe 1.22
+        pos 3.36 -1.94 -0.96
+        color 0.92 0.26 0.38
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.92 0.26 0.38
+    keyframe 7.22
+        pos 3.36 -1.94 -0.96
+        color 0.92 0.26 0.38
+}
+
+# Cube 318 at (-3.79, -0.84, -0.98)
+position -3.79 -0.84 -0.98
+animate cube
+    keyframe 1.24
+        pos -3.79 -0.84 -0.98
+        color 0.03 0.39 0.38
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.03 0.39 0.38
+    keyframe 7.24
+        pos -3.79 -0.84 -0.98
+        color 0.03 0.39 0.38
+}
+
+# Cube 319 at (2.22, 3.18, -0.99)
+position 2.22 3.18 -0.99
+animate cube
+    keyframe 1.26
+        pos 2.22 3.18 -0.99
+        color 0.78 0.90 0.38
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.78 0.90 0.38
+    keyframe 7.26
+        pos 2.22 3.18 -0.99
+        color 0.78 0.90 0.38
+}
+
+# Cube 320 at (0.51, -3.84, -1.01)
+position 0.51 -3.84 -1.01
+animate cube
+    keyframe 0.00
+        pos 0.51 -3.84 -1.01
+        color 0.56 0.02 0.37
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.56 0.02 0.37
+    keyframe 6.00
+        pos 0.51 -3.84 -1.01
+        color 0.56 0.02 0.37
+}
+
+# Cube 321 at (-2.96, 2.49, -1.02)
+position -2.96 2.49 -1.02
+animate cube
+    keyframe 0.02
+        pos -2.96 2.49 -1.02
+        color 0.13 0.81 0.37
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.13 0.81 0.37
+    keyframe 6.02
+        pos -2.96 2.49 -1.02
+        color 0.13 0.81 0.37
+}
+
+# Cube 322 at (3.86, 0.17, -1.04)
+position 3.86 0.17 -1.04
+animate cube
+    keyframe 0.04
+        pos 3.86 0.17 -1.04
+        color 0.98 0.52 0.37
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.98 0.52 0.37
+    keyframe 6.04
+        pos 3.86 0.17 -1.04
+        color 0.98 0.52 0.37
+}
+
+# Cube 323 at (-2.73, -2.73, -1.05)
+position -2.73 -2.73 -1.05
+animate cube
+    keyframe 0.06
+        pos -2.73 -2.73 -1.05
+        color 0.16 0.16 0.37
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.16 0.16 0.37
+    keyframe 6.06
+        pos -2.73 -2.73 -1.05
+        color 0.16 0.16 0.37
+}
+
+# Cube 324 at (0.17, 3.85, -1.07)
+position 0.17 3.85 -1.07
+animate cube
+    keyframe 0.08
+        pos 0.17 3.85 -1.07
+        color 0.52 0.98 0.37
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.52 0.98 0.37
+    keyframe 6.08
+        pos 0.17 3.85 -1.07
+        color 0.52 0.98 0.37
+}
+
+# Cube 325 at (2.47, -2.95, -1.09)
+position 2.47 -2.95 -1.09
+animate cube
+    keyframe 0.10
+        pos 2.47 -2.95 -1.09
+        color 0.81 0.13 0.36
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.81 0.13 0.36
+    keyframe 6.10
+        pos 2.47 -2.95 -1.09
+        color 0.81 0.13 0.36
+}
+
+# Cube 326 at (-3.81, 0.50, -1.10)
+position -3.81 0.50 -1.10
+animate cube
+    keyframe 0.12
+        pos -3.81 0.50 -1.10
+        color 0.02 0.56 0.36
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.02 0.56 0.36
+    keyframe 6.12
+        pos -3.81 0.50 -1.10
+        color 0.02 0.56 0.36
+}
+
+# Cube 327 at (3.15, 2.20, -1.12)
+position 3.15 2.20 -1.12
+animate cube
+    keyframe 0.14
+        pos 3.15 2.20 -1.12
+        color 0.89 0.78 0.36
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.89 0.78 0.36
+    keyframe 6.14
+        pos 3.15 2.20 -1.12
+        color 0.89 0.78 0.36
+}
+
+# Cube 328 at (-0.83, -3.74, -1.13)
+position -0.83 -3.74 -1.13
+animate cube
+    keyframe 0.16
+        pos -0.83 -3.74 -1.13
+        color 0.40 0.03 0.36
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.40 0.03 0.36
+    keyframe 6.16
+        pos -0.83 -3.74 -1.13
+        color 0.40 0.03 0.36
+}
+
+# Cube 329 at (-1.91, 3.32, -1.15)
+position -1.91 3.32 -1.15
+animate cube
+    keyframe 0.18
+        pos -1.91 3.32 -1.15
+        color 0.26 0.92 0.36
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.26 0.92 0.36
+    keyframe 6.18
+        pos -1.91 3.32 -1.15
+        color 0.26 0.92 0.36
+}
+
+# Cube 330 at (3.65, -1.15, -1.16)
+position 3.65 -1.15 -1.16
+animate cube
+    keyframe 0.20
+        pos 3.65 -1.15 -1.16
+        color 0.96 0.36 0.35
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.96 0.36 0.35
+    keyframe 6.20
+        pos 3.65 -1.15 -1.16
+        color 0.96 0.36 0.35
+}
+
+# Cube 331 at (-3.47, -1.61, -1.18)
+position -3.47 -1.61 -1.18
+animate cube
+    keyframe 0.22
+        pos -3.47 -1.61 -1.18
+        color 0.07 0.30 0.35
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.07 0.30 0.35
+    keyframe 6.22
+        pos -3.47 -1.61 -1.18
+        color 0.07 0.30 0.35
+}
+
+# Cube 332 at (1.47, 3.52, -1.20)
+position 1.47 3.52 -1.20
+animate cube
+    keyframe 0.24
+        pos 1.47 3.52 -1.20
+        color 0.68 0.94 0.35
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.68 0.94 0.35
+    keyframe 6.24
+        pos 1.47 3.52 -1.20
+        color 0.68 0.94 0.35
+}
+
+# Cube 333 at (1.30, -3.58, -1.21)
+position 1.30 -3.58 -1.21
+animate cube
+    keyframe 0.26
+        pos 1.30 -3.58 -1.21
+        color 0.66 0.05 0.35
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.66 0.05 0.35
+    keyframe 6.26
+        pos 1.30 -3.58 -1.21
+        color 0.66 0.05 0.35
+}
+
+# Cube 334 at (-3.37, 1.76, -1.23)
+position -3.37 1.76 -1.23
+animate cube
+    keyframe 0.28
+        pos -3.37 1.76 -1.23
+        color 0.08 0.72 0.35
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.08 0.72 0.35
+    keyframe 6.28
+        pos -3.37 1.76 -1.23
+        color 0.08 0.72 0.35
+}
+
+# Cube 335 at (3.67, 0.98, -1.24)
+position 3.67 0.98 -1.24
+animate cube
+    keyframe 0.30
+        pos 3.67 0.98 -1.24
+        color 0.96 0.62 0.34
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.96 0.62 0.34
+    keyframe 6.30
+        pos 3.67 0.98 -1.24
+        color 0.96 0.62 0.34
+}
+
+# Cube 336 at (-2.05, -3.20, -1.26)
+position -2.05 -3.20 -1.26
+animate cube
+    keyframe 0.32
+        pos -2.05 -3.20 -1.26
+        color 0.24 0.10 0.34
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.24 0.10 0.34
+    keyframe 6.32
+        pos -2.05 -3.20 -1.26
+        color 0.24 0.10 0.34
+}
+
+# Cube 337 at (-0.65, 3.74, -1.27)
+position -0.65 3.74 -1.27
+animate cube
+    keyframe 0.34
+        pos -0.65 3.74 -1.27
+        color 0.42 0.97 0.34
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.42 0.97 0.34
+    keyframe 6.34
+        pos -0.65 3.74 -1.27
+        color 0.42 0.97 0.34
+}
+
+# Cube 338 at (3.00, -2.31, -1.29)
+position 3.00 -2.31 -1.29
+animate cube
+    keyframe 0.36
+        pos 3.00 -2.31 -1.29
+        color 0.87 0.21 0.34
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.87 0.21 0.34
+    keyframe 6.36
+        pos 3.00 -2.31 -1.29
+        color 0.87 0.21 0.34
+}
+
+# Cube 339 at (-3.77, -0.32, -1.30)
+position -3.77 -0.32 -1.30
+animate cube
+    keyframe 0.38
+        pos -3.77 -0.32 -1.30
+        color 0.03 0.46 0.34
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.03 0.46 0.34
+    keyframe 6.38
+        pos -3.77 -0.32 -1.30
+        color 0.03 0.46 0.34
+}
+
+# Cube 340 at (2.56, 2.78, -1.32)
+position 2.56 2.78 -1.32
+animate cube
+    keyframe 0.40
+        pos 2.56 2.78 -1.32
+        color 0.82 0.85 0.33
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.82 0.85 0.33
+    keyframe 6.40
+        pos 2.56 2.78 -1.32
+        color 0.82 0.85 0.33
+}
+
+# Cube 341 at (-0.01, -3.77, -1.34)
+position -0.01 -3.77 -1.34
+animate cube
+    keyframe 0.42
+        pos -0.01 -3.77 -1.34
+        color 0.50 0.03 0.33
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.50 0.03 0.33
+    keyframe 6.42
+        pos -0.01 -3.77 -1.34
+        color 0.50 0.03 0.33
+}
+
+# Cube 342 at (-2.54, 2.78, -1.35)
+position -2.54 2.78 -1.35
+animate cube
+    keyframe 0.44
+        pos -2.54 2.78 -1.35
+        color 0.18 0.85 0.33
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.18 0.85 0.33
+    keyframe 6.44
+        pos -2.54 2.78 -1.35
+        color 0.18 0.85 0.33
+}
+
+# Cube 343 at (3.74, -0.34, -1.37)
+position 3.74 -0.34 -1.37
+animate cube
+    keyframe 0.46
+        pos 3.74 -0.34 -1.37
+        color 0.97 0.46 0.33
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.97 0.46 0.33
+    keyframe 6.46
+        pos 3.74 -0.34 -1.37
+        color 0.97 0.46 0.33
+}
+
+# Cube 344 at (-2.98, -2.28, -1.38)
+position -2.98 -2.28 -1.38
+animate cube
+    keyframe 0.48
+        pos -2.98 -2.28 -1.38
+        color 0.13 0.22 0.33
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.13 0.22 0.33
+    keyframe 6.48
+        pos -2.98 -2.28 -1.38
+        color 0.13 0.22 0.33
+}
+
+# Cube 345 at (0.66, 3.69, -1.40)
+position 0.66 3.69 -1.40
+animate cube
+    keyframe 0.50
+        pos 0.66 3.69 -1.40
+        color 0.58 0.96 0.33
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.58 0.96 0.33
+    keyframe 6.50
+        pos 0.66 3.69 -1.40
+        color 0.58 0.96 0.33
+}
+
+# Cube 346 at (2.00, -3.16, -1.41)
+position 2.00 -3.16 -1.41
+animate cube
+    keyframe 0.52
+        pos 2.00 -3.16 -1.41
+        color 0.75 0.10 0.32
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.75 0.10 0.32
+    keyframe 6.52
+        pos 2.00 -3.16 -1.41
+        color 0.75 0.10 0.32
+}
+
+# Cube 347 at (-3.61, 0.98, -1.43)
+position -3.61 0.98 -1.43
+animate cube
+    keyframe 0.54
+        pos -3.61 0.98 -1.43
+        color 0.05 0.62 0.32
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.05 0.62 0.32
+    keyframe 6.54
+        pos -3.61 0.98 -1.43
+        color 0.05 0.62 0.32
+}
+
+# Cube 348 at (3.31, 1.71, -1.45)
+position 3.31 1.71 -1.45
+animate cube
+    keyframe 0.56
+        pos 3.31 1.71 -1.45
+        color 0.91 0.71 0.32
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.91 0.71 0.32
+    keyframe 6.56
+        pos 3.31 1.71 -1.45
+        color 0.91 0.71 0.32
+}
+
+# Cube 349 at (-1.29, -3.49, -1.46)
+position -1.29 -3.49 -1.46
+animate cube
+    keyframe 0.58
+        pos -1.29 -3.49 -1.46
+        color 0.34 0.06 0.32
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.34 0.06 0.32
+    keyframe 6.58
+        pos -1.29 -3.49 -1.46
+        color 0.34 0.06 0.32
+}
+
+# Cube 350 at (-1.41, 3.44, -1.48)
+position -1.41 3.44 -1.48
+animate cube
+    keyframe 0.60
+        pos -1.41 3.44 -1.48
+        color 0.32 0.93 0.32
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.32 0.93 0.32
+    keyframe 6.60
+        pos -1.41 3.44 -1.48
+        color 0.32 0.93 0.32
+}
+
+# Cube 351 at (3.36, -1.58, -1.49)
+position 3.36 -1.58 -1.49
+animate cube
+    keyframe 0.62
+        pos 3.36 -1.58 -1.49
+        color 0.92 0.30 0.31
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.92 0.30 0.31
+    keyframe 6.62
+        pos 3.36 -1.58 -1.49
+        color 0.92 0.30 0.31
+}
+
+# Cube 352 at (-3.54, -1.10, -1.51)
+position -3.54 -1.10 -1.51
+animate cube
+    keyframe 0.64
+        pos -3.54 -1.10 -1.51
+        color 0.06 0.36 0.31
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.06 0.36 0.31
+    keyframe 6.64
+        pos -3.54 -1.10 -1.51
+        color 0.06 0.36 0.31
+}
+
+# Cube 353 at (1.86, 3.20, -1.52)
+position 1.86 3.20 -1.52
+animate cube
+    keyframe 0.66
+        pos 1.86 3.20 -1.52
+        color 0.73 0.90 0.31
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.73 0.90 0.31
+    keyframe 6.66
+        pos 1.86 3.20 -1.52
+        color 0.73 0.90 0.31
+}
+
+# Cube 354 at (0.78, -3.61, -1.54)
+position 0.78 -3.61 -1.54
+animate cube
+    keyframe 0.68
+        pos 0.78 -3.61 -1.54
+        color 0.60 0.05 0.31
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.60 0.05 0.31
+    keyframe 6.68
+        pos 0.78 -3.61 -1.54
+        color 0.60 0.05 0.31
+}
+
+# Cube 355 at (-3.01, 2.13, -1.55)
+position -3.01 2.13 -1.55
+animate cube
+    keyframe 0.70
+        pos -3.01 2.13 -1.55
+        color 0.12 0.77 0.31
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.12 0.77 0.31
+    keyframe 6.70
+        pos -3.01 2.13 -1.55
+        color 0.12 0.77 0.31
+}
+
+# Cube 356 at (3.65, 0.46, -1.57)
+position 3.65 0.46 -1.57
+animate cube
+    keyframe 0.72
+        pos 3.65 0.46 -1.57
+        color 0.96 0.56 0.30
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.96 0.56 0.30
+    keyframe 6.72
+        pos 3.65 0.46 -1.57
+        color 0.96 0.56 0.30
+}
+
+# Cube 357 at (-2.37, -2.80, -1.59)
+position -2.37 -2.80 -1.59
+animate cube
+    keyframe 0.74
+        pos -2.37 -2.80 -1.59
+        color 0.20 0.15 0.30
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.20 0.15 0.30
+    keyframe 6.74
+        pos -2.37 -2.80 -1.59
+        color 0.20 0.15 0.30
+}
+
+# Cube 358 at (-0.14, 3.66, -1.60)
+position -0.14 3.66 -1.60
+animate cube
+    keyframe 0.76
+        pos -0.14 3.66 -1.60
+        color 0.48 0.96 0.30
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.48 0.96 0.30
+    keyframe 6.76
+        pos -0.14 3.66 -1.60
+        color 0.48 0.96 0.30
+}
+
+# Cube 359 at (2.57, -2.60, -1.62)
+position 2.57 -2.60 -1.62
+animate cube
+    keyframe 0.78
+        pos 2.57 -2.60 -1.62
+        color 0.82 0.18 0.30
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.82 0.18 0.30
+    keyframe 6.78
+        pos 2.57 -2.60 -1.62
+        color 0.82 0.18 0.30
+}
+
+# Cube 360 at (-3.65, 0.18, -1.63)
+position -3.65 0.18 -1.63
+animate cube
+    keyframe 0.80
+        pos -3.65 0.18 -1.63
+        color 0.04 0.52 0.30
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.04 0.52 0.30
+    keyframe 6.80
+        pos -3.65 0.18 -1.63
+        color 0.04 0.52 0.30
+}
+
+# Cube 361 at (2.80, 2.33, -1.65)
+position 2.80 2.33 -1.65
+animate cube
+    keyframe 0.82
+        pos 2.80 2.33 -1.65
+        color 0.85 0.79 0.29
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.85 0.79 0.29
+    keyframe 6.82
+        pos 2.80 2.33 -1.65
+        color 0.85 0.79 0.29
+}
+
+# Cube 362 at (-0.49, -3.60, -1.66)
+position -0.49 -3.60 -1.66
+animate cube
+    keyframe 0.84
+        pos -0.49 -3.60 -1.66
+        color 0.44 0.05 0.29
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.44 0.05 0.29
+    keyframe 6.84
+        pos -0.49 -3.60 -1.66
+        color 0.44 0.05 0.29
+}
+
+# Cube 363 at (-2.07, 2.99, -1.68)
+position -2.07 2.99 -1.68
+animate cube
+    keyframe 0.86
+        pos -2.07 2.99 -1.68
+        color 0.24 0.87 0.29
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.24 0.87 0.29
+    keyframe 6.86
+        pos -2.07 2.99 -1.68
+        color 0.24 0.87 0.29
+}
+
+# Cube 364 at (3.53, -0.80, -1.70)
+position 3.53 -0.80 -1.70
+animate cube
+    keyframe 0.88
+        pos 3.53 -0.80 -1.70
+        color 0.94 0.40 0.29
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.94 0.40 0.29
+    keyframe 6.88
+        pos 3.53 -0.80 -1.70
+        color 0.94 0.40 0.29
+}
+
+# Cube 365 at (-3.14, -1.79, -1.71)
+position -3.14 -1.79 -1.71
+animate cube
+    keyframe 0.90
+        pos -3.14 -1.79 -1.71
+        color 0.11 0.28 0.29
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.11 0.28 0.29
+    keyframe 6.90
+        pos -3.14 -1.79 -1.71
+        color 0.11 0.28 0.29
+}
+
+# Cube 366 at (1.11, 3.43, -1.73)
+position 1.11 3.43 -1.73
+animate cube
+    keyframe 0.92
+        pos 1.11 3.43 -1.73
+        color 0.64 0.93 0.28
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.64 0.93 0.28
+    keyframe 6.92
+        pos 1.11 3.43 -1.73
+        color 0.64 0.93 0.28
+}
+
+# Cube 367 at (1.50, -3.27, -1.74)
+position 1.50 -3.27 -1.74
+animate cube
+    keyframe 0.94
+        pos 1.50 -3.27 -1.74
+        color 0.69 0.09 0.28
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.69 0.09 0.28
+    keyframe 6.94
+        pos 1.50 -3.27 -1.74
+        color 0.69 0.09 0.28
+}
+
+# Cube 368 at (-3.31, 1.40, -1.76)
+position -3.31 1.40 -1.76
+animate cube
+    keyframe 0.96
+        pos -3.31 1.40 -1.76
+        color 0.09 0.67 0.28
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.09 0.67 0.28
+    keyframe 6.96
+        pos -3.31 1.40 -1.76
+        color 0.09 0.67 0.28
+}
+
+# Cube 369 at (3.38, 1.20, -1.77)
+position 3.38 1.20 -1.77
+animate cube
+    keyframe 0.98
+        pos 3.38 1.20 -1.77
+        color 0.92 0.65 0.28
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.92 0.65 0.28
+    keyframe 6.98
+        pos 3.38 1.20 -1.77
+        color 0.92 0.65 0.28
+}
+
+# Cube 370 at (-1.67, -3.16, -1.79)
+position -1.67 -3.16 -1.79
+animate cube
+    keyframe 1.00
+        pos -1.67 -3.16 -1.79
+        color 0.29 0.10 0.28
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.29 0.10 0.28
+    keyframe 7.00
+        pos -1.67 -3.16 -1.79
+        color 0.29 0.10 0.28
+}
+
+# Cube 371 at (-0.90, 3.45, -1.80)
+position -0.90 3.45 -1.80
+animate cube
+    keyframe 1.02
+        pos -0.90 3.45 -1.80
+        color 0.39 0.93 0.27
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.39 0.93 0.27
+    keyframe 7.02
+        pos -0.90 3.45 -1.80
+        color 0.39 0.93 0.27
+}
+
+# Cube 372 at (2.99, -1.93, -1.82)
+position 2.99 -1.93 -1.82
+animate cube
+    keyframe 1.04
+        pos 2.99 -1.93 -1.82
+        color 0.87 0.26 0.27
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.87 0.26 0.27
+    keyframe 7.04
+        pos 2.99 -1.93 -1.82
+        color 0.87 0.26 0.27
+}
+
+# Cube 373 at (-3.50, -0.59, -1.84)
+position -3.50 -0.59 -1.84
+animate cube
+    keyframe 1.06
+        pos -3.50 -0.59 -1.84
+        color 0.06 0.43 0.27
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.06 0.43 0.27
+    keyframe 7.06
+        pos -3.50 -0.59 -1.84
+        color 0.06 0.43 0.27
+}
+
+# Cube 374 at (2.18, 2.80, -1.85)
+position 2.18 2.80 -1.85
+animate cube
+    keyframe 1.08
+        pos 2.18 2.80 -1.85
+        color 0.77 0.85 0.27
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.77 0.85 0.27
+    keyframe 7.08
+        pos 2.18 2.80 -1.85
+        color 0.77 0.85 0.27
+}
+
+# Cube 375 at (0.28, -3.53, -1.87)
+position 0.28 -3.53 -1.87
+animate cube
+    keyframe 1.10
+        pos 0.28 -3.53 -1.87
+        color 0.54 0.06 0.27
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.54 0.06 0.27
+    keyframe 7.10
+        pos 0.28 -3.53 -1.87
+        color 0.54 0.06 0.27
+}
+
+# Cube 376 at (-2.58, 2.40, -1.88)
+position -2.58 2.40 -1.88
+animate cube
+    keyframe 1.12
+        pos -2.58 2.40 -1.88
+        color 0.18 0.80 0.26
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.18 0.80 0.26
+    keyframe 7.12
+        pos -2.58 2.40 -1.88
+        color 0.18 0.80 0.26
+}
+
+# Cube 377 at (3.52, -0.03, -1.90)
+position 3.52 -0.03 -1.90
+animate cube
+    keyframe 1.14
+        pos 3.52 -0.03 -1.90
+        color 0.94 0.50 0.26
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.94 0.50 0.26
+    keyframe 7.14
+        pos 3.52 -0.03 -1.90
+        color 0.94 0.50 0.26
+}
+
+# Cube 378 at (-2.61, -2.35, -1.91)
+position -2.61 -2.35 -1.91
+animate cube
+    keyframe 1.16
+        pos -2.61 -2.35 -1.91
+        color 0.17 0.21 0.26
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.17 0.21 0.26
+    keyframe 7.16
+        pos -2.61 -2.35 -1.91
+        color 0.17 0.21 0.26
+}
+
+# Cube 379 at (0.33, 3.49, -1.93)
+position 0.33 3.49 -1.93
+animate cube
+    keyframe 1.18
+        pos 0.33 3.49 -1.93
+        color 0.54 0.94 0.26
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.54 0.94 0.26
+    keyframe 7.18
+        pos 0.33 3.49 -1.93
+        color 0.54 0.94 0.26
+}
+
+# Cube 380 at (2.11, -2.79, -1.95)
+position 2.11 -2.79 -1.95
+animate cube
+    keyframe 1.20
+        pos 2.11 -2.79 -1.95
+        color 0.76 0.15 0.26
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.76 0.15 0.26
+    keyframe 7.20
+        pos 2.11 -2.79 -1.95
+        color 0.76 0.15 0.26
+}
+
+# Cube 381 at (-3.43, 0.63, -1.96)
+position -3.43 0.63 -1.96
+animate cube
+    keyframe 1.22
+        pos -3.43 0.63 -1.96
+        color 0.07 0.58 0.25
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.07 0.58 0.25
+    keyframe 7.22
+        pos -3.43 0.63 -1.96
+        color 0.07 0.58 0.25
+}
+
+# Cube 382 at (2.95, 1.84, -1.98)
+position 2.95 1.84 -1.98
+animate cube
+    keyframe 1.24
+        pos 2.95 1.84 -1.98
+        color 0.87 0.73 0.25
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.87 0.73 0.25
+    keyframe 7.24
+        pos 2.95 1.84 -1.98
+        color 0.87 0.73 0.25
+}
+
+# Cube 383 at (-0.93, -3.34, -1.99)
+position -0.93 -3.34 -1.99
+animate cube
+    keyframe 1.26
+        pos -0.93 -3.34 -1.99
+        color 0.38 0.08 0.25
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.38 0.08 0.25
+    keyframe 7.26
+        pos -0.93 -3.34 -1.99
+        color 0.38 0.08 0.25
+}
+
+# Cube 384 at (-1.57, 3.08, -2.01)
+position -1.57 3.08 -2.01
+animate cube
+    keyframe 0.00
+        pos -1.57 3.08 -2.01
+        color 0.30 0.89 0.25
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.30 0.89 0.25
+    keyframe 6.00
+        pos -1.57 3.08 -2.01
+        color 0.30 0.89 0.25
+}
+
+# Cube 385 at (3.23, -1.21, -2.02)
+position 3.23 -1.21 -2.02
+animate cube
+    keyframe 0.02
+        pos 3.23 -1.21 -2.02
+        color 0.90 0.35 0.25
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.90 0.35 0.25
+    keyframe 6.02
+        pos 3.23 -1.21 -2.02
+        color 0.90 0.35 0.25
+}
+
+# Cube 386 at (-3.19, -1.29, -2.04)
+position -3.19 -1.29 -2.04
+animate cube
+    keyframe 0.04
+        pos -3.19 -1.29 -2.04
+        color 0.10 0.34 0.25
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.10 0.34 0.25
+    keyframe 6.04
+        pos -3.19 -1.29 -2.04
+        color 0.10 0.34 0.25
+}
+
+# Cube 387 at (1.48, 3.10, -2.05)
+position 1.48 3.10 -2.05
+animate cube
+    keyframe 0.06
+        pos 1.48 3.10 -2.05
+        color 0.68 0.89 0.24
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.68 0.89 0.24
+    keyframe 6.06
+        pos 1.48 3.10 -2.05
+        color 0.68 0.89 0.24
+}
+
+# Cube 388 at (1.00, -3.27, -2.07)
+position 1.00 -3.27 -2.07
+animate cube
+    keyframe 0.08
+        pos 1.00 -3.27 -2.07
+        color 0.62 0.09 0.24
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.62 0.09 0.24
+    keyframe 6.08
+        pos 1.00 -3.27 -2.07
+        color 0.62 0.09 0.24
+}
+
+# Cube 389 at (-2.94, 1.73, -2.09)
+position -2.94 1.73 -2.09
+animate cube
+    keyframe 0.10
+        pos -2.94 1.73 -2.09
+        color 0.13 0.72 0.24
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.13 0.72 0.24
+    keyframe 6.10
+        pos -2.94 1.73 -2.09
+        color 0.13 0.72 0.24
+}
+
+# Cube 390 at (3.33, 0.71, -2.10)
+position 3.33 0.71 -2.10
+animate cube
+    keyframe 0.12
+        pos 3.33 0.71 -2.10
+        color 0.92 0.59 0.24
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.92 0.59 0.24
+    keyframe 6.12
+        pos 3.33 0.71 -2.10
+        color 0.92 0.59 0.24
+}
+
+# Cube 391 at (-1.97, -2.76, -2.12)
+position -1.97 -2.76 -2.12
+animate cube
+    keyframe 0.14
+        pos -1.97 -2.76 -2.12
+        color 0.25 0.15 0.24
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.25 0.15 0.24
+    keyframe 6.14
+        pos -1.97 -2.76 -2.12
+        color 0.25 0.15 0.24
+}
+
+# Cube 392 at (-0.41, 3.36, -2.13)
+position -0.41 3.36 -2.13
+animate cube
+    keyframe 0.16
+        pos -0.41 3.36 -2.13
+        color 0.45 0.92 0.23
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.45 0.92 0.23
+    keyframe 6.16
+        pos -0.41 3.36 -2.13
+        color 0.45 0.92 0.23
+}
+
+# Cube 393 at (2.56, -2.19, -2.15)
+position 2.56 -2.19 -2.15
+animate cube
+    keyframe 0.18
+        pos 2.56 -2.19 -2.15
+        color 0.82 0.23 0.23
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.82 0.23 0.23
+    keyframe 6.18
+        pos 2.56 -2.19 -2.15
+        color 0.82 0.23 0.23
+}
+
+# Cube 394 at (-3.36, -0.11, -2.16)
+position -3.36 -0.11 -2.16
+animate cube
+    keyframe 0.20
+        pos -3.36 -0.11 -2.16
+        color 0.08 0.49 0.23
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.08 0.49 0.23
+    keyframe 6.20
+        pos -3.36 -0.11 -2.16
+        color 0.08 0.49 0.23
+}
+
+# Cube 395 at (2.39, 2.35, -2.18)
+position 2.39 2.35 -2.18
+animate cube
+    keyframe 0.22
+        pos 2.39 2.35 -2.18
+        color 0.80 0.79 0.23
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.80 0.79 0.23
+    keyframe 6.22
+        pos 2.39 2.35 -2.18
+        color 0.80 0.79 0.23
+}
+
+# Cube 396 at (-0.18, -3.34, -2.20)
+position -0.18 -3.34 -2.20
+animate cube
+    keyframe 0.24
+        pos -0.18 -3.34 -2.20
+        color 0.48 0.08 0.23
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.48 0.08 0.23
+    keyframe 6.24
+        pos -0.18 -3.34 -2.20
+        color 0.48 0.08 0.23
+}
+
+# Cube 397 at (-2.12, 2.58, -2.21)
+position -2.12 2.58 -2.21
+animate cube
+    keyframe 0.26
+        pos -2.12 2.58 -2.21
+        color 0.24 0.82 0.22
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.24 0.82 0.22
+    keyframe 6.26
+        pos -2.12 2.58 -2.21
+        color 0.24 0.82 0.22
+}
+
+# Cube 398 at (3.29, -0.47, -2.23)
+position 3.29 -0.47 -2.23
+animate cube
+    keyframe 0.28
+        pos 3.29 -0.47 -2.23
+        color 0.91 0.44 0.22
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.91 0.44 0.22
+    keyframe 6.28
+        pos 3.29 -0.47 -2.23
+        color 0.91 0.44 0.22
+}
+
+# Cube 399 at (-2.73, -1.87, -2.24)
+position -2.73 -1.87 -2.24
+animate cube
+    keyframe 0.30
+        pos -2.73 -1.87 -2.24
+        color 0.16 0.27 0.22
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.16 0.27 0.22
+    keyframe 6.30
+        pos -2.73 -1.87 -2.24
+        color 0.16 0.27 0.22
+}
+
+# Cube 400 at (0.75, 3.22, -2.26)
+position 0.75 3.22 -2.26
+animate cube
+    keyframe 0.32
+        pos 0.75 3.22 -2.26
+        color 0.59 0.90 0.22
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.59 0.90 0.22
+    keyframe 6.32
+        pos 0.75 3.22 -2.26
+        color 0.59 0.90 0.22
+}
+
+# Cube 401 at (1.61, -2.87, -2.27)
+position 1.61 -2.87 -2.27
+animate cube
+    keyframe 0.34
+        pos 1.61 -2.87 -2.27
+        color 0.70 0.14 0.22
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.70 0.14 0.22
+    keyframe 6.34
+        pos 1.61 -2.87 -2.27
+        color 0.70 0.14 0.22
+}
+
+# Cube 402 at (-3.12, 1.02, -2.29)
+position -3.12 1.02 -2.29
+animate cube
+    keyframe 0.36
+        pos -3.12 1.02 -2.29
+        color 0.11 0.63 0.21
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.11 0.63 0.21
+    keyframe 6.36
+        pos -3.12 1.02 -2.29
+        color 0.11 0.63 0.21
+}
+
+# Cube 403 at (2.98, 1.35, -2.30)
+position 2.98 1.35 -2.30
+animate cube
+    keyframe 0.38
+        pos 2.98 1.35 -2.30
+        color 0.87 0.67 0.21
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.87 0.67 0.21
+    keyframe 6.38
+        pos 2.98 1.35 -2.30
+        color 0.87 0.67 0.21
+}
+
+# Cube 404 at (-1.28, -3.00, -2.32)
+position -1.28 -3.00 -2.32
+animate cube
+    keyframe 0.40
+        pos -1.28 -3.00 -2.32
+        color 0.34 0.13 0.21
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.34 0.13 0.21
+    keyframe 6.40
+        pos -1.28 -3.00 -2.32
+        color 0.34 0.13 0.21
+}
+
+# Cube 405 at (-1.08, 3.06, -2.34)
+position -1.08 3.06 -2.34
+animate cube
+    keyframe 0.42
+        pos -1.08 3.06 -2.34
+        color 0.37 0.88 0.21
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.37 0.88 0.21
+    keyframe 6.42
+        pos -1.08 3.06 -2.34
+        color 0.37 0.88 0.21
+}
+
+# Cube 406 at (2.85, -1.53, -2.35)
+position 2.85 -1.53 -2.35
+animate cube
+    keyframe 0.44
+        pos 2.85 -1.53 -2.35
+        color 0.86 0.31 0.21
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.86 0.31 0.21
+    keyframe 6.44
+        pos 2.85 -1.53 -2.35
+        color 0.86 0.31 0.21
+}
+
+# Cube 407 at (-3.12, -0.80, -2.37)
+position -3.12 -0.80 -2.37
+animate cube
+    keyframe 0.46
+        pos -3.12 -0.80 -2.37
+        color 0.11 0.40 0.20
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.11 0.40 0.20
+    keyframe 6.46
+        pos -3.12 -0.80 -2.37
+        color 0.11 0.40 0.20
+}
+
+# Cube 408 at (1.76, 2.69, -2.38)
+position 1.76 2.69 -2.38
+animate cube
+    keyframe 0.48
+        pos 1.76 2.69 -2.38
+        color 0.72 0.84 0.20
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.72 0.84 0.20
+    keyframe 6.48
+        pos 1.76 2.69 -2.38
+        color 0.72 0.84 0.20
+}
+
+# Cube 409 at (0.52, -3.16, -2.40)
+position 0.52 -3.16 -2.40
+animate cube
+    keyframe 0.50
+        pos 0.52 -3.16 -2.40
+        color 0.56 0.11 0.20
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.56 0.11 0.20
+    keyframe 6.50
+        pos 0.52 -3.16 -2.40
+        color 0.56 0.11 0.20
+}
+
+# Cube 410 at (-2.51, 1.97, -2.41)
+position -2.51 1.97 -2.41
+animate cube
+    keyframe 0.52
+        pos -2.51 1.97 -2.41
+        color 0.19 0.75 0.20
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.19 0.75 0.20
+    keyframe 6.52
+        pos -2.51 1.97 -2.41
+        color 0.19 0.75 0.20
+}
+
+# Cube 411 at (3.17, 0.24, -2.43)
+position 3.17 0.24 -2.43
+animate cube
+    keyframe 0.54
+        pos 3.17 0.24 -2.43
+        color 0.90 0.53 0.20
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.90 0.53 0.20
+    keyframe 6.54
+        pos 3.17 0.24 -2.43
+        color 0.90 0.53 0.20
+}
+
+# Cube 412 at (-2.17, -2.31, -2.45)
+position -2.17 -2.31 -2.45
+animate cube
+    keyframe 0.56
+        pos -2.17 -2.31 -2.45
+        color 0.23 0.21 0.19
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.23 0.21 0.19
+    keyframe 6.56
+        pos -2.17 -2.31 -2.45
+        color 0.23 0.21 0.19
+}
+
+# Cube 413 at (0.04, 3.15, -2.46)
+position 0.04 3.15 -2.46
+animate cube
+    keyframe 0.58
+        pos 0.04 3.15 -2.46
+        color 0.50 0.89 0.19
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.50 0.89 0.19
+    keyframe 6.58
+        pos 0.04 3.15 -2.46
+        color 0.50 0.89 0.19
+}
+
+# Cube 414 at (2.09, -2.34, -2.48)
+position 2.09 -2.34 -2.48
+animate cube
+    keyframe 0.60
+        pos 2.09 -2.34 -2.48
+        color 0.76 0.21 0.19
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.76 0.21 0.19
+    keyframe 6.60
+        pos 2.09 -2.34 -2.48
+        color 0.76 0.21 0.19
+}
+
+# Cube 415 at (-3.11, 0.31, -2.49)
+position -3.11 0.31 -2.49
+animate cube
+    keyframe 0.62
+        pos -3.11 0.31 -2.49
+        color 0.11 0.54 0.19
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.11 0.54 0.19
+    keyframe 6.62
+        pos -3.11 0.31 -2.49
+        color 0.11 0.54 0.19
+}
+
+# Cube 416 at (2.50, 1.87, -2.51)
+position 2.50 1.87 -2.51
+animate cube
+    keyframe 0.64
+        pos 2.50 1.87 -2.51
+        color 0.81 0.73 0.19
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.81 0.73 0.19
+    keyframe 6.64
+        pos 2.50 1.87 -2.51
+        color 0.81 0.73 0.19
+}
+
+# Cube 417 at (-0.58, -3.05, -2.52)
+position -0.58 -3.05 -2.52
+animate cube
+    keyframe 0.66
+        pos -0.58 -3.05 -2.52
+        color 0.43 0.12 0.18
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.43 0.12 0.18
+    keyframe 6.66
+        pos -0.58 -3.05 -2.52
+        color 0.43 0.12 0.18
+}
+
+# Cube 418 at (-1.63, 2.63, -2.54)
+position -1.63 2.63 -2.54
+animate cube
+    keyframe 0.68
+        pos -1.63 2.63 -2.54
+        color 0.30 0.83 0.18
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.30 0.83 0.18
+    keyframe 6.68
+        pos -1.63 2.63 -2.54
+        color 0.30 0.83 0.18
+}
+
+# Cube 419 at (2.96, -0.84, -2.55)
+position 2.96 -0.84 -2.55
+animate cube
+    keyframe 0.70
+        pos 2.96 -0.84 -2.55
+        color 0.87 0.40 0.18
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.87 0.40 0.18
+    keyframe 6.70
+        pos 2.96 -0.84 -2.55
+        color 0.87 0.40 0.18
+}
+
+# Cube 420 at (-2.74, -1.38, -2.57)
+position -2.74 -1.38 -2.57
+animate cube
+    keyframe 0.72
+        pos -2.74 -1.38 -2.57
+        color 0.16 0.33 0.18
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.16 0.33 0.18
+    keyframe 6.72
+        pos -2.74 -1.38 -2.57
+        color 0.16 0.33 0.18
+}
+
+# Cube 421 at (1.08, 2.85, -2.59)
+position 1.08 2.85 -2.59
+animate cube
+    keyframe 0.74
+        pos 1.08 2.85 -2.59
+        color 0.64 0.86 0.18
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.64 0.86 0.18
+    keyframe 6.74
+        pos 1.08 2.85 -2.59
+        color 0.64 0.86 0.18
+}
+
+# Cube 422 at (1.12, -2.82, -2.60)
+position 1.12 -2.82 -2.60
+animate cube
+    keyframe 0.76
+        pos 1.12 -2.82 -2.60
+        color 0.64 0.15 0.17
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.64 0.15 0.17
+    keyframe 6.76
+        pos 1.12 -2.82 -2.60
+        color 0.64 0.15 0.17
+}
+
+# Cube 423 at (-2.72, 1.32, -2.62)
+position -2.72 1.32 -2.62
+animate cube
+    keyframe 0.78
+        pos -2.72 1.32 -2.62
+        color 0.16 0.66 0.17
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.16 0.66 0.17
+    keyframe 6.78
+        pos -2.72 1.32 -2.62
+        color 0.16 0.66 0.17
+}
+
+# Cube 424 at (2.88, 0.87, -2.63)
+position 2.88 0.87 -2.63
+animate cube
+    keyframe 0.80
+        pos 2.88 0.87 -2.63
+        color 0.86 0.61 0.17
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.86 0.61 0.17
+    keyframe 6.80
+        pos 2.88 0.87 -2.63
+        color 0.86 0.61 0.17
+}
+
+# Cube 425 at (-1.53, -2.57, -2.65)
+position -1.53 -2.57 -2.65
+animate cube
+    keyframe 0.82
+        pos -1.53 -2.57 -2.65
+        color 0.31 0.18 0.17
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.31 0.18 0.17
+    keyframe 6.82
+        pos -1.53 -2.57 -2.65
+        color 0.31 0.18 0.17
+}
+
+# Cube 426 at (-0.60, 2.92, -2.66)
+position -0.60 2.92 -2.66
+animate cube
+    keyframe 0.84
+        pos -0.60 2.92 -2.66
+        color 0.42 0.87 0.17
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.42 0.87 0.17
+    keyframe 6.84
+        pos -0.60 2.92 -2.66
+        color 0.42 0.87 0.17
+}
+
+# Cube 427 at (2.41, -1.74, -2.68)
+position 2.41 -1.74 -2.68
+animate cube
+    keyframe 0.86
+        pos 2.41 -1.74 -2.68
+        color 0.80 0.28 0.17
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.80 0.28 0.17
+    keyframe 6.86
+        pos 2.41 -1.74 -2.68
+        color 0.80 0.28 0.17
+}
+
+# Cube 428 at (-2.94, -0.34, -2.70)
+position -2.94 -0.34 -2.70
+animate cube
+    keyframe 0.88
+        pos -2.94 -0.34 -2.70
+        color 0.13 0.46 0.16
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.13 0.46 0.16
+    keyframe 6.88
+        pos -2.94 -0.34 -2.70
+        color 0.13 0.46 0.16
+}
+
+# Cube 429 at (1.92, 2.23, -2.71)
+position 1.92 2.23 -2.71
+animate cube
+    keyframe 0.90
+        pos 1.92 2.23 -2.71
+        color 0.74 0.78 0.16
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.74 0.78 0.16
+    keyframe 6.90
+        pos 1.92 2.23 -2.71
+        color 0.74 0.78 0.16
+}
+
+# Cube 430 at (0.08, -2.93, -2.73)
+position 0.08 -2.93 -2.73
+animate cube
+    keyframe 0.92
+        pos 0.08 -2.93 -2.73
+        color 0.51 0.13 0.16
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.51 0.13 0.16
+    keyframe 6.92
+        pos 0.08 -2.93 -2.73
+        color 0.51 0.13 0.16
+}
+
+# Cube 431 at (-2.03, 2.09, -2.74)
+position -2.03 2.09 -2.74
+animate cube
+    keyframe 0.94
+        pos -2.03 2.09 -2.74
+        color 0.25 0.76 0.16
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.25 0.76 0.16
+    keyframe 6.94
+        pos -2.03 2.09 -2.74
+        color 0.25 0.76 0.16
+}
+
+# Cube 432 at (2.89, -0.17, -2.76)
+position 2.89 -0.17 -2.76
+animate cube
+    keyframe 0.96
+        pos 2.89 -0.17 -2.76
+        color 0.86 0.48 0.16
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.86 0.48 0.16
+    keyframe 6.96
+        pos 2.89 -0.17 -2.76
+        color 0.86 0.48 0.16
+}
+
+# Cube 433 at (-2.24, -1.82, -2.77)
+position -2.24 -1.82 -2.77
+animate cube
+    keyframe 0.98
+        pos -2.24 -1.82 -2.77
+        color 0.22 0.27 0.15
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.22 0.27 0.15
+    keyframe 6.98
+        pos -2.24 -1.82 -2.77
+        color 0.22 0.27 0.15
+}
+
+# Cube 434 at (0.42, 2.84, -2.79)
+position 0.42 2.84 -2.79
+animate cube
+    keyframe 1.00
+        pos 0.42 2.84 -2.79
+        color 0.55 0.85 0.15
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.55 0.85 0.15
+    keyframe 7.00
+        pos 0.42 2.84 -2.79
+        color 0.55 0.85 0.15
+}
+
+# Cube 435 at (1.60, -2.36, -2.80)
+position 1.60 -2.36 -2.80
+animate cube
+    keyframe 1.02
+        pos 1.60 -2.36 -2.80
+        color 0.70 0.20 0.15
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.70 0.20 0.15
+    keyframe 7.02
+        pos 1.60 -2.36 -2.80
+        color 0.70 0.20 0.15
+}
+
+# Cube 436 at (-2.76, 0.66, -2.82)
+position -2.76 0.66 -2.82
+animate cube
+    keyframe 1.04
+        pos -2.76 0.66 -2.82
+        color 0.16 0.58 0.15
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.16 0.58 0.15
+    keyframe 7.04
+        pos -2.76 0.66 -2.82
+        color 0.16 0.58 0.15
+}
+
+# Cube 437 at (2.46, 1.37, -2.84)
+position 2.46 1.37 -2.84
+animate cube
+    keyframe 1.06
+        pos 2.46 1.37 -2.84
+        color 0.81 0.67 0.15
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.81 0.67 0.15
+    keyframe 7.06
+        pos 2.46 1.37 -2.84
+        color 0.81 0.67 0.15
+}
+
+# Cube 438 at (-0.89, -2.66, -2.85)
+position -0.89 -2.66 -2.85
+animate cube
+    keyframe 1.08
+        pos -0.89 -2.66 -2.85
+        color 0.39 0.17 0.14
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.39 0.17 0.14
+    keyframe 7.08
+        pos -0.89 -2.66 -2.85
+        color 0.39 0.17 0.14
+}
+
+# Cube 439 at (-1.14, 2.55, -2.87)
+position -1.14 2.55 -2.87
+animate cube
+    keyframe 1.10
+        pos -1.14 2.55 -2.87
+        color 0.36 0.82 0.14
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.36 0.82 0.14
+    keyframe 7.10
+        pos -1.14 2.55 -2.87
+        color 0.36 0.82 0.14
+}
+
+# Cube 440 at (2.54, -1.10, -2.88)
+position 2.54 -1.10 -2.88
+animate cube
+    keyframe 1.12
+        pos 2.54 -1.10 -2.88
+        color 0.82 0.36 0.14
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.82 0.36 0.14
+    keyframe 7.12
+        pos 2.54 -1.10 -2.88
+        color 0.82 0.36 0.14
+}
+
+# Cube 441 at (-2.61, -0.90, -2.90)
+position -2.61 -0.90 -2.90
+animate cube
+    keyframe 1.14
+        pos -2.61 -0.90 -2.90
+        color 0.17 0.39 0.14
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.17 0.39 0.14
+    keyframe 7.14
+        pos -2.61 -0.90 -2.90
+        color 0.17 0.39 0.14
+}
+
+# Cube 442 at (1.30, 2.41, -2.91)
+position 1.30 2.41 -2.91
+animate cube
+    keyframe 1.16
+        pos 1.30 2.41 -2.91
+        color 0.66 0.80 0.14
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.66 0.80 0.14
+    keyframe 7.16
+        pos 1.30 2.41 -2.91
+        color 0.66 0.80 0.14
+}
+
+# Cube 443 at (0.66, -2.64, -2.93)
+position 0.66 -2.64 -2.93
+animate cube
+    keyframe 1.18
+        pos 0.66 -2.64 -2.93
+        color 0.58 0.17 0.13
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.58 0.17 0.13
+    keyframe 7.18
+        pos 0.66 -2.64 -2.93
+        color 0.58 0.17 0.13
+}
+
+# Cube 444 at (-2.26, 1.49, -2.95)
+position -2.26 1.49 -2.95
+animate cube
+    keyframe 1.20
+        pos -2.26 1.49 -2.95
+        color 0.22 0.69 0.13
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.22 0.69 0.13
+    keyframe 7.20
+        pos -2.26 1.49 -2.95
+        color 0.22 0.69 0.13
+}
+
+# Cube 445 at (2.66, 0.42, -2.96)
+position 2.66 0.42 -2.96
+animate cube
+    keyframe 1.22
+        pos 2.66 0.42 -2.96
+        color 0.83 0.55 0.13
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.83 0.55 0.13
+    keyframe 7.22
+        pos 2.66 0.42 -2.96
+        color 0.83 0.55 0.13
+}
+
+# Cube 446 at (-1.66, -2.09, -2.98)
+position -1.66 -2.09 -2.98
+animate cube
+    keyframe 1.24
+        pos -1.66 -2.09 -2.98
+        color 0.29 0.24 0.13
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.29 0.24 0.13
+    keyframe 7.24
+        pos -1.66 -2.09 -2.98
+        color 0.29 0.24 0.13
+}
+
+# Cube 447 at (-0.19, 2.65, -2.99)
+position -0.19 2.65 -2.99
+animate cube
+    keyframe 1.26
+        pos -0.19 2.65 -2.99
+        color 0.48 0.83 0.13
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.48 0.83 0.13
+    keyframe 7.26
+        pos -0.19 2.65 -2.99
+        color 0.48 0.83 0.13
+}
+
+# Cube 448 at (1.91, -1.81, -3.01)
+position 1.91 -1.81 -3.01
+animate cube
+    keyframe 0.00
+        pos 1.91 -1.81 -3.01
+        color 0.74 0.27 0.12
+    keyframe 3.00
+        pos 0.0 0.0 5.0
+        color 0.74 0.27 0.12
+    keyframe 6.00
+        pos 1.91 -1.81 -3.01
+        color 0.74 0.27 0.12
+}
+
+# Cube 449 at (-2.62, 0.05, -3.02)
+position -2.62 0.05 -3.02
+animate cube
+    keyframe 0.02
+        pos -2.62 0.05 -3.02
+        color 0.17 0.51 0.12
+    keyframe 3.02
+        pos 0.0 0.0 5.0
+        color 0.17 0.51 0.12
+    keyframe 6.02
+        pos -2.62 0.05 -3.02
+        color 0.17 0.51 0.12
+}
+
+# Cube 450 at (1.95, 1.72, -3.04)
+position 1.95 1.72 -3.04
+animate cube
+    keyframe 0.04
+        pos 1.95 1.72 -3.04
+        color 0.74 0.72 0.12
+    keyframe 3.04
+        pos 0.0 0.0 5.0
+        color 0.74 0.72 0.12
+    keyframe 6.04
+        pos 1.95 1.72 -3.04
+        color 0.74 0.72 0.12
+}
+
+# Cube 451 at (-0.27, -2.57, -3.05)
+position -0.27 -2.57 -3.05
+animate cube
+    keyframe 0.06
+        pos -0.27 -2.57 -3.05
+        color 0.47 0.18 0.12
+    keyframe 3.06
+        pos 0.0 0.0 5.0
+        color 0.47 0.18 0.12
+    keyframe 6.06
+        pos -0.27 -2.57 -3.05
+        color 0.47 0.18 0.12
+}
+
+# Cube 452 at (-1.52, 2.06, -3.07)
+position -1.52 2.06 -3.07
+animate cube
+    keyframe 0.08
+        pos -1.52 2.06 -3.07
+        color 0.31 0.76 0.12
+    keyframe 3.08
+        pos 0.0 0.0 5.0
+        color 0.31 0.76 0.12
+    keyframe 6.08
+        pos -1.52 2.06 -3.07
+        color 0.31 0.76 0.12
+}
+
+# Cube 453 at (2.50, -0.49, -3.09)
+position 2.50 -0.49 -3.09
+animate cube
+    keyframe 0.10
+        pos 2.50 -0.49 -3.09
+        color 0.81 0.44 0.11
+    keyframe 3.10
+        pos 0.0 0.0 5.0
+        color 0.81 0.44 0.11
+    keyframe 6.10
+        pos 2.50 -0.49 -3.09
+        color 0.81 0.44 0.11
+}
+
+# Cube 454 at (-2.15, -1.32, -3.10)
+position -2.15 -1.32 -3.10
+animate cube
+    keyframe 0.12
+        pos -2.15 -1.32 -3.10
+        color 0.23 0.34 0.11
+    keyframe 3.12
+        pos 0.0 0.0 5.0
+        color 0.23 0.34 0.11
+    keyframe 6.12
+        pos -2.15 -1.32 -3.10
+        color 0.23 0.34 0.11
+}
+
+# Cube 455 at (0.69, 2.41, -3.12)
+position 0.69 2.41 -3.12
+animate cube
+    keyframe 0.14
+        pos 0.69 2.41 -3.12
+        color 0.59 0.80 0.11
+    keyframe 3.14
+        pos 0.0 0.0 5.0
+        color 0.59 0.80 0.11
+    keyframe 6.14
+        pos 0.69 2.41 -3.12
+        color 0.59 0.80 0.11
+}
+
+# Cube 456 at (1.11, -2.23, -3.13)
+position 1.11 -2.23 -3.13
+animate cube
+    keyframe 0.16
+        pos 1.11 -2.23 -3.13
+        color 0.64 0.22 0.11
+    keyframe 3.16
+        pos 0.0 0.0 5.0
+        color 0.64 0.22 0.11
+    keyframe 6.16
+        pos 1.11 -2.23 -3.13
+        color 0.64 0.22 0.11
+}
+
+# Cube 457 at (-2.30, 0.89, -3.15)
+position -2.30 0.89 -3.15
+animate cube
+    keyframe 0.18
+        pos -2.30 0.89 -3.15
+        color 0.21 0.61 0.11
+    keyframe 3.18
+        pos 0.0 0.0 5.0
+        color 0.21 0.61 0.11
+    keyframe 6.18
+        pos -2.30 0.89 -3.15
+        color 0.21 0.61 0.11
+}
+
+# Cube 458 at (2.28, 0.89, -3.16)
+position 2.28 0.89 -3.16
+animate cube
+    keyframe 0.20
+        pos 2.28 0.89 -3.16
+        color 0.78 0.61 0.10
+    keyframe 3.20
+        pos 0.0 0.0 5.0
+        color 0.78 0.61 0.10
+    keyframe 6.20
+        pos 2.28 0.89 -3.16
+        color 0.78 0.61 0.10
+}
+
+# Cube 459 at (-1.07, -2.18, -3.18)
+position -1.07 -2.18 -3.18
+animate cube
+    keyframe 0.22
+        pos -1.07 -2.18 -3.18
+        color 0.37 0.23 0.10
+    keyframe 3.22
+        pos 0.0 0.0 5.0
+        color 0.37 0.23 0.10
+    keyframe 6.22
+        pos -1.07 -2.18 -3.18
+        color 0.37 0.23 0.10
+}
+
+# Cube 460 at (-0.68, 2.31, -3.20)
+position -0.68 2.31 -3.20
+animate cube
+    keyframe 0.24
+        pos -0.68 2.31 -3.20
+        color 0.41 0.79 0.10
+    keyframe 3.24
+        pos 0.0 0.0 5.0
+        color 0.41 0.79 0.10
+    keyframe 6.24
+        pos -0.68 2.31 -3.20
+        color 0.41 0.79 0.10
+}
+
+# Cube 461 at (2.04, -1.23, -3.21)
+position 2.04 -1.23 -3.21
+animate cube
+    keyframe 0.26
+        pos 2.04 -1.23 -3.21
+        color 0.76 0.35 0.10
+    keyframe 3.26
+        pos 0.0 0.0 5.0
+        color 0.76 0.35 0.10
+    keyframe 6.26
+        pos 2.04 -1.23 -3.21
+        color 0.76 0.35 0.10
+}
+
+# Cube 462 at (-2.32, -0.47, -3.23)
+position -2.32 -0.47 -3.23
+animate cube
+    keyframe 0.28
+        pos -2.32 -0.47 -3.23
+        color 0.21 0.44 0.10
+    keyframe 3.28
+        pos 0.0 0.0 5.0
+        color 0.21 0.44 0.10
+    keyframe 6.28
+        pos -2.32 -0.47 -3.23
+        color 0.21 0.44 0.10
+}
+
+# Cube 463 at (1.38, 1.89, -3.24)
+position 1.38 1.89 -3.24
+animate cube
+    keyframe 0.30
+        pos 1.38 1.89 -3.24
+        color 0.67 0.74 0.09
+    keyframe 3.30
+        pos 0.0 0.0 5.0
+        color 0.67 0.74 0.09
+    keyframe 6.30
+        pos 1.38 1.89 -3.24
+        color 0.67 0.74 0.09
+}
+
+# Cube 464 at (0.26, -2.31, -3.26)
+position 0.26 -2.31 -3.26
+animate cube
+    keyframe 0.32
+        pos 0.26 -2.31 -3.26
+        color 0.53 0.21 0.09
+    keyframe 3.32
+        pos 0.0 0.0 5.0
+        color 0.53 0.21 0.09
+    keyframe 6.32
+        pos 0.26 -2.31 -3.26
+        color 0.53 0.21 0.09
+}
+
+# Cube 465 at (-1.73, 1.51, -3.27)
+position -1.73 1.51 -3.27
+animate cube
+    keyframe 0.34
+        pos -1.73 1.51 -3.27
+        color 0.28 0.69 0.09
+    keyframe 3.34
+        pos 0.0 0.0 5.0
+        color 0.28 0.69 0.09
+    keyframe 6.34
+        pos -1.73 1.51 -3.27
+        color 0.28 0.69 0.09
+}
+
+# Cube 466 at (2.28, 0.05, -3.29)
+position 2.28 0.05 -3.29
+animate cube
+    keyframe 0.36
+        pos 2.28 0.05 -3.29
+        color 0.78 0.51 0.09
+    keyframe 3.36
+        pos 0.0 0.0 5.0
+        color 0.78 0.51 0.09
+    keyframe 6.36
+        pos 2.28 0.05 -3.29
+        color 0.78 0.51 0.09
+}
+
+# Cube 467 at (-1.62, -1.56, -3.30)
+position -1.62 -1.56 -3.30
+animate cube
+    keyframe 0.38
+        pos -1.62 -1.56 -3.30
+        color 0.30 0.30 0.09
+    keyframe 3.38
+        pos 0.0 0.0 5.0
+        color 0.30 0.30 0.09
+    keyframe 6.38
+        pos -1.62 -1.56 -3.30
+        color 0.30 0.30 0.09
+}
+
+# Cube 468 at (0.14, 2.23, -3.32)
+position 0.14 2.23 -3.32
+animate cube
+    keyframe 0.40
+        pos 0.14 2.23 -3.32
+        color 0.52 0.78 0.08
+    keyframe 3.40
+        pos 0.0 0.0 5.0
+        color 0.52 0.78 0.08
+    keyframe 6.40
+        pos 0.14 2.23 -3.32
+        color 0.52 0.78 0.08
+}
+
+# Cube 469 at (1.38, -1.72, -3.34)
+position 1.38 -1.72 -3.34
+animate cube
+    keyframe 0.42
+        pos 1.38 -1.72 -3.34
+        color 0.67 0.29 0.08
+    keyframe 3.42
+        pos 0.0 0.0 5.0
+        color 0.67 0.29 0.08
+    keyframe 6.42
+        pos 1.38 -1.72 -3.34
+        color 0.67 0.29 0.08
+}
+
+# Cube 470 at (-2.16, 0.33, -3.35)
+position -2.16 0.33 -3.35
+animate cube
+    keyframe 0.44
+        pos -2.16 0.33 -3.35
+        color 0.23 0.54 0.08
+    keyframe 3.44
+        pos 0.0 0.0 5.0
+        color 0.23 0.54 0.08
+    keyframe 6.44
+        pos -2.16 0.33 -3.35
+        color 0.23 0.54 0.08
+}
+
+# Cube 471 at (1.79, 1.20, -3.37)
+position 1.79 1.20 -3.37
+animate cube
+    keyframe 0.46
+        pos 1.79 1.20 -3.37
+        color 0.72 0.65 0.08
+    keyframe 3.46
+        pos 0.0 0.0 5.0
+        color 0.72 0.65 0.08
+    keyframe 6.46
+        pos 1.79 1.20 -3.37
+        color 0.72 0.65 0.08
+}
+
+# Cube 472 at (-0.50, -2.07, -3.38)
+position -0.50 -2.07 -3.38
+animate cube
+    keyframe 0.48
+        pos -0.50 -2.07 -3.38
+        color 0.44 0.24 0.08
+    keyframe 3.48
+        pos 0.0 0.0 5.0
+        color 0.44 0.24 0.08
+    keyframe 6.48
+        pos -0.50 -2.07 -3.38
+        color 0.44 0.24 0.08
+}
+
+# Cube 473 at (-1.02, 1.85, -3.40)
+position -1.02 1.85 -3.40
+animate cube
+    keyframe 0.50
+        pos -1.02 1.85 -3.40
+        color 0.37 0.73 0.08
+    keyframe 3.50
+        pos 0.0 0.0 5.0
+        color 0.37 0.73 0.08
+    keyframe 6.50
+        pos -1.02 1.85 -3.40
+        color 0.37 0.73 0.08
+}
+
+# Cube 474 at (1.97, -0.67, -3.41)
+position 1.97 -0.67 -3.41
+animate cube
+    keyframe 0.52
+        pos 1.97 -0.67 -3.41
+        color 0.75 0.42 0.07
+    keyframe 3.52
+        pos 0.0 0.0 5.0
+        color 0.75 0.42 0.07
+    keyframe 6.52
+        pos 1.97 -0.67 -3.41
+        color 0.75 0.42 0.07
+}
+
+# Cube 475 at (-1.88, -0.83, -3.43)
+position -1.88 -0.83 -3.43
+animate cube
+    keyframe 0.54
+        pos -1.88 -0.83 -3.43
+        color 0.26 0.40 0.07
+    keyframe 3.54
+        pos 0.0 0.0 5.0
+        color 0.26 0.40 0.07
+    keyframe 6.54
+        pos -1.88 -0.83 -3.43
+        color 0.26 0.40 0.07
+}
+
+# Cube 476 at (0.82, 1.86, -3.45)
+position 0.82 1.86 -3.45
+animate cube
+    keyframe 0.56
+        pos 0.82 1.86 -3.45
+        color 0.60 0.73 0.07
+    keyframe 3.56
+        pos 0.0 0.0 5.0
+        color 0.60 0.73 0.07
+    keyframe 6.56
+        pos 0.82 1.86 -3.45
+        color 0.60 0.73 0.07
+}
+
+# Cube 477 at (0.65, -1.90, -3.46)
+position 0.65 -1.90 -3.46
+animate cube
+    keyframe 0.58
+        pos 0.65 -1.90 -3.46
+        color 0.58 0.26 0.07
+    keyframe 3.58
+        pos 0.0 0.0 5.0
+        color 0.58 0.26 0.07
+    keyframe 6.58
+        pos 0.65 -1.90 -3.46
+        color 0.58 0.26 0.07
+}
+
+# Cube 478 at (-1.74, 0.95, -3.48)
+position -1.74 0.95 -3.48
+animate cube
+    keyframe 0.60
+        pos -1.74 0.95 -3.48
+        color 0.28 0.62 0.07
+    keyframe 3.60
+        pos 0.0 0.0 5.0
+        color 0.28 0.62 0.07
+    keyframe 6.60
+        pos -1.74 0.95 -3.48
+        color 0.28 0.62 0.07
+}
+
+# Cube 479 at (1.89, 0.46, -3.49)
+position 1.89 0.46 -3.49
+animate cube
+    keyframe 0.62
+        pos 1.89 0.46 -3.49
+        color 0.74 0.56 0.06
+    keyframe 3.62
+        pos 0.0 0.0 5.0
+        color 0.74 0.56 0.06
+    keyframe 6.62
+        pos 1.89 0.46 -3.49
+        color 0.74 0.56 0.06
+}
+
+# Cube 480 at (-1.07, -1.60, -3.51)
+position -1.07 -1.60 -3.51
+animate cube
+    keyframe 0.64
+        pos -1.07 -1.60 -3.51
+        color 0.37 0.30 0.06
+    keyframe 3.64
+        pos 0.0 0.0 5.0
+        color 0.37 0.30 0.06
+    keyframe 6.64
+        pos -1.07 -1.60 -3.51
+        color 0.37 0.30 0.06
+}
+
+# Cube 481 at (-0.29, 1.87, -3.52)
+position -0.29 1.87 -3.52
+animate cube
+    keyframe 0.66
+        pos -0.29 1.87 -3.52
+        color 0.46 0.73 0.06
+    keyframe 3.66
+        pos 0.0 0.0 5.0
+        color 0.46 0.73 0.06
+    keyframe 6.66
+        pos -0.29 1.87 -3.52
+        color 0.46 0.73 0.06
+}
+
+# Cube 482 at (1.45, -1.17, -3.54)
+position 1.45 -1.17 -3.54
+animate cube
+    keyframe 0.68
+        pos 1.45 -1.17 -3.54
+        color 0.68 0.35 0.06
+    keyframe 3.68
+        pos 0.0 0.0 5.0
+        color 0.68 0.35 0.06
+    keyframe 6.68
+        pos 1.45 -1.17 -3.54
+        color 0.68 0.35 0.06
+}
+
+# Cube 483 at (-1.83, -0.12, -3.55)
+position -1.83 -0.12 -3.55
+animate cube
+    keyframe 0.70
+        pos -1.83 -0.12 -3.55
+        color 0.27 0.49 0.06
+    keyframe 3.70
+        pos 0.0 0.0 5.0
+        color 0.27 0.49 0.06
+    keyframe 6.70
+        pos -1.83 -0.12 -3.55
+        color 0.27 0.49 0.06
+}
+
+# Cube 484 at (1.25, 1.30, -3.57)
+position 1.25 1.30 -3.57
+animate cube
+    keyframe 0.72
+        pos 1.25 1.30 -3.57
+        color 0.66 0.66 0.05
+    keyframe 3.72
+        pos 0.0 0.0 5.0
+        color 0.66 0.66 0.05
+    keyframe 6.72
+        pos 1.25 1.30 -3.57
+        color 0.66 0.66 0.05
+}
+
+# Cube 485 at (-0.04, -1.77, -3.59)
+position -0.04 -1.77 -3.59
+animate cube
+    keyframe 0.74
+        pos -0.04 -1.77 -3.59
+        color 0.50 0.28 0.05
+    keyframe 3.74
+        pos 0.0 0.0 5.0
+        color 0.50 0.28 0.05
+    keyframe 6.74
+        pos -0.04 -1.77 -3.59
+        color 0.50 0.28 0.05
+}
+
+# Cube 486 at (-1.15, 1.31, -3.60)
+position -1.15 1.31 -3.60
+animate cube
+    keyframe 0.76
+        pos -1.15 1.31 -3.60
+        color 0.36 0.66 0.05
+    keyframe 3.76
+        pos 0.0 0.0 5.0
+        color 0.36 0.66 0.05
+    keyframe 6.76
+        pos -1.15 1.31 -3.60
+        color 0.36 0.66 0.05
+}
+
+# Cube 487 at (1.70, -0.19, -3.62)
+position 1.70 -0.19 -3.62
+animate cube
+    keyframe 0.78
+        pos 1.70 -0.19 -3.62
+        color 0.71 0.48 0.05
+    keyframe 3.78
+        pos 0.0 0.0 5.0
+        color 0.71 0.48 0.05
+    keyframe 6.78
+        pos 1.70 -0.19 -3.62
+        color 0.71 0.48 0.05
+}
+
+# Cube 488 at (-1.35, -0.99, -3.63)
+position -1.35 -0.99 -3.63
+animate cube
+    keyframe 0.80
+        pos -1.35 -0.99 -3.63
+        color 0.33 0.38 0.05
+    keyframe 3.80
+        pos 0.0 0.0 5.0
+        color 0.33 0.38 0.05
+    keyframe 6.80
+        pos -1.35 -0.99 -3.63
+        color 0.33 0.38 0.05
+}
+
+# Cube 489 at (0.32, 1.61, -3.65)
+position 0.32 1.61 -3.65
+animate cube
+    keyframe 0.82
+        pos 0.32 1.61 -3.65
+        color 0.54 0.70 0.04
+    keyframe 3.82
+        pos 0.0 0.0 5.0
+        color 0.54 0.70 0.04
+    keyframe 6.82
+        pos 0.32 1.61 -3.65
+        color 0.54 0.70 0.04
+}
+
+# Cube 490 at (0.83, -1.37, -3.66)
+position 0.83 -1.37 -3.66
+animate cube
+    keyframe 0.84
+        pos 0.83 -1.37 -3.66
+        color 0.60 0.33 0.04
+    keyframe 3.84
+        pos 0.0 0.0 5.0
+        color 0.60 0.33 0.04
+    keyframe 6.84
+        pos 0.83 -1.37 -3.66
+        color 0.60 0.33 0.04
+}
+
+# Cube 491 at (-1.51, 0.44, -3.68)
+position -1.51 0.44 -3.68
+animate cube
+    keyframe 0.86
+        pos -1.51 0.44 -3.68
+        color 0.31 0.56 0.04
+    keyframe 3.86
+        pos 0.0 0.0 5.0
+        color 0.31 0.56 0.04
+    keyframe 6.86
+        pos -1.51 0.44 -3.68
+        color 0.31 0.56 0.04
+}
+
+# Cube 492 at (1.37, 0.68, -3.70)
+position 1.37 0.68 -3.70
+animate cube
+    keyframe 0.88
+        pos 1.37 0.68 -3.70
+        color 0.67 0.58 0.04
+    keyframe 3.88
+        pos 0.0 0.0 5.0
+        color 0.67 0.58 0.04
+    keyframe 6.88
+        pos 1.37 0.68 -3.70
+        color 0.67 0.58 0.04
+}
+
+# Cube 493 at (-0.54, -1.39, -3.71)
+position -0.54 -1.39 -3.71
+animate cube
+    keyframe 0.90
+        pos -0.54 -1.39 -3.71
+        color 0.43 0.33 0.04
+    keyframe 3.90
+        pos 0.0 0.0 5.0
+        color 0.43 0.33 0.04
+    keyframe 6.90
+        pos -0.54 -1.39 -3.71
+        color 0.43 0.33 0.04
+}
+
+# Cube 494 at (-0.52, 1.36, -3.73)
+position -0.52 1.36 -3.73
+animate cube
+    keyframe 0.92
+        pos -0.52 1.36 -3.73
+        color 0.43 0.67 0.03
+    keyframe 3.92
+        pos 0.0 0.0 5.0
+        color 0.43 0.67 0.03
+    keyframe 6.92
+        pos -0.52 1.36 -3.73
+        color 0.43 0.67 0.03
+}
+
+# Cube 495 at (1.27, -0.63, -3.74)
+position 1.27 -0.63 -3.74
+animate cube
+    keyframe 0.94
+        pos 1.27 -0.63 -3.74
+        color 0.66 0.42 0.03
+    keyframe 3.94
+        pos 0.0 0.0 5.0
+        color 0.66 0.42 0.03
+    keyframe 6.94
+        pos 1.27 -0.63 -3.74
+        color 0.66 0.42 0.03
+}
+
+# Cube 496 at (-1.32, -0.38, -3.76)
+position -1.32 -0.38 -3.76
+animate cube
+    keyframe 0.96
+        pos -1.32 -0.38 -3.76
+        color 0.34 0.45 0.03
+    keyframe 3.96
+        pos 0.0 0.0 5.0
+        color 0.34 0.45 0.03
+    keyframe 6.96
+        pos -1.32 -0.38 -3.76
+        color 0.34 0.45 0.03
+}
+
+# Cube 497 at (0.69, 1.13, -3.77)
+position 0.69 1.13 -3.77
+animate cube
+    keyframe 0.98
+        pos 0.69 1.13 -3.77
+        color 0.59 0.64 0.03
+    keyframe 3.98
+        pos 0.0 0.0 5.0
+        color 0.59 0.64 0.03
+    keyframe 6.98
+        pos 0.69 1.13 -3.77
+        color 0.59 0.64 0.03
+}
+
+# Cube 498 at (0.25, -1.26, -3.79)
+position 0.25 -1.26 -3.79
+animate cube
+    keyframe 1.00
+        pos 0.25 -1.26 -3.79
+        color 0.53 0.34 0.03
+    keyframe 4.00
+        pos 0.0 0.0 5.0
+        color 0.53 0.34 0.03
+    keyframe 7.00
+        pos 0.25 -1.26 -3.79
+        color 0.53 0.34 0.03
+}
+
+# Cube 499 at (-0.99, 0.73, -3.80)
+position -0.99 0.73 -3.80
+animate cube
+    keyframe 1.02
+        pos -0.99 0.73 -3.80
+        color 0.38 0.59 0.02
+    keyframe 4.02
+        pos 0.0 0.0 5.0
+        color 0.38 0.59 0.02
+    keyframe 7.02
+        pos -0.99 0.73 -3.80
+        color 0.38 0.59 0.02
+}
+
+# Cube 500 at (1.18, 0.13, -3.82)
+position 1.18 0.13 -3.82
+animate cube
+    keyframe 1.04
+        pos 1.18 0.13 -3.82
+        color 0.65 0.52 0.02
+    keyframe 4.04
+        pos 0.0 0.0 5.0
+        color 0.65 0.52 0.02
+    keyframe 7.04
+        pos 1.18 0.13 -3.82
+        color 0.65 0.52 0.02
+}
+
+# Cube 501 at (-0.75, -0.85, -3.84)
+position -0.75 -0.85 -3.84
+animate cube
+    keyframe 1.06
+        pos -0.75 -0.85 -3.84
+        color 0.41 0.39 0.02
+    keyframe 4.06
+        pos 0.0 0.0 5.0
+        color 0.41 0.39 0.02
+    keyframe 7.06
+        pos -0.75 -0.85 -3.84
+        color 0.41 0.39 0.02
+}
+
+# Cube 502 at (-0.02, 1.08, -3.85)
+position -0.02 1.08 -3.85
+animate cube
+    keyframe 1.08
+        pos -0.02 1.08 -3.85
+        color 0.50 0.63 0.02
+    keyframe 4.08
+        pos 0.0 0.0 5.0
+        color 0.50 0.63 0.02
+    keyframe 7.08
+        pos -0.02 1.08 -3.85
+        color 0.50 0.63 0.02
+}
+
+# Cube 503 at (0.70, -0.74, -3.87)
+position 0.70 -0.74 -3.87
+animate cube
+    keyframe 1.10
+        pos 0.70 -0.74 -3.87
+        color 0.59 0.41 0.02
+    keyframe 4.10
+        pos 0.0 0.0 5.0
+        color 0.59 0.41 0.02
+    keyframe 7.10
+        pos 0.70 -0.74 -3.87
+        color 0.59 0.41 0.02
+}
+
+# Cube 504 at (-0.96, 0.07, -3.88)
+position -0.96 0.07 -3.88
+animate cube
+    keyframe 1.12
+        pos -0.96 0.07 -3.88
+        color 0.38 0.51 0.01
+    keyframe 4.12
+        pos 0.0 0.0 5.0
+        color 0.38 0.51 0.01
+    keyframe 7.12
+        pos -0.96 0.07 -3.88
+        color 0.38 0.51 0.01
+}
+
+# Cube 505 at (0.70, 0.56, -3.90)
+position 0.70 0.56 -3.90
+animate cube
+    keyframe 1.14
+        pos 0.70 0.56 -3.90
+        color 0.59 0.57 0.01
+    keyframe 4.14
+        pos 0.0 0.0 5.0
+        color 0.59 0.57 0.01
+    keyframe 7.14
+        pos 0.70 0.56 -3.90
+        color 0.59 0.57 0.01
+}
+
+# Cube 506 at (-0.13, -0.81, -3.91)
+position -0.13 -0.81 -3.91
+animate cube
+    keyframe 1.16
+        pos -0.13 -0.81 -3.91
+        color 0.48 0.40 0.01
+    keyframe 4.16
+        pos 0.0 0.0 5.0
+        color 0.48 0.40 0.01
+    keyframe 7.16
+        pos -0.13 -0.81 -3.91
+        color 0.48 0.40 0.01
+}
+
+# Cube 507 at (-0.41, 0.62, -3.93)
+position -0.41 0.62 -3.93
+animate cube
+    keyframe 1.18
+        pos -0.41 0.62 -3.93
+        color 0.45 0.58 0.01
+    keyframe 4.18
+        pos 0.0 0.0 5.0
+        color 0.45 0.58 0.01
+    keyframe 7.18
+        pos -0.41 0.62 -3.93
+        color 0.45 0.58 0.01
+}
+
+# Cube 508 at (0.64, -0.16, -3.95)
+position 0.64 -0.16 -3.95
+animate cube
+    keyframe 1.20
+        pos 0.64 -0.16 -3.95
+        color 0.58 0.48 0.01
+    keyframe 4.20
+        pos 0.0 0.0 5.0
+        color 0.58 0.48 0.01
+    keyframe 7.20
+        pos 0.64 -0.16 -3.95
+        color 0.58 0.48 0.01
+}
+
+# Cube 509 at (-0.49, -0.27, -3.96)
+position -0.49 -0.27 -3.96
+animate cube
+    keyframe 1.22
+        pos -0.49 -0.27 -3.96
+        color 0.44 0.47 0.00
+    keyframe 4.22
+        pos 0.0 0.0 5.0
+        color 0.44 0.47 0.00
+    keyframe 7.22
+        pos -0.49 -0.27 -3.96
+        color 0.44 0.47 0.00
+}
+
+# Cube 510 at (0.14, 0.41, -3.98)
+position 0.14 0.41 -3.98
+animate cube
+    keyframe 1.24
+        pos 0.14 0.41 -3.98
+        color 0.52 0.55 0.00
+    keyframe 4.24
+        pos 0.0 0.0 5.0
+        color 0.52 0.55 0.00
+    keyframe 7.24
+        pos 0.14 0.41 -3.98
+        color 0.52 0.55 0.00
+}
+
+# Cube 511 at (0.10, -0.23, -3.99)
+position 0.10 -0.23 -3.99
+animate cube
+    keyframe 1.26
+        pos 0.10 -0.23 -3.99
+        color 0.51 0.47 0.00
+    keyframe 4.26
+        pos 0.0 0.0 5.0
+        color 0.51 0.47 0.00
+    keyframe 7.26
+        pos 0.10 -0.23 -3.99
+        color 0.51 0.47 0.00
+}

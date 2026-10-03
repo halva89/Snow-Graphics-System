@@ -1,4 +1,4 @@
-[Parser] Loading scene: assets/level1.sgss
+[Parser] Loading scene: assets/level1.mff
 [Parser] Read 16 lines
 [Parser] Line 0: 'window 800 600'
 [SettingsParser] Parsing settings...
