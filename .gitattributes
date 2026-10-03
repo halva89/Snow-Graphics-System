@@ -1,6 +1,6 @@
 *.rs linguist-language=Rust
 *.py linguist-language=Python
-*.mff linguist-language=Python
+*.mff linguist-language=MFF
 *.md linguist-language=Markdown
 
 *.mff linguist-vendored=false
